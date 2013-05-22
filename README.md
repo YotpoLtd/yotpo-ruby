@@ -1,4 +1,4 @@
-# Yotpo::Api::Connectot
+# Yotpo::Api::Connector
 
 TODO: Write a gem description
 
@@ -6,15 +6,15 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'yotpo-api-connectot'
+    gem 'yotpo-api-connector'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
-    $ gem install yotpo-api-connectot
+    $ gem install yotpo-api-connector
 
 ## Usage
 
