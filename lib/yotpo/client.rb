@@ -1,8 +1,23 @@
-require File.expand_path('../response_parser', __FILE__)
-require File.extend_path('../../version', __FILE__)
+require 'active_support/notifications'
+require 'faraday'
+require 'typhoeus'
+require 'typhoeus/adapters/faraday'
+require 'faraday_middleware'
+require 'yotpo/core/encode_oj'
+require 'yotpo/core/parse_oj'
+require 'yotpo/core/response_parser'
+require 'yotpo/version'
+require 'yotpo/api/account'
+require 'yotpo/api/account_platform'
+require 'yotpo/api/product'
+require 'yotpo/api/reminder'
+require 'yotpo/api/review'
+require 'yotpo/api/user'
 
 module Yotpo
   class Client
+    include Yotpo::Review
+
     def initialize(url = 'https://api.yotpo.com', parallel_requests = 5)
       @url = url
       @parallel_requests = parallel_requests
@@ -58,9 +73,8 @@ module Yotpo
         conn.response :rashify
 
         # Setting request and response to use JSON/XML
-        conn.request :json
-        conn.response :json, :content_type => /\bjson$/
-        conn.response :xml,  :content_type => /\bxml$/
+        conn.request :oj
+        conn.response :oj
 
         # Set to use instrumentals to get time logs
         conn.use :instrumentation

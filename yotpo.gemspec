@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Yotpo::VERSION
   gem.authors       = ['Vladislav Shub']
   gem.email         = %w(vlad@yotpo.com)
-  gem.description   = %q{Connector to the yotpo api}
-  gem.summary       = %q{Connector to the yotpo api}
-  gem.homepage      = 'https://github.com/YotpoLtd/yotpo-api-connector'
+  gem.description   = %q{A Ruby interface to the YOTPO API}
+  gem.summary       = %q{A Ruby interface to the YOTPO API}
+  gem.homepage      = 'https://github.com/YotpoLtd/yotpo-ruby'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -21,14 +21,9 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'typhoeus'
   gem.add_dependency 'faraday_middleware'
   gem.add_dependency 'rash'
-  gem.add_dependency 'activesupport'
-  gem.add_dependency 'rake'
   gem.add_dependency 'oj'
+  gem.add_dependency 'activesupport'
 
-  gem.add_development_dependency 'rspec'
-  gem.add_development_dependency 'coveralls'
-  gem.add_development_dependency 'simplecov'
-  gem.add_development_dependency 'webmock'
 
 
 end

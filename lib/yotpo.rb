@@ -1,9 +1,9 @@
 require 'yotpo/version'
-require 'yotpo/core/client'
+require 'yotpo/client'
 
 module Yotpo
   class << self
-    attr_accessor :url, :parallel_requests
+    attr_accessor :url, :parallel_requests, :app_key, :secret
 
     def configure
       yield self

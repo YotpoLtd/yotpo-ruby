@@ -31,11 +31,11 @@ Or install it yourself as:
 ## Usage
 
 First [register your application with Yotpo][register]
-Then copy and past the token and secret
+Then copy and past the app_key and secret
 ```ruby
 Yotpo.configure do |config|
-  config.url = 'https://api.yotpo.com'
-  config.parallel_requests = 5
+  config.app_key = APP_KEY
+  config.secret = SECRET
 end
 ```
 That is it you are ready
