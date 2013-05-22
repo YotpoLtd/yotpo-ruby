@@ -1,6 +1,6 @@
 # Yotpo
 
-Yotpo api connection gem
+A Ruby interface to the YOTPO API
 
 [gem]: http://rubygems.org/gems/yotpo
 [travis]: http://travis-ci.org/YotpoLtd/yotpo-ruby
@@ -30,7 +30,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First [register your application with Yotpo][register]
+Then copy and past the token and secret
+```ruby
+Yotpo.configure do |config|
+  config.url = 'https://api.yotpo.com'
+  config.parallel_requests = 5
+end
+```
+That is it you are ready
+
+[register]: https://www.yotpo.com/register
 
 ## Contributing
 

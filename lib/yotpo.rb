@@ -15,7 +15,7 @@ module YotpoApiConnector
     end
 
     def client
-      @client ||= YotpoApiConnector::Client.new()
+      @client ||= Yotpo::Client.new()
     end
 
     private
