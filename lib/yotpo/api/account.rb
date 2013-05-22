@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module Purchase
     def update_account(params)
       request = {

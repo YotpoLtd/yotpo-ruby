@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module User
 
     def create_user(params)

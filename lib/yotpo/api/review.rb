@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module Review
     def get_all_products
       get('reviews_me/site_map')

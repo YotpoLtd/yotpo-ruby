@@ -52,7 +52,7 @@ module Yotpo
     def connection
       @connection ||= Faraday.new(url: @url, parallel_manager: Typhoeus::Hydra.new(max_concurrency: @parallel_requests), headers: {:yotpo_api_connector => Yotpo::VERSION}) do |conn|
 
-        conn.use YotpoApiConnector::ResponseParser
+        conn.use Yotpo::ResponseParser
 
         # Set the response to be rashified
         conn.response :rashify

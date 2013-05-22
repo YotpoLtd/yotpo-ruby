@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module Product
     def get_all_bottom_lines(params)
       request = {

@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module Reminder
     def send_test_reminder(params)
       request ={

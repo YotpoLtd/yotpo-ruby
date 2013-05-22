@@ -1,7 +1,7 @@
 require 'yotpo/version'
 require 'yotpo/core/client'
 
-module YotpoApiConnector
+module Yotpo
   class << self
     attr_accessor :url, :parallel_requests
 

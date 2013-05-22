@@ -1,4 +1,4 @@
-module YotpoApiConnector
+module Yotpo
   module Purchases
     def create_new_purchase(params)
       request = {
