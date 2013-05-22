@@ -2,9 +2,6 @@
 
 Yotpo api connection gem
 
-[![Build Status](https://travis-ci.org/YotpoLtd/yotpo-ruby.png?branch=master)](https://travis-ci.org/YotpoLtd/yotpo-ruby)
-[![Coverage Status](https://coveralls.io/repos/YotpoLtd/yotpo-ruby/badge.png)](https://coveralls.io/r/YotpoLtd/yotpo-ruby)
-
 [gem]: http://rubygems.org/gems/yotpo
 [travis]: http://travis-ci.org/YotpoLtd/yotpo-ruby
 [gemnasium]: https://gemnasium.com/YotpoLtd/yotpo-ruby
