@@ -1,10 +1,23 @@
 module Yotpo
   module Review
 
-    # Creates a new review in yotpo
+    # Creates a new review in Yotpo
     #
-    # @param attrs [Hash]
-    # @return [Twitter::Action::Favorite, Twitter::Action::Follow, Twitter::Action::ListMemberAdded, Twitter::Action::Mention, Twitter::Action::Reply, Twitter::Action::Retweet]
+    # @param [Hash] params
+    # @option params [String] :app_key the app key of the account for which the review is created
+    # @option params [String] :product_id the id of the product
+    # @option params [String] :shop_domain the domain of the account
+    # @option params [String] :product_title the name of the product for which the review is created
+    # @option params [String] :product_description the description of the product for which the review is created
+    # @option params [String] :product_url the url of the product for which the review is created
+    # @option params [String] :product_image_url the image url of the product for which the review is created
+    # @option params [String] :user_display_name the author name
+    # @option params [String] :user_email the author email
+    # @option params [String] :review_body the review itself
+    # @option params [String] :review_title the review title
+    # @option params [String Integer] :review_score the rating of the review
+    # @option params [String] :utoken the token of the user who wrote the review (if one exists)
+    # @return [::Hashie::Rash] The new review with all of it's date
     def create_review(params)
       request = {
           app_key: params[:app_key],

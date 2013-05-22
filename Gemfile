@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rake'
 gem 'yard'
+gem 'redcarpet'
 
 group :test do
   gem 'coveralls', :require => false
