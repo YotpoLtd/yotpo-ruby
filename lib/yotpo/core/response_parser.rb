@@ -8,7 +8,7 @@ module Yotpo
       @app.call(env).on_complete do
         body = false
         if env[:status] == 200
-          body = env[:response].body.response.first[1]
+          body = env[:response].body.response || env[:response].body
         elsif env[:response] && env[:response].body && env[:response].body.status
           body = env[:response].body.status
         end
@@ -18,7 +18,7 @@ module Yotpo
   end
 
   #
-  # Response middleware that decodes the response body as from JSON.
+  # Response middleware that decodes the response body from JSON.
   #
   class ParseOj < FaradayMiddleware::ResponseMiddleware
     dependency do

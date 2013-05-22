@@ -8,13 +8,22 @@ require 'yotpo/version'
 require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
 require 'yotpo/api/product'
+require 'yotpo/api/purchase'
 require 'yotpo/api/reminder'
 require 'yotpo/api/review'
 require 'yotpo/api/user'
 
 module Yotpo
   class Client
+    include Yotpo::Account
+    include Yotpo::AccountPlatform
+    include Yotpo::Product
+    include Yotpo::Reminder
     include Yotpo::Review
+    include Yotpo::User
+
+    include Yotpo::Purchase
+
 
     #
     # Creates a new instance of Yotpo::Client

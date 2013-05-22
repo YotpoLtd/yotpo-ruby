@@ -1,0 +1,10 @@
+{
+    "status" : {
+        "code" : 200,
+        "message" : "OK"
+    },
+    "response" : {
+        "code" : "pStQjjzuiUfRGX0EMhqi",
+        "signin_url" : "https://www.yotpo.com/callbacks/login?code=pStQjjzuiUfRGX0EMhqi"
+    }
+}

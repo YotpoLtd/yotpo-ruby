@@ -37,5 +37,31 @@ module Yotpo
       request.delete_if {|element, value| value.nil? }
       get('/reviews/dynamic_create', request)
     end
+
+
+    #
+    # Gets reviews of a specific product
+    #
+    # @param [Hash] params
+    # @option params [String] :app_key the app key of the account for which the review is created
+    # @option params [String] :product_id the id of the product
+    # @option params [Integer] :count the amount of reviews per page
+    # @option params [Integer] :page the page number
+    # @option params [String] :since_id the id from which to start retrieving reviews
+    # @option params [String] :since_date the date from which to start retrieving reviews
+    # @option params [String] :utoken the users utoken to get the reviews that are most relevant to that user
+    def get_product_reviews(params)
+      app_key = params[:app_key]
+      sku = params[:product_id]
+      request = {
+          page: params[:page] || 1,
+          count: params[:per_page] || 5,
+          since_date: params[:since_date],
+          since_id: params[:since_id],
+          utoken: params[:utoken]
+      }
+      request.delete_if{|key,val| val.nil? }
+      get("/products/#{app_key}/#{sku}/reviews", request)
+    end
   end
 end

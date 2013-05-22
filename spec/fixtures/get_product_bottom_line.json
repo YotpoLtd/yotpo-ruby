@@ -1,0 +1,12 @@
+{
+    "status":{
+        "code":200,
+        "message":"OK"
+    },
+    "response":{
+        "bottomline":{
+            "average_score":4.52,
+            "total_reviews":23
+        }
+    }
+}

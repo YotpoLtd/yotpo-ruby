@@ -1,0 +1,12 @@
+{
+    "status" : {
+        "code" : 200,
+        "message" : "OK"
+    },
+    "response" : {
+        "subdomain" : {
+            "available" : "true",
+            "subdomain" : "shalom1"
+        }
+    }
+}

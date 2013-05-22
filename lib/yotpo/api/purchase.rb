@@ -1,5 +1,5 @@
 module Yotpo
-  module Purchases
+  module Purchase
     def create_new_purchase(params)
       request = {
           utoken: params[:utoken],
@@ -16,7 +16,7 @@ module Yotpo
     def create_new_purchases(params)
       request = {
           utoken: params[:utoken],
-          email: params[:orders]
+          orders: params[:orders]
       }
       app_key = params[:app_key]
       post("/apps/#{app_key}/purchases/mass_create", request)
@@ -30,6 +30,7 @@ module Yotpo
           page: params[:page] || 1,
           count: params[:count] || 10
       }
+      request.delete_if{|key, value| value.nil? }
       app_key = params[:app_key]
       get("/apps/#{app_key}/purchases", request)
     end

@@ -1,0 +1,29 @@
+{
+    "status" : {
+        "code" : 200,
+        "message" : "OK"
+    },
+    "response" : {
+        "bottomlines" : [ {
+            "domain_key" : "62050632",
+            "product_score" : "3.45",
+            "total_reviews" : 11
+        }, {
+            "domain_key" : "62050052",
+            "product_score" : "3.0",
+            "total_reviews" : 3
+        }, {
+            "domain_key" : "62050122",
+            "product_score" : "4.64",
+            "total_reviews" : 11
+        }, {
+            "domain_key" : "73503772",
+            "product_score" : "4.76",
+            "total_reviews" : 17
+        }, {
+            "domain_key" : "92431514",
+            "product_score" : "4.52",
+            "total_reviews" : 25
+        }]
+    }
+}

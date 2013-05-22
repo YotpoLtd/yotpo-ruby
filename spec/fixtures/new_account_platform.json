@@ -1,0 +1,23 @@
+{
+    "status" : {
+        "code" : 200,
+        "message" : "OK"
+    },
+    "response" : {
+        "account_platform" : {
+            "id" : 8,
+            "shop_token" : "",
+            "shop_domain" : "http://omricohen.me",
+            "shop_api_url" : null,
+            "plan_name" : "",
+            "platform_type" : {
+                "id" : 4,
+                "name" : "3dcart",
+                "description" : null,
+                "billable" : false
+            },
+            "deleted" : false,
+            "shop_user_name" : null
+        }
+    }
+}

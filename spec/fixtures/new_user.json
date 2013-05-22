@@ -1,0 +1,12 @@
+{
+    "status": {
+        "code": 200,
+        "message": "OK"
+    },
+    "response": {
+        "user_id": 11,
+        "token": "NkLHMUYXnkIRrb3UUVpCtI0EIHconaoFEMzgpYXt",
+        "app_key": "a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP",
+        "secret": "NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm"
+    }
+}
