@@ -1,11 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require File.expand_path('yotpo-api-connector/version', lib)
+require File.expand_path('yotpo/version', lib)
 
 Gem::Specification.new do |gem|
   gem.name          = 'yotpo'
-  gem.version       = YotpoApiConnector::VERSION
+  gem.version       = Yotpo::VERSION
   gem.authors       = ['Vladislav Shub']
   gem.email         = %w(vlad@yotpo.com)
   gem.description   = %q{Connector to the yotpo api}
