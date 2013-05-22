@@ -1,4 +1,4 @@
-# Yotpo::Api::Connector
+# Yotpo
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'yotpo-api-connector'
+    gem 'yotpo'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install yotpo-api-connector
+    $ gem install yotpo
 
 ## Usage
 
