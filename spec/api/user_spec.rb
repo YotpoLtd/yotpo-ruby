@@ -5,15 +5,15 @@ describe Yotpo::User do
   describe '#create_user' do
     before(:all) do
       @user_info = {
-          email: Faker::Internet.email,
-          display_name: Faker::Internet.user_name,
-          first_name: Faker::Name.first_name,
-          last_name: Faker::Name.last_name,
-          website_name: Faker::Internet.domain_name,
-          password: Faker::Lorem.words(3).join(' '),
-          support_url: Faker::Internet.http_url,
-          callback_url: Faker::Internet.http_url,
-          url: Faker::Internet.http_url
+          email: 'newuser@email.com',
+          display_name: 'User Name',
+          first_name: 'First Name',
+          last_name: 'Last Name',
+          website_name: 'My Awesome Web Site',
+          password: 'thisispass',
+          support_url: 'https://www.google.com/support',
+          callback_url: 'https://www.google.com/callback',
+          url: 'https://www.google.com'
       }
 
       VCR.use_cassette('create_user') do

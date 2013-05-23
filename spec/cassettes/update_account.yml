@@ -5,12 +5,12 @@ http_interactions:
     uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG
     body:
       encoding: UTF-8
-      string: ! '{"account":{"minisite_website_name":"kuvalis","minisite_website":"gibson.name","minisite_subdomain":"keelingwaelchi.co.uk","minisite_cname":"jacobi.info","minisite_subdomain_active":false},"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl"}'
+      string: ! '{"account":{"minisite_website_name":"Minisite Name","minisite_website":"www.google.com","minisite_subdomain":"google","minisite_cname":"reviews.google.com","minisite_subdomain_active":true},"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A"}'
     headers:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
       Content-Type:
       - application/json
   response:
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:05:13 GMT
+      - Thu, 23 May 2013 14:18:51 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,16 +33,16 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"1d3efb62dfe12cc0cf128327e91c3baf"'
+      - ! '"c5655713a352c8ca14003b519ffe6b79"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTJmYjM5ZDkwMWEyMDkyMzgxZjEyOGNjMTFhNDRhMmYzBjsAVA%3D%3D--ca71fce6c8bd9b1c909066b9655a02117d637c29;
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJThmMDViZmZhM2Y2NjZiYzZiNDgzN2VkMmY1OTA2MjliBjsAVA%3D%3D--4b285c4b343d479a31f0fe9831b2891693a87751;
         path=/; HttpOnly
       X-Request-Id:
-      - 85dc582cdf28fbb83982eb65718bc3a7
+      - 3132294910a28304086212eb81515016
       X-Runtime:
-      - '0.285526'
+      - '0.157990'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -50,12 +50,13 @@ http_interactions:
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
     body:
       encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"app":{"app_key":"nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG","domain":"hammes.biz","minisite_subdomain":"keelingwaelchi.co.uk","minisite_cname":"jacobi.info","minisite_website":"gibson.name","minisite_website_name":"kuvalis","referal":"","active":true,"auto_publish":true,"minisite_subdomain_active":false,"account_type":{"id":1,"name":"small","description":"dummy
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"app":{"app_key":"nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG","domain":"hammes.biz","minisite_subdomain":"google","minisite_cname":"reviews.google.com","minisite_website":"www.google.com","minisite_website_name":"Minisite
+        Name","referal":"","active":true,"auto_publish":true,"minisite_subdomain_active":true,"account_type":{"id":1,"name":"small","description":"dummy
         description","price":14.9},"account_socials":[],"account_platform":{"id":1,"shop_token":null,"shop_domain":null,"plan_name":null,"platform_type_id":2,"deleted":null,"shop_user_name":null,"secondary_cancelled_charge_at":null,"secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null,"platform_type":{"id":2,"name":"general","description":"users
         that signup for general purpose","billable":false}},"bills":[],"users":[{"id":4,"display_name":"Vladislav
         Shub","slug":"vladislavshub"}],"reminders":[{"id":1,"account_id":5,"days_from_purchase":11,"subject":"Please
-        review your recent purchases at {store_name}","body":null}],"custom_design":false,"created_at":"2013-05-19T14:00:44Z","updated_at":"2013-05-23T12:05:13Z","auto_login_popup":false,"bottom_line_installed":false,"install_step":"0","customer_language":"en","auto_social_push":false,"customer_mails_sender_name":"Rogahn,
+        review your recent purchases at {store_name}","body":null}],"custom_design":false,"created_at":"2013-05-19T14:00:44Z","updated_at":"2013-05-23T14:18:51Z","auto_login_popup":false,"bottom_line_installed":false,"install_step":"0","customer_language":"en","auto_social_push":false,"customer_mails_sender_name":"Rogahn,
         Murray and Bartoletti","testimonials_enabled":false,"testimonials_custom":false,"testimonials_floater_position":null,"testimonials_label":null,"testimonials_default_tab":"product_tab","features":[]}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:05:13 GMT
+  recorded_at: Thu, 23 May 2013 14:18:51 GMT
 recorded_with: VCR 2.2.5

@@ -5,7 +5,7 @@ describe Yotpo::AccountPlatform do
     before(:all) do
       create_account_platform_request = {
           shop_token: 'asdasdadads',
-          shop_domain: Faker::Internet.domain_name,
+          shop_domain: 'yahoo.com',
           plan_name: 'test plan',
           platform_type_id: 1,
           deleted: false,

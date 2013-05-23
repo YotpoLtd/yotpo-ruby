@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
   response:
     status:
       code: 200
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:01:38 GMT
+      - Thu, 23 May 2013 14:18:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,13 +31,13 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"a4d380f1871e0cae0e5176bbd3645fcf"'
+      - ! '"4f518c8eebe684ec690ae0e38c63b000"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7ad55add6d3e24b218ba247636ef565e
+      - 754e253f2b6acf1665642ab7f49a8060
       X-Runtime:
-      - '0.130978'
+      - '0.039777'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -45,7 +45,7 @@ http_interactions:
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
     body:
       encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"bottomline":{"average_score":3.0,"total_reviews":100}}}'
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"bottomline":{"average_score":2.92,"total_reviews":103}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:01:38 GMT
+  recorded_at: Thu, 23 May 2013 14:18:54 GMT
 recorded_with: VCR 2.2.5

@@ -10,7 +10,7 @@ http_interactions:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
   response:
     status:
       code: 200
@@ -19,7 +19,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:04:25 GMT
+      - Thu, 23 May 2013 14:18:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,13 +31,13 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"0070754770a0ace493837f6d90602af6"'
+      - ! '"0ddda42c4bd01a653f26a396e27c7416"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8e752fac60eb34c98ec2bc81f2a638e7
+      - 3a79ff829adbc1354eab3b8bae621dd0
       X-Runtime:
-      - '0.152249'
+      - '0.053795'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -45,7 +45,7 @@ http_interactions:
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
     body:
       encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"code":"gmzR1OSUxtRHClgTTJm8","signin_url":"https://www.yotpo.com/callbacks/login?code=gmzR1OSUxtRHClgTTJm8"}}'
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"code":"2I6V5iWi4JA26fr8ZiGc","signin_url":"https://www.yotpo.com/callbacks/login?code=2I6V5iWi4JA26fr8ZiGc"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:04:25 GMT
+  recorded_at: Thu, 23 May 2013 14:18:54 GMT
 recorded_with: VCR 2.2.5

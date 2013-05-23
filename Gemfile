@@ -9,7 +9,6 @@ group :test do
   gem 'rspec'
   gem 'simplecov', :require => false
   gem 'webmock'
-  gem 'ffaker'
   gem 'vcr'
 end
 

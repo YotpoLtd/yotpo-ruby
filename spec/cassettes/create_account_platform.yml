@@ -5,13 +5,13 @@ http_interactions:
     uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/account_platform
     body:
       encoding: UTF-8
-      string: ! '{"account_platform":{"shop_token":"asdasdadads","shop_domain":"schmitt.com","plan_name":"test
-        plan","platform_type_id":1,"deleted":false},"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl"}'
+      string: ! '{"account_platform":{"shop_token":"asdasdadads","shop_domain":"yahoo.com","plan_name":"test
+        plan","platform_type_id":1,"deleted":false},"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A"}'
     headers:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
       Content-Type:
       - application/json
   response:
@@ -22,7 +22,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:01:38 GMT
+      - Thu, 23 May 2013 14:18:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -38,12 +38,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWRjNmNlYTNmODhiNTljMzk2ZjAyODdjOWRhNGNkOGQ1BjsAVA%3D%3D--a24cde851f83bd2ec3d4204c54bbef4677d591d9;
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTM4ZTJmNzk1Y2QyNTRiZmMzZDBjNDJmNDg4ZWM0MjRiBjsAVA%3D%3D--8308bb590105ad5cf5c422f4180038cd0504663f;
         path=/; HttpOnly
       X-Request-Id:
-      - 394f43cf6428d562fe172c3886f0c629
+      - 9a131cbb7ece84043cc91038980b6a8b
       X-Runtime:
-      - '0.068062'
+      - '0.051893'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -54,5 +54,5 @@ http_interactions:
       string: ! '{"status":{"code":200,"message":"OK"},"response":{"account_platform":{"id":1,"shop_token":null,"shop_domain":null,"plan_name":null,"platform_type":{"id":2,"name":"general","description":"users
         that signup for general purpose","billable":false},"deleted":null,"shop_user_name":null,"secondary_cancelled_charge_at":null,"secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:01:38 GMT
+  recorded_at: Thu, 23 May 2013 14:18:53 GMT
 recorded_with: VCR 2.2.5

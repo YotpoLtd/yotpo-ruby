@@ -6,15 +6,15 @@ describe Yotpo::Review do
     before(:all) do
       anonymous_review = {
           product_id: 'D-4771',
-          domain: Faker::Internet.domain_name,
-          product_title: Faker::Product.product,
-          product_description: Faker::Lorem.paragraph(3),
-          product_url: Faker::Internet.http_url,
+          domain: 'google.com',
+          product_title: 'Product Title',
+          product_description: 'Nullam ultrices purus a metus porttitor hendrerit. Vivamus accumsan congue urna a viverra. Nam molestie euismod est, vitae sollicitudin velit scelerisque vel. Quisque feugiat, metus sed tempus malesuada, quam erat volutpat metus, a tempor felis est id purus. Ut nec felis nunc, id cursus magna. Mauris sollicitudin ultrices velit vitae viverra. Nulla faucibus lacus id nisl euismod porta. Curabitur mi magna, tempus tristique commodo sit amet, imperdiet in eros. Proin eros arcu, ornare in lobortis eu, posuere ut risus. Quisque fermentum varius nibh, id aliquet lectus congue quis. In placerat arcu at libero posuere eleifend. Donec lacinia mollis lacus, at aliquam nisi molestie nec. Cras eleifend gravida nulla, vitae mollis eros varius eleifend. Pellentesque elit sem, lacinia eget fringilla vitae, condimentum eu quam. Proin quis orci arcu, ut suscipit arcu.',
+          product_url: 'https://www.google.com/?q=pforducturl',
           product_image_url: 'https://www.google.com/images/srpr/logo4w.png',
-          user_display_name: Faker::Internet.user_name,
-          user_email: Faker::Internet.email,
-          review_body: Faker::Lorem.paragraph(3),
-          review_title: Faker::Lorem.sentence(5),
+          user_display_name: 'User Name',
+          user_email: 'user@email.com',
+          review_body: 'Integer feugiat nunc non leo vehicula bibendum. Nulla at tortor at nulla faucibus suscipit. Curabitur sodales est vel orci lobortis convallis. Vestibulum sit amet tellus neque, ac euismod arcu. Phasellus a nunc ultrices erat condimentum facilisis. Donec a odio in ligula vestibulum lobortis. Mauris posuere, justo tincidunt tincidunt interdum, felis velit venenatis augue, vel rhoncus purus turpis ut magna. Quisque consequat elit vitae enim molestie mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur adipiscing consequat lectus eu pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae' ,
+          review_title: 'Fusce commodo felis quis turpis fringilla egestas',
           review_score: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
           app_key: @app_key
       }

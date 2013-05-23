@@ -5,12 +5,12 @@ http_interactions:
     uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/reminders/send_test_email
     body:
       encoding: UTF-8
-      string: ! '{"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl","email":"vlad@yotpo.com"}'
+      string: ! '{"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A","email":"vlad@yotpo.com"}'
     headers:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
       Content-Type:
       - application/json
   response:
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:00:53 GMT
+      - Thu, 23 May 2013 14:18:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -37,12 +37,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTIxYjUxZjI1N2I3M2U4OWE3ZDZhZjJjMGQyZWQ4MjIwBjsAVA%3D%3D--97555bbbcf8265f551f35ab902532cb85edcfacf;
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTk2OGU2ZjZlYWM1NTVmOWJmNzU4MTA1NWU2NzhkYWU3BjsAVA%3D%3D--e626e1a20d294022433f2c35c93f66a727805899;
         path=/; HttpOnly
       X-Request-Id:
-      - 77da4016214c6516a7f726c4bbbcfd87
+      - c7dc1dc700ae9717e49a51a6650b0d4d
       X-Runtime:
-      - '0.071867'
+      - '0.077728'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -52,5 +52,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"status":{"code":200,"message":"OK"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:00:53 GMT
+  recorded_at: Thu, 23 May 2013 14:18:50 GMT
 recorded_with: VCR 2.2.5

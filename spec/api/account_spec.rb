@@ -4,10 +4,10 @@ describe Yotpo::Account do
   describe '#update_account' do
     before(:all) do
       account_data = {
-          minisite_website_name: Faker::Internet.domain_word,
-          minisite_website: Faker::Internet.domain_name,
-          minisite_subdomain: Faker::Internet.domain_name,
-          minisite_cname: Faker::Internet.domain_name,
+          minisite_website_name: 'Minisite Name',
+          minisite_website: 'www.google.com',
+          minisite_subdomain: 'google',
+          minisite_cname: 'reviews.google.com',
           minisite_subdomain_active: [true, false].sample,
           utoken: @utoken,
           app_key: @app_key

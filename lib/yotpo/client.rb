@@ -116,7 +116,7 @@ module Yotpo
     #
     # @return an instance of Faraday initialized with all that this gem needs
     def connection
-      @connection ||= Faraday.new(url: @url, parallel_manager: Typhoeus::Hydra.new(max_concurrency: @parallel_requests), headers: {:yotpo_api_connector => Yotpo::VERSION}) do |conn|
+      @connection ||= Faraday.new(url: @url, parallel_manager: Typhoeus::Hydra.new(max_concurrency: @parallel_requests), headers: {:yotpo_api_connector => 'Ruby'+Yotpo::VERSION}) do |conn|
 
         conn.use Yotpo::ResponseParser
 

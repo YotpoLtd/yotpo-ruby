@@ -5,13 +5,13 @@ http_interactions:
     uri: https://api.yotpo.com/users
     body:
       encoding: UTF-8
-      string: ! '{"user":{"email":"pete@goodwin.name","display_name":"doug","first_name":"Destiny","last_name":"Waelchi","website_name":"breitenberg.us","password":"doloribus
-        dolor suscipit","support_url":"http://abernathyabbott.us","callback_url":"http://kemmer.com","url":"http://nienow.biz"}}'
+      string: ! '{"user":{"email":"newuser@email.com","display_name":"User Name","first_name":"First
+        Name","last_name":"Last Name","website_name":"My Awesome Web Site","password":"thisispass","support_url":"https://www.google.com/support","callback_url":"https://www.google.com/callback","url":"https://www.google.com"}}'
     headers:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
       Content-Type:
       - application/json
   response:
@@ -22,7 +22,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:00:54 GMT
+      - Thu, 23 May 2013 14:18:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -34,16 +34,16 @@ http_interactions:
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - ! '"9c81cf7440d9e1dae8bc324ca96d8b76"'
+      - ! '"052a094cc26bad9db147f9f83b4a8e9a"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yotpo-api-1_session=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZpDUkiFGFzZGZhZHNmYXNkZmFkcwY7AEZJIh13YXJkZW4udXNlci51c2VyLnNlc3Npb24GOwBUewZJIhRsYXN0X3JlcXVlc3RfYXQGOwBGSXU6CVRpbWUN7FIcwEaSXQMGOgtAX3pvbmVJIghVVEMGOwBUSSIPc2Vzc2lvbl9pZAY7AEZJIiUzMTlhYjQ1ZDY1YTdhMjNkMWI5MWE4ZWRhOTBmZjg4OQY7AFQ%3D--31a9cfc34c14f7f267b4f83ca7725249a5b71dad;
+      - _yotpo-api-1_session=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZpDkkiFGFzZGZhZHNmYXNkZmFkcwY7AEZJIh13YXJkZW4udXNlci51c2VyLnNlc3Npb24GOwBUewZJIhRsYXN0X3JlcXVlc3RfYXQGOwBGSXU6CVRpbWUN7lIcwPuSXEsGOgtAX3pvbmVJIghVVEMGOwBUSSIPc2Vzc2lvbl9pZAY7AEZJIiU5YzUwNzUzMDQxZjc1ZGZlNDQyYzE3NjNmZjIyOGM2OQY7AFQ%3D--f0464b322e5de2dac2f0335eaa70575533f5ff1b;
         path=/; HttpOnly
       X-Request-Id:
-      - 65ac0796d3e9d56a393ebd6523ebd0d0
+      - f2b8569d3620bf5b25ca431f9494b409
       X-Runtime:
-      - '0.840719'
+      - '0.327660'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -51,7 +51,7 @@ http_interactions:
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
     body:
       encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"user_id":8,"token":"GJ7Nab513wIJ4NiYMcFTZ2c0Q3cIonpPAtBnUrPN","app_key":"iRpux0cHoeX5aSex6wwv1dvYBLF0d4ZRetPJpspU","secret":"ObSAkmUFj87v8qh7eRzZzUy0AnaAisB0OQ7sf0or"}}'
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"user_id":9,"token":"66YHgLWUfRopeTBLAjGtTCDCsnHHuMD1oKJ7m4tj","app_key":"byrktwaT76y0mKpBKyajf2fPxbHUQ7lN8kgvhcAp","secret":"wKdvGjywHYXltsP8JfpiQB6JXuS7yymNmaLlA3QT"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:00:54 GMT
+  recorded_at: Thu, 23 May 2013 14:18:53 GMT
 recorded_with: VCR 2.2.5

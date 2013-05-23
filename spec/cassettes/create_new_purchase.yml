@@ -5,13 +5,14 @@ http_interactions:
     uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases
     body:
       encoding: UTF-8
-      string: ! '{"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl","email":"rosetta.boehm@heaney.co.uk","customer_name":"freda","order_id":"123","platform":"shopify","products":[{"p1":{"url":"http://example_product_url1.com","name":"product1","image":"http://example_product_image_url1.com","description":"this
+      string: ! '{"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A","email":"some@one.com","customer_name":"Customer
+        Name","order_id":"123","platform":"shopify","products":[{"p1":{"url":"http://example_product_url1.com","name":"product1","image":"http://example_product_image_url1.com","description":"this
         is the description of a product"}}]}'
     headers:
       User-Agent:
       - Faraday v0.8.7
       Yotpo-Api-Connector:
-      - 0.0.4
+      - Ruby0.0.5
       Content-Type:
       - application/json
   response:
@@ -22,7 +23,7 @@ http_interactions:
       Server:
       - nginx/1.2.1
       Date:
-      - Thu, 23 May 2013 12:01:39 GMT
+      - Thu, 23 May 2013 14:18:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -38,12 +39,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTE1MDk5NjIxODgyNzMzZjY3Nzg3YzMwNThiNDY5YzZlBjsAVA%3D%3D--11c63a78e376459e63d3021737b05fee58151605;
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJWJkNDI0YTVkZjE4MzA4MDhjYmM4ZGFjYjY4OGEwY2E1BjsAVA%3D%3D--057a48270d4662f36f7850a570eb60e4e1c29877;
         path=/; HttpOnly
       X-Request-Id:
-      - a7637b4192cd687d998864ad0decdfb2
+      - 3c3ca9c567e50344b4b759e7709787a2
       X-Runtime:
-      - '0.086851'
+      - '0.160472'
       Strict-Transport-Security:
       - max-age=2592000; includeSubdomains
       P3p:
@@ -53,5 +54,5 @@ http_interactions:
       encoding: US-ASCII
       string: ! '{"code":200,"message":"OK"}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 12:01:39 GMT
+  recorded_at: Thu, 23 May 2013 14:18:53 GMT
 recorded_with: VCR 2.2.5

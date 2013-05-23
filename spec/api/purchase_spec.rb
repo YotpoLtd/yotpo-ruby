@@ -4,8 +4,8 @@ describe Yotpo::Purchase do
   describe '#create_new_purchase' do
     before(:all) do
       create_new_purchase_request = {
-          email: Faker::Internet.email,
-          customer_name: Faker::Internet.user_name,
+          email: 'some@one.com',
+          customer_name: 'Customer Name',
           order_id: '123',
           platform: 'shopify',
           products: [
@@ -36,8 +36,8 @@ describe Yotpo::Purchase do
       create_new_purchase_request = {
           orders: [
               {
-                  email: Faker::Internet.email,
-                  customer_name: Faker::Internet.user_name,
+                  email: 'another@one.com',
+                  customer_name: 'Another Name',
                   order_id: '123',
                   platform: 'shopify',
                   products: [

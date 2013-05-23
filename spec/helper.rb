@@ -2,7 +2,6 @@ require 'simplecov'
 require 'coveralls'
 require 'rspec'
 require 'webmock/rspec'
-require 'ffaker'
 require 'yotpo'
 require 'vcr'
 
@@ -33,8 +32,6 @@ RSpec.configure do |config|
       @utoken ||= Yotpo.get_oauth_token({ app_key: @app_key, secret: @secret }).body.access_token
     end
   end
-
-  config.extend VCR::RSpec::Macros
 end
 
 def a_delete(path)
