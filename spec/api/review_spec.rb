@@ -40,7 +40,6 @@ describe Yotpo::Review do
           product_id: 'A12'
       }
       stub_get("/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/A12/reviews?count=5&page=1").
-          with(:headers => {'User-Agent'=>'Faraday v0.8.7', 'Yotpo-Api-Connector'=>'0.0.1'}).
           to_return(:status => 200, :body => fixture('get_product_reviews.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
       @response = Yotpo.get_product_reviews(get_reviews_params)
     end

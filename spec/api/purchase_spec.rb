@@ -20,7 +20,6 @@ describe Yotpo::Purchase do
           app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
       }
       stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases").
-          with(:headers => {'User-Agent' => 'Faraday v0.8.7', 'Yotpo-Api-Connector' => '0.0.1'}).
           to_return(:status => 200, :body => fixture('new_purchase.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.create_new_purchase(create_new_purchase_request)
@@ -57,7 +56,6 @@ describe Yotpo::Purchase do
           ]
       }
       stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases/mass_create").
-          with(:headers => {'User-Agent' => 'Faraday v0.8.7', 'Yotpo-Api-Connector' => '0.0.1'}).
           to_return(:status => 200, :body => fixture('new_purchase.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.create_new_purchases(create_new_purchase_request)
@@ -76,7 +74,6 @@ describe Yotpo::Purchase do
           app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
       }
       stub_get('/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases?count=10&page=1&utoken=asdeuh1di1udifn1309fn09').
-          with(:headers => {'User-Agent' => 'Faraday v0.8.7', 'Yotpo-Api-Connector' => '0.0.1'}).
           to_return(:status => 200, :body => fixture('get_list_of_purchases.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.get_purchases(get_purchases_request)

@@ -9,7 +9,6 @@ describe Yotpo::Product do
 
       }
       stub_get("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/bottom_lines?utoken=asdeuh1di1udifn1309fn09").
-          with(:headers => {'User-Agent'=>'Faraday v0.8.7', 'Yotpo-Api-Connector'=>'0.0.1'}).
           to_return(:status => 200, :body => fixture('get_all_bottom_lines.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
@@ -30,7 +29,6 @@ describe Yotpo::Product do
       }
 
       stub_get("/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/A12/bottomline").
-          with(:headers => {'User-Agent'=>'Faraday v0.8.7', 'Yotpo-Api-Connector'=>'0.0.1'}).
           to_return(:status => 200, :body => fixture('get_product_bottom_line.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.get_product_bottom_line(get_bottom_line_params)

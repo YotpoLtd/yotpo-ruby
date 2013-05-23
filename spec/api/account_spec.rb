@@ -30,7 +30,6 @@ describe Yotpo::Account do
           utoken: '12ei1rr1i3ufn23itfoijver903'
       }
       stub_get('/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/subomain_check/shalom1?utoken=12ei1rr1i3ufn23itfoijver903').
-          with(:headers => {'User-Agent'=>'Faraday v0.8.7', 'Yotpo-Api-Connector'=>'0.0.1'}).
           to_return(:status => 200, :body => fixture('check_subdomain.json'), :headers => {})
 
       @response = Yotpo.check_minisite_subdomain(sub_domain_data)

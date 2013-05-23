@@ -34,8 +34,7 @@ describe Yotpo::User do
           grant_type: "client_credentials"
       }
       stub_request(:post, "https://api.yotpo.com/oauth/token").
-          with(:body => "{\":client_id\":\"a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP\",\":client_secret\":\"NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm\",\":grant_type\":\"client_credentials\"}",
-               :headers => {'Content-Type'=>'application/json', 'User-Agent'=>'Faraday v0.8.7', 'Yotpo-Api-Connector'=>'0.0.1'}).
+          with(:body => "{\":client_id\":\"a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP\",\":client_secret\":\"NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm\",\":grant_type\":\"client_credentials\"}").
           to_return(:status => 200, :body => fixture('bearer_token.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
       @response = Yotpo.get_oauth_token(oauth_request)
     end

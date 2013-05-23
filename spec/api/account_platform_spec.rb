@@ -13,7 +13,6 @@ describe Yotpo::AccountPlatform do
           app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
       }
       stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/account_platform").
-          with(:headers => {'User-Agent' => 'Faraday v0.8.7', 'Yotpo-Api-Connector' => '0.0.1'}).
           to_return(:status => 200, :body => fixture('new_account_platform.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
 
       @response = Yotpo.create_account_platform(create_account_platform_request)
