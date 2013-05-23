@@ -18,7 +18,7 @@ describe Yotpo::Review do
           review_title: Faker::Lorem.sentence(5),
           review_score: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].sample
       }
-      stub_get('/reviews/dynamic_create').with(:query => hash_including({:app_key => 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'})).to_return(:body => fixture('new_review.json'),
+      stub_get('/reviews/dynamic_create').with(:query => hash_including({:appkey => 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'})).to_return(:body => fixture('new_review.json'),
                                                                                                                                              :headers => {:content_type => 'application/json; charset=utf-8'})
       @response = Yotpo.create_review(anonymous_review)
     end

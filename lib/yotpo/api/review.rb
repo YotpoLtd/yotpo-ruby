@@ -20,7 +20,7 @@ module Yotpo
     # @return [::Hashie::Rash] The new review with all of it's date
     def create_review(params)
       request = {
-          app_key: params[:app_key],
+          appkey: params[:app_key],
           sku: params[:product_id],
           domain: params[:shop_domain],
           product_title: params[:product_title],
