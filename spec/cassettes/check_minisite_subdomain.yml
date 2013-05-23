@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/bottom_lines?utoken=mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:01:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"1098f768b6bbfd4e53e90ac3390a772e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 33f3945461b4c4062073959cad0f556b
+      X-Runtime:
+      - '0.061216'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"bottomlines":[{"domain_key":"D-4771","product_score":"3.0","total_reviews":100},{"domain_key":"S5","product_score":"4.5","total_reviews":2},{"domain_key":"123","product_score":"5.0","total_reviews":4}]}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:01:38 GMT
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/subomain_check/shalom1?utoken=mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:05:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"9c50c01193944b740719a84607eeaaa0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 162be4b9069fb1b3b59a5d48d88bce0c
+      X-Runtime:
+      - '0.091567'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"subdomain":{"available":"true","subdomain":"shalom1"}}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:05:12 GMT
+recorded_with: VCR 2.2.5

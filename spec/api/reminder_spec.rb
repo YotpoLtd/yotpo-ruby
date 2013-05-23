@@ -5,14 +5,13 @@ describe Yotpo::Reminder do
     describe '#send_test_reminder' do
       before(:all) do
         request ={
-            utoken: 'asdeuh1di1udifn1309fn09',
-            app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG',
-            email: 'vlad@yotpo.com'
+            email: 'vlad@yotpo.com',
+            utoken: @utoken,
+            app_key: @app_key
         }
-        stub_post('/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/reminders/send_test_email').with(:body => Oj.dump({utoken: 'asdeuh1di1udifn1309fn09',
-                                                                                                                     email: 'vlad@yotpo.com'})).
-            to_return(:body => fixture('send_test_email.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-        @response = Yotpo.send_test_reminder(request)
+        VCR.use_cassette('send_test_reminder') do
+          @response = Yotpo.send_test_reminder(request)
+        end
       end
       subject { @response.body }
       it { should be_a ::Hashie::Rash }

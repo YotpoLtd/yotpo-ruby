@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/reminders/send_test_email
+    body:
+      encoding: UTF-8
+      string: ! '{"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl","email":"vlad@yotpo.com"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:00:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"a873ac57132fed9ae7f368e3c8c85724"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTIxYjUxZjI1N2I3M2U4OWE3ZDZhZjJjMGQyZWQ4MjIwBjsAVA%3D%3D--97555bbbcf8265f551f35ab902532cb85edcfacf;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 77da4016214c6516a7f726c4bbbcfd87
+      X-Runtime:
+      - '0.071867'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:00:53 GMT
+recorded_with: VCR 2.2.5

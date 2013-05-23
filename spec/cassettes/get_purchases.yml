@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases?count=10&page=1&utoken=mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:05:12 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"2d30c125778f69cc47810815f0f4f3e9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - aeeb07b9b1106e26ad5ee3fd82e9af88
+      X-Runtime:
+      - '0.322208'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"purchases":[{"id":1,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"22","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-05T14:10:54Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-18T21:00:00Z","created_at":"2013-05-19T14:10:55Z"},{"id":3,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"23","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:38Z"},{"id":4,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"24","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:38Z"},{"id":5,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"25","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:38Z"},{"id":6,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"26","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:38Z"},{"id":7,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"27","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:38Z"},{"id":8,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"28","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:38Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:39Z"},{"id":9,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"29","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:39Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:39Z"},{"id":10,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"30","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:39Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:39Z"},{"id":11,"user_email":"vlad6il@gmail.com","user_name":"vlad","product_sku":"123","order_id":"31","product_name":"ttt","product_url":"http://www.google.com","order_date":"2013-05-06T16:45:39Z","product_description":"lalalala","product_image":"http://www.google.com/images/srpr/logo4w.png","delivery_date":"2013-05-19T21:00:00Z","created_at":"2013-05-20T16:45:39Z"}],"total_purchases":1001}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:05:12 GMT
+recorded_with: VCR 2.2.5

@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/reviews/dynamic_create?appkey=nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG&display_name=diana&email=golden@feeneyokon.ca&product_description=Minima%20cupiditate%20ut%20delectus%20vitae.%20Enim%20et%20eligendi%20illum.%20Totam%20vero%20quo%20sit%20quas.%20Hic%20deserunt%20vero%20suscipit%20qui%20pariatur%20voluptatem%20labore.%20Sed%20rerum%20ea%20magnam%20nulla%20vel.&product_image_url=https://www.google.com/images/srpr/logo4w.png&product_title=Finsync%20Power%20System&product_url=http://oconnell.uk&review_content=Odit%20dolorem%20necessitatibus%20libero%20doloribus.%20Veniam%20repudiandae%20voluptas%20voluptatem%20aut%20fugit%20ut.%20Quos%20eos%20nam%20consequuntur%20sed%20animi%20incidunt.%20Amet%20qui%20at%20libero%20molestias.%20Quis%20repudiandae%20ducimus%20facilis%20quae%20dolorem%20quasi%20consequatur%20quod.&review_score=0&review_title=Non%20dolor%20ipsam%20unde%20tenetur%20rerum%20et%20eius.&sku=D-4771
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:08:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"71de43ff171532a15238c11fe27bb6e6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTE0NTg2YjJiODBhNThjNGI3MTkyOTdiYWE3Mzk1NmJjBjsAVEkiFmFub255bW91c191c2VyX2lkBjsARmls--b18c07011fb9a2971a16c5e21de480310f84f8af;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 47f1ff371dfbf7479268252be2ac9dbf
+      X-Runtime:
+      - '1.340902'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"reviews":[{"id":107,"content":"Odit
+        dolorem necessitatibus libero doloribus. Veniam repudiandae voluptas voluptatem
+        aut fugit ut. Quos eos nam consequuntur sed animi incidunt. Amet qui at libero
+        molestias. Quis repudiandae ducimus facilis quae dolorem quasi consequatur
+        quod.","title":"Non dolor ipsam unde tenetur rerum et eius.","score":0,"user":{"id":103,"display_name":"diana","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-23T12:07:59Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}}]}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:08:00 GMT
+recorded_with: VCR 2.2.5

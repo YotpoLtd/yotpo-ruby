@@ -4,14 +4,12 @@ describe Yotpo::Product do
   describe '#get_all_bottom_lines' do
     before(:all) do
       get_app_bottom_lines_params = {
-          utoken: 'asdeuh1di1udifn1309fn09',
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
-
+          utoken: @utoken,
+          app_key: @app_key
       }
-      stub_get("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/bottom_lines?utoken=asdeuh1di1udifn1309fn09").
-          to_return(:status => 200, :body => fixture('get_all_bottom_lines.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-
-      @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
+      VCR.use_cassette('check_minisite_subdomain') do
+        @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
+      end
     end
 
     subject { @response.body.bottomlines[0] }
@@ -24,14 +22,12 @@ describe Yotpo::Product do
   describe '#get_product_bottom_line' do
     before(:all) do
       get_bottom_line_params = {
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG',
-          product_id: 'A12'
+          product_id: 'D-4771',
+          app_key: @app_key
       }
-
-      stub_get("/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/A12/bottomline").
-          to_return(:status => 200, :body => fixture('get_product_bottom_line.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-
-      @response = Yotpo.get_product_bottom_line(get_bottom_line_params)
+      VCR.use_cassette('get_product_bottom_line') do
+        @response = Yotpo.get_product_bottom_line(get_bottom_line_params)
+      end
     end
 
     subject { @response.body.bottomline }

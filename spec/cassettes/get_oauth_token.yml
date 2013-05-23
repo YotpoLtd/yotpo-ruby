@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: ! '{"client_id":"nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG","client_secret":"YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm","grant_type":"client_credentials"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:00:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"544441b4753b99aa4b0d51467fa541b0"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 84cac11b404bc5061dca10753ef6c75a
+      X-Runtime:
+      - '0.137149'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"access_token":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl","token_type":"bearer"}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:00:52 GMT
+recorded_with: VCR 2.2.5

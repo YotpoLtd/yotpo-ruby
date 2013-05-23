@@ -10,6 +10,7 @@ group :test do
   gem 'simplecov', :require => false
   gem 'webmock'
   gem 'ffaker'
+  gem 'vcr'
 end
 
 # Specify your gem's dependencies in yotpo-api-connector.gemspec

@@ -4,6 +4,8 @@ require 'rspec'
 require 'webmock/rspec'
 require 'ffaker'
 require 'yotpo'
+require 'vcr'
+
 
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
@@ -12,7 +14,12 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
 ]
 SimpleCov.start
 
-WebMock.disable_net_connect!(:allow => 'coveralls.io')
+VCR.configure do |c|
+  c.hook_into :webmock
+  c.ignore_hosts 'coveralls.io'
+  c.cassette_library_dir     = 'spec/cassettes'
+  c.default_cassette_options = { :record => :new_episodes }
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
@@ -20,8 +27,14 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
-
+    @app_key = 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
+    @secret = 'YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm'
+    VCR.use_cassette('get_oauth_token') do
+      @utoken ||= Yotpo.get_oauth_token({ app_key: @app_key, secret: @secret }).body.access_token
+    end
   end
+
+  config.extend VCR::RSpec::Macros
 end
 
 def a_delete(path)

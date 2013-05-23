@@ -41,6 +41,7 @@ module Yotpo
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the url params that should be passed in the request
     def get(url, params = {})
+      params = params.inject({}){|memo,(k,v)| memo[k.to_s] = v; memo}
       preform(url, :get, params: params) do
         return connection.get(url, params)
       end
@@ -52,6 +53,7 @@ module Yotpo
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the body of the request
     def post(url, params)
+      params = convert_hash_keys(params)
       preform(url, :post, params: params) do
         return connection.post(url, params)
       end
@@ -63,6 +65,7 @@ module Yotpo
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the body of the request
     def put(url, params)
+      params = convert_hash_keys(params)
       preform(url, :put, params: params) do
         return connection.put(url, params)
       end
@@ -128,6 +131,17 @@ module Yotpo
         conn.use :instrumentation
 
         conn.adapter :typhoeus
+      end
+    end
+    private
+    def convert_hash_keys(value)
+      case value
+        when Array
+          value.map { |v| convert_hash_keys(v) }
+        when Hash
+          Hash[value.map { |k, v| [k.to_s, convert_hash_keys(v)] }]
+        else
+          value
       end
     end
   end

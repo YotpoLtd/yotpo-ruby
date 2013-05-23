@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/D-4771/reviews?count=5&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:08:02 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"c20116a2e92b9a1060546b44a1133641"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 78119053a1920efbcdb667019891986c
+      X-Runtime:
+      - '1.252772'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"total_reviews":101,"reviews":[{"id":107,"content":"Odit
+        dolorem necessitatibus libero doloribus. Veniam repudiandae voluptas voluptatem
+        aut fugit ut. Quos eos nam consequuntur sed animi incidunt. Amet qui at libero
+        molestias. Quis repudiandae ducimus facilis quae dolorem quasi consequatur
+        quod.","title":"Non dolor ipsam unde tenetur rerum et eius.","score":0,"user":{"id":103,"display_name":"diana","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-23T12:07:59Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":96,"content":"Molestias
+        quae pariatur corrupti sit vel. Nobis neque ea facere possimus. Sequi pariatur
+        totam suscipit tenetur voluptatem. Eum dolorem ipsa rerum illo autem voluptatem
+        ex.","title":"Ipsam consequuntur et voluptas.","score":4,"user":{"id":96,"display_name":"noble","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":97,"content":"Voluptatibus
+        ducimus reprehenderit consequatur tenetur sit. Unde doloribus ut laudantium
+        maxime. Nam cumque ipsam eaque. Quae repudiandae voluptatibus ratione ut magnam
+        tempore molestiae.","title":"Velit ad quo a eum esse corporis ut.","score":2,"user":{"id":97,"display_name":"dudley","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":98,"content":"Dolorem
+        similique et temporibus. Aut voluptatum sit officia voluptatem corporis nemo
+        impedit. Ipsam ut in dolore excepturi.","title":"In ea aut quisquam non.","score":2,"user":{"id":98,"display_name":"esmeralda","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":99,"content":"Earum
+        blanditiis officia voluptas deleniti suscipit qui delectus. Voluptatem tempore
+        excepturi quae et sed tenetur. Non laboriosam ut nisi dolorum. Qui optio suscipit
+        repellendus debitis facere quasi. Qui cum aliquam qui aut natus.","title":"Consequatur
+        ducimus quia doloribus sequi ullam natus asperiores.","score":4,"user":{"id":99,"display_name":"lola","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://oconnell.uk","id":1,"name":"Finsync
+        Power System","slug":"finsync-power-system","shorten_url":"https://yotpo.com/go/q","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/r","twitter":"https://yotpo.com/go/s","linkedin":"https://yotpo.com/go/t","google_oauth2":"https://yotpo.com/go/u"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/v"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}}]}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:08:02 GMT
+recorded_with: VCR 2.2.5

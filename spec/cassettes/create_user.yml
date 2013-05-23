@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/users
+    body:
+      encoding: UTF-8
+      string: ! '{"user":{"email":"pete@goodwin.name","display_name":"doug","first_name":"Destiny","last_name":"Waelchi","website_name":"breitenberg.us","password":"doloribus
+        dolor suscipit","support_url":"http://abernathyabbott.us","callback_url":"http://kemmer.com","url":"http://nienow.biz"}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:00:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"9c81cf7440d9e1dae8bc324ca96d8b76"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZpDUkiFGFzZGZhZHNmYXNkZmFkcwY7AEZJIh13YXJkZW4udXNlci51c2VyLnNlc3Npb24GOwBUewZJIhRsYXN0X3JlcXVlc3RfYXQGOwBGSXU6CVRpbWUN7FIcwEaSXQMGOgtAX3pvbmVJIghVVEMGOwBUSSIPc2Vzc2lvbl9pZAY7AEZJIiUzMTlhYjQ1ZDY1YTdhMjNkMWI5MWE4ZWRhOTBmZjg4OQY7AFQ%3D--31a9cfc34c14f7f267b4f83ca7725249a5b71dad;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 65ac0796d3e9d56a393ebd6523ebd0d0
+      X-Runtime:
+      - '0.840719'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"user_id":8,"token":"GJ7Nab513wIJ4NiYMcFTZ2c0Q3cIonpPAtBnUrPN","app_key":"iRpux0cHoeX5aSex6wwv1dvYBLF0d4ZRetPJpspU","secret":"ObSAkmUFj87v8qh7eRzZzUy0AnaAisB0OQ7sf0or"}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:00:54 GMT
+recorded_with: VCR 2.2.5

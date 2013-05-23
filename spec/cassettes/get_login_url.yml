@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/users/b2blogin.json?app_key=nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG&secret=YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:04:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"0070754770a0ace493837f6d90602af6"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8e752fac60eb34c98ec2bc81f2a638e7
+      X-Runtime:
+      - '0.152249'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"status":{"code":200,"message":"OK"},"response":{"code":"gmzR1OSUxtRHClgTTJm8","signin_url":"https://www.yotpo.com/callbacks/login?code=gmzR1OSUxtRHClgTTJm8"}}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:04:25 GMT
+recorded_with: VCR 2.2.5

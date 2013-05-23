@@ -15,8 +15,10 @@ describe Yotpo::User do
           callback_url: Faker::Internet.http_url,
           url: Faker::Internet.http_url
       }
-      stub_post('/users').with(:body => Oj.dump({:user => @user_info})).to_return(:body => fixture('new_user.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-      @response = Yotpo.create_user(@user_info)
+
+      VCR.use_cassette('create_user') do
+        @response = Yotpo.create_user(@user_info)
+      end
     end
     subject { @response.body }
     it { should be_a ::Hashie::Rash }
@@ -29,14 +31,13 @@ describe Yotpo::User do
   describe '#get_oauth_token' do
     before(:all) do
       oauth_request = {
-          app_key: 'a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP',
-          secret: 'NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm',
+          app_key: @app_key,
+          secret: @secret,
           grant_type: "client_credentials"
       }
-      stub_request(:post, "https://api.yotpo.com/oauth/token").
-          with(:body => "{\":client_id\":\"a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP\",\":client_secret\":\"NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm\",\":grant_type\":\"client_credentials\"}").
-          to_return(:status => 200, :body => fixture('bearer_token.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-      @response = Yotpo.get_oauth_token(oauth_request)
+      VCR.use_cassette('get_oauth_token') do
+        @response = Yotpo.get_oauth_token(oauth_request)
+      end
     end
     subject { @response.body }
     it { should be_a ::Hashie::Rash }
@@ -47,11 +48,12 @@ describe Yotpo::User do
   describe '#get_login_url' do
     before(:all) do
       request = {
-          app_key: 'a3lmMnC3u4SNmz0ZcHf3lODeIYM9LEQwtTWXRdDP',
-          secret: 'NumuadvlCGOTwnCCvY5BRAhGib1LTCFptYxfvebm'
+          app_key: @app_key,
+          secret: @secret
       }
-      stub_get('/users/b2blogin').with(:query => hash_including(request)).to_return(:body => fixture('get_login_url.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-      @response = Yotpo.get_login_url(request)
+      VCR.use_cassette('get_login_url') do
+        @response = Yotpo.get_login_url(request)
+      end
     end
     subject { @response.body }
     it { should be_a ::Hashie::Rash }

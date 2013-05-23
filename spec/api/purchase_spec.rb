@@ -16,13 +16,13 @@ describe Yotpo::Purchase do
                   description: 'this is the description of a product'
               }
           ],
-          utoken: 'asdeuh1di1udifn1309fn09',
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
+          utoken: @utoken,
+          app_key: @app_key
       }
-      stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases").
-          to_return(:status => 200, :body => fixture('new_purchase.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
+      VCR.use_cassette('create_new_purchase') do
+        @response = Yotpo.create_new_purchase(create_new_purchase_request)
+      end
 
-      @response = Yotpo.create_new_purchase(create_new_purchase_request)
     end
 
     subject { @response.body }
@@ -34,8 +34,6 @@ describe Yotpo::Purchase do
   describe '#create_new_purchases' do
     before(:all) do
       create_new_purchase_request = {
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG',
-          utoken: 'asdeuh1di1udifn1309fn09',
           orders: [
               {
                   email: Faker::Internet.email,
@@ -53,12 +51,13 @@ describe Yotpo::Purchase do
 
 
               }
-          ]
+          ],
+        utoken: @utoken,
+        app_key: @app_key
       }
-      stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases/mass_create").
-          to_return(:status => 200, :body => fixture('new_purchase.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-
-      @response = Yotpo.create_new_purchases(create_new_purchase_request)
+      VCR.use_cassette('create_new_purchases') do
+        @response = Yotpo.create_new_purchases(create_new_purchase_request)
+      end
     end
 
     subject { @response.body }
@@ -70,13 +69,12 @@ describe Yotpo::Purchase do
   describe '#get_purchases' do
     before(:all) do
       get_purchases_request = {
-          utoken: 'asdeuh1di1udifn1309fn09',
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
+          utoken: @utoken,
+          app_key: @app_key
       }
-      stub_get('/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases?count=10&page=1&utoken=asdeuh1di1udifn1309fn09').
-          to_return(:status => 200, :body => fixture('get_list_of_purchases.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-
-      @response = Yotpo.get_purchases(get_purchases_request)
+      VCR.use_cassette('get_purchases') do
+        @response = Yotpo.get_purchases(get_purchases_request)
+      end
     end
 
     subject { @response.body.purchases[0] }

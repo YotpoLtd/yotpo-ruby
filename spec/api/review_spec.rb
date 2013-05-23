@@ -5,22 +5,22 @@ describe Yotpo::Review do
   describe '#create_review' do
     before(:all) do
       anonymous_review = {
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG',
-          sku: Faker::Product.model,
+          product_id: 'D-4771',
           domain: Faker::Internet.domain_name,
           product_title: Faker::Product.product,
           product_description: Faker::Lorem.paragraph(3),
           product_url: Faker::Internet.http_url,
           product_image_url: 'https://www.google.com/images/srpr/logo4w.png',
-          display_name: Faker::Internet.user_name,
-          email: Faker::Internet.email,
-          review_content: Faker::Lorem.paragraph(3),
+          user_display_name: Faker::Internet.user_name,
+          user_email: Faker::Internet.email,
+          review_body: Faker::Lorem.paragraph(3),
           review_title: Faker::Lorem.sentence(5),
-          review_score: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].sample
+          review_score: [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5].sample,
+          app_key: @app_key
       }
-      stub_get('/reviews/dynamic_create').with(:query => hash_including({:appkey => 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'})).to_return(:body => fixture('new_review.json'),
-                                                                                                                                             :headers => {:content_type => 'application/json; charset=utf-8'})
-      @response = Yotpo.create_review(anonymous_review)
+      VCR.use_cassette('create_review') do
+        @response = Yotpo.create_review(anonymous_review)
+      end
     end
 
     subject { @response.body.reviews[0] }
@@ -36,12 +36,12 @@ describe Yotpo::Review do
       get_reviews_params = {
           page: 1,
           count: 5,
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG',
-          product_id: 'A12'
+          app_key: @app_key,
+          product_id: 'D-4771'
       }
-      stub_get("/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/A12/reviews?count=5&page=1").
-          to_return(:status => 200, :body => fixture('get_product_reviews.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-      @response = Yotpo.get_product_reviews(get_reviews_params)
+      VCR.use_cassette('get_product_reviews') do
+        @response = Yotpo.get_product_reviews(get_reviews_params)
+      end
     end
 
     subject { @response.body.reviews[0] }

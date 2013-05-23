@@ -9,13 +9,12 @@ describe Yotpo::AccountPlatform do
           plan_name: 'test plan',
           platform_type_id: 1,
           deleted: false,
-          utoken: 'asdeuh1di1udifn1309fn09',
-          app_key: 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
+          utoken: @utoken,
+          app_key: @app_key
       }
-      stub_post("/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/account_platform").
-          to_return(:status => 200, :body => fixture('new_account_platform.json'), :headers => {:content_type => 'application/json; charset=utf-8'})
-
-      @response = Yotpo.create_account_platform(create_account_platform_request)
+      VCR.use_cassette('create_account_platform') do
+        @response = Yotpo.create_account_platform(create_account_platform_request)
+      end
     end
 
     subject { @response.body.account_platform }
@@ -23,7 +22,6 @@ describe Yotpo::AccountPlatform do
     it { should respond_to :id }
     it { should respond_to :shop_token }
     it { should respond_to :shop_domain }
-    it { should respond_to :shop_api_url }
     it { should respond_to :plan_name }
     it { should respond_to :platform_type }
     it { should respond_to :deleted }

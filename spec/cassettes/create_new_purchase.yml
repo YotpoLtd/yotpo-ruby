@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases
+    body:
+      encoding: UTF-8
+      string: ! '{"utoken":"mz3AdCKGsoxJB00u0gmq2usGE3HI8HDHFZC5dlLl","email":"rosetta.boehm@heaney.co.uk","customer_name":"freda","order_id":"123","platform":"shopify","products":[{"p1":{"url":"http://example_product_url1.com","name":"product1","image":"http://example_product_image_url1.com","description":"this
+        is the description of a product"}}]}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Yotpo-Api-Connector:
+      - 0.0.4
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.1
+      Date:
+      - Thu, 23 May 2013 12:01:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - ! '"ff338c05e925e0da825f92d06e112107"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTE1MDk5NjIxODgyNzMzZjY3Nzg3YzMwNThiNDY5YzZlBjsAVA%3D%3D--11c63a78e376459e63d3021737b05fee58151605;
+        path=/; HttpOnly
+      X-Request-Id:
+      - a7637b4192cd687d998864ad0decdfb2
+      X-Runtime:
+      - '0.086851'
+      Strict-Transport-Security:
+      - max-age=2592000; includeSubdomains
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: US-ASCII
+      string: ! '{"code":200,"message":"OK"}'
+    http_version: 
+  recorded_at: Thu, 23 May 2013 12:01:39 GMT
+recorded_with: VCR 2.2.5
