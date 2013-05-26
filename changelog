@@ -14,3 +14,4 @@
 2013-05-26 Omri Cohen
 1. Adding support in purchase.rb for order_date and currency_iso
 2. increasing version to 0.0.7
+3. fixing the purchases mass create functionality, increasing to 0.0.8

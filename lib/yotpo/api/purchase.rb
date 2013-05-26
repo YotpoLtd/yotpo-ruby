@@ -18,6 +18,7 @@ module Yotpo
     def create_new_purchases(params)
       request = {
           utoken: params[:utoken],
+          platform: params[:platform],
           orders: params[:orders]
       }
       app_key = params[:app_key]
