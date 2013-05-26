@@ -91,6 +91,53 @@ response.body.bottomline.average_score
 
 Now lets try something a little bit more complicated. Lets try to create a purchase. 
 
+For that we will need to go through Yotpo authenticaton process, provide an app_key and secret, and return to get the utoken. The utoken will allow us to make authenticated API calls. 
+
+```ruby
+ak = "d3n27Sg0eP8MHmVCHfPdQzyxjhwIEeV5cBKhoggC" #remember to replace the APP_KEY with your own.
+st = "adsfasdf68ads6fadsfkjbhkljhciolqewrnqwew" #remember to replace the SECRET with your own.
+
+
+# retrieving the utoken - will be valid for 24 hours
+response = Yotpo.get_oauth_token :app_key => ak, :secret => st
+utoken = response.body.access_token
+
+#first creating the products that are in the order, notice that the key of the product hash is the product_sku
+products = {
+            "BLABLA1" => {
+                    :url => "http://shop.yotpo.com/products/amazing-yotpo-poster", 
+                    :name => "Yotpo Amazing Poster", 
+                    :image_url => "http://cdn.shopify.com/s/files/1/0098/1912/products/qa2_medium.png?41", 
+                    :description => "this is the most awesome poster in the world!", 
+                    :price => "100"
+                }
+            }
+
+# now we will create a purchase using this the token we have received in the previous step
+
+response = Yotpo.create_new_purchase    :app_key => ak, 
+                                        :utoken => utoken, 
+                                        :email => "trial@yotpo.com", 
+                                        :customer_name => "bob", 
+                                        :order_id => "12999", 
+                                        :platform => "Shopify", 
+                                        :order_date => "2013-05-28", 
+                                        :products => products, 
+                                        :currency_iso => "USD"
+                                        
+#making sure our request went through
+
+raise Exception unless response.body.code == 200 
+                                        
+```
+
+We can pull all the purchases of a certain account to make sure that the previous calls has worked
+
+```ruby
+
+response = Yotpo.get_purchases :app_key => ak, :utoken => utoken, :since_date => "2013-05-26"
+
+```
 
 
 [register]: https://www.yotpo.com/register
