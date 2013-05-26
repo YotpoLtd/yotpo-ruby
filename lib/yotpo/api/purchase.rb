@@ -5,6 +5,8 @@ module Yotpo
           utoken: params[:utoken],
           email: params[:email],
           customer_name: params[:customer_name],
+          order_date: params[:order_date],
+          currency_iso: params[:currency_iso],
           order_id: params[:order_id],
           platform: params[:platform],
           products: params[:products]

@@ -1,0 +1,16 @@
+############################################################
+## PLEASE ADD NEW CHANGES AT THE *BOTTOM* !!
+##
+## Change format:
+##
+## YYYY-MM-DD Commiter Name
+## 1. Change one
+## 2. Change two
+##
+## Please allow single line space line from the last commit
+##
+############################################################
+
+2013-05-26 Omri Cohen
+1. Adding support in purchase.rb for order_date and currency_iso
+2. increasing version to 0.0.7
