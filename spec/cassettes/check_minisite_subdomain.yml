@@ -2,98 +2,98 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/subomain_check/shalom1?utoken=SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/subomain_check/shalom1?utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:50 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"9c50c01193944b740719a84607eeaaa0"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 0668e57638cd193f8611b3830adab954
-      X-Runtime:
-      - '0.048419'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:38 GMT
+      Etag:
+      - '"9c50c01193944b740719a84607eeaaa0"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 7f6b04640922626f263421850f690069
+      X-Runtime:
+      - '0.009236'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '106'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"subdomain":{"available":"true","subdomain":"shalom1"}}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"subdomain":{"available":"true","subdomain":"shalom1"}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:50 GMT
+  recorded_at: Sun, 19 Jul 2015 07:31:38 GMT
 - request:
     method: get
-    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/bottom_lines?utoken=SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/bottom_lines?utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:54 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"3bd4ea3f4ca23a43afb807a0c6716b41"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 03d1b28badec093fa1baac500c01b002
-      X-Runtime:
-      - '0.053200'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:40 GMT
+      Etag:
+      - '"b18b1a5e5b4f24aa1bc24d8df541a235"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - ffc772913acdbd209952de88a7cdc65c
+      X-Runtime:
+      - '0.014414'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '198'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"bottomlines":[{"domain_key":"D-4771","product_score":"2.92","total_reviews":103},{"domain_key":"S5","product_score":"4.5","total_reviews":2},{"domain_key":"123","product_score":"5.0","total_reviews":4}]}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"bottomlines":[{"domain_key":"120915246","product_score":"4.0","total_reviews":1},{"domain_key":"D-4771","product_score":"4.0","total_reviews":2}]}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:54 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:40 GMT
+recorded_with: VCR 2.9.3

@@ -2,53 +2,53 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/reviews/dynamic_create?appkey=nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG&display_name=User%20Name&email=user@email.com&product_description=Nullam%20ultrices%20purus%20a%20metus%20porttitor%20hendrerit.%20Vivamus%20accumsan%20congue%20urna%20a%20viverra.%20Nam%20molestie%20euismod%20est,%20vitae%20sollicitudin%20velit%20scelerisque%20vel.%20Quisque%20feugiat,%20metus%20sed%20tempus%20malesuada,%20quam%20erat%20volutpat%20metus,%20a%20tempor%20felis%20est%20id%20purus.%20Ut%20nec%20felis%20nunc,%20id%20cursus%20magna.%20Mauris%20sollicitudin%20ultrices%20velit%20vitae%20viverra.%20Nulla%20faucibus%20lacus%20id%20nisl%20euismod%20porta.%20Curabitur%20mi%20magna,%20tempus%20tristique%20commodo%20sit%20amet,%20imperdiet%20in%20eros.%20Proin%20eros%20arcu,%20ornare%20in%20lobortis%20eu,%20posuere%20ut%20risus.%20Quisque%20fermentum%20varius%20nibh,%20id%20aliquet%20lectus%20congue%20quis.%20In%20placerat%20arcu%20at%20libero%20posuere%20eleifend.%20Donec%20lacinia%20mollis%20lacus,%20at%20aliquam%20nisi%20molestie%20nec.%20Cras%20eleifend%20gravida%20nulla,%20vitae%20mollis%20eros%20varius%20eleifend.%20Pellentesque%20elit%20sem,%20lacinia%20eget%20fringilla%20vitae,%20condimentum%20eu%20quam.%20Proin%20quis%20orci%20arcu,%20ut%20suscipit%20arcu.&product_image_url=https://www.google.com/images/srpr/logo4w.png&product_title=Product%20Title&product_url=https://www.google.com/?q=pforducturl&review_content=Integer%20feugiat%20nunc%20non%20leo%20vehicula%20bibendum.%20Nulla%20at%20tortor%20at%20nulla%20faucibus%20suscipit.%20Curabitur%20sodales%20est%20vel%20orci%20lobortis%20convallis.%20Vestibulum%20sit%20amet%20tellus%20neque,%20ac%20euismod%20arcu.%20Phasellus%20a%20nunc%20ultrices%20erat%20condimentum%20facilisis.%20Donec%20a%20odio%20in%20ligula%20vestibulum%20lobortis.%20Mauris%20posuere,%20justo%20tincidunt%20tincidunt%20interdum,%20felis%20velit%20venenatis%20augue,%20vel%20rhoncus%20purus%20turpis%20ut%20magna.%20Quisque%20consequat%20elit%20vitae%20enim%20molestie%20mattis.%20Class%20aptent%20taciti%20sociosqu%20ad%20litora%20torquent%20per%20conubia%20nostra,%20per%20inceptos%20himenaeos.%20Curabitur%20adipiscing%20consequat%20lectus%20eu%20pulvinar.%20Vestibulum%20ante%20ipsum%20primis%20in%20faucibus%20orci%20luctus%20et%20ultrices%20posuere%20cubilia%20Curae&review_score=4.5&review_title=Fusce%20commodo%20felis%20quis%20turpis%20fringilla%20egestas&sku=D-4771
+    uri: https://api.yotpo.com/reviews/dynamic_create?appkey=3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy&display_name=User%20Name&email=user@email.com&product_description=Nullam%20ultrices%20purus%20a%20metus%20porttitor%20hendrerit.%20Vivamus%20accumsan%20congue%20urna%20a%20viverra.%20Nam%20molestie%20euismod%20est,%20vitae%20sollicitudin%20velit%20scelerisque%20vel.%20Quisque%20feugiat,%20metus%20sed%20tempus%20malesuada,%20quam%20erat%20volutpat%20metus,%20a%20tempor%20felis%20est%20id%20purus.%20Ut%20nec%20felis%20nunc,%20id%20cursus%20magna.%20Mauris%20sollicitudin%20ultrices%20velit%20vitae%20viverra.%20Nulla%20faucibus%20lacus%20id%20nisl%20euismod%20porta.%20Curabitur%20mi%20magna,%20tempus%20tristique%20commodo%20sit%20amet,%20imperdiet%20in%20eros.%20Proin%20eros%20arcu,%20ornare%20in%20lobortis%20eu,%20posuere%20ut%20risus.%20Quisque%20fermentum%20varius%20nibh,%20id%20aliquet%20lectus%20congue%20quis.%20In%20placerat%20arcu%20at%20libero%20posuere%20eleifend.%20Donec%20lacinia%20mollis%20lacus,%20at%20aliquam%20nisi%20molestie%20nec.%20Cras%20eleifend%20gravida%20nulla,%20vitae%20mollis%20eros%20varius%20eleifend.%20Pellentesque%20elit%20sem,%20lacinia%20eget%20fringilla%20vitae,%20condimentum%20eu%20quam.%20Proin%20quis%20orci%20arcu,%20ut%20suscipit%20arcu.&product_image_url=https://www.google.com/images/srpr/logo4w.png&product_title=Product%20Title&product_url=https://www.google.com/?q=pforducturl&review_content=Integer%20feugiat%20nunc%20non%20leo%20vehicula%20bibendum.%20Nulla%20at%20tortor%20at%20nulla%20faucibus%20suscipit.%20Curabitur%20sodales%20est%20vel%20orci%20lobortis%20convallis.%20Vestibulum%20sit%20amet%20tellus%20neque,%20ac%20euismod%20arcu.%20Phasellus%20a%20nunc%20ultrices%20erat%20condimentum%20facilisis.%20Donec%20a%20odio%20in%20ligula%20vestibulum%20lobortis.%20Mauris%20posuere,%20justo%20tincidunt%20tincidunt%20interdum,%20felis%20velit%20venenatis%20augue,%20vel%20rhoncus%20purus%20turpis%20ut%20magna.%20Quisque%20consequat%20elit%20vitae%20enim%20molestie%20mattis.%20Class%20aptent%20taciti%20sociosqu%20ad%20litora%20torquent%20per%20conubia%20nostra,%20per%20inceptos%20himenaeos.%20Curabitur%20adipiscing%20consequat%20lectus%20eu%20pulvinar.%20Vestibulum%20ante%20ipsum%20primis%20in%20faucibus%20orci%20luctus%20et%20ultrices%20posuere%20cubilia%20Curae&review_score=4.5&review_title=Fusce%20commodo%20felis%20quis%20turpis%20fringilla%20egestas&sku=D-4771
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.6
+      - Ruby0.0.8
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:38:40 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"f1bb06922c9e6137ffc5434df16e3a75"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yotpo-api-1_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTViNjc2NTFhZGY4MDFiZTdkMGU5MDk0NzVjMzk1NGIwBjsAVEkiFmFub255bW91c191c2VyX2lkBjsARmlx--1ff1e8c5b273920b3796474f8bd12c5d1aeaaf61;
-        path=/; HttpOnly
-      X-Request-Id:
-      - fbe03cb1100efe0501c3118caa139a39
-      X-Runtime:
-      - '0.313869'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:41 GMT
+      Etag:
+      - '"a4059c55e23392335326ee2c49efea9d"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7B0kiD3Nlc3Npb25faWQGOgZFRkkiJTMxNWEzMWQ1Y2M1YjE5ZjU2MzI0M2I2NTc5N2U0MGQ0BjsAVEkiFmFub255bW91c191c2VyX2lkBjsARmkDDbwz--6d6c43af8f8c79b8f69ee81d35a8aa1a52d80b3f;
+        path=/; HttpOnly
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 241cf958afbf9ee09b6144ed79eb6bcf
+      X-Runtime:
+      - '0.448344'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '2086'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"reviews":[{"id":112,"content":"Integer
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"reviews":[{"id":7286197,"content":"Integer
         feugiat nunc non leo vehicula bibendum. Nulla at tortor at nulla faucibus
         suscipit. Curabitur sodales est vel orci lobortis convallis. Vestibulum sit
         amet tellus neque, ac euismod arcu. Phasellus a nunc ultrices erat condimentum
@@ -58,9 +58,10 @@ http_interactions:
         aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
         himenaeos. Curabitur adipiscing consequat lectus eu pulvinar. Vestibulum ante
         ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae","title":"Fusce
-        commodo felis quis turpis fringilla egestas","score":4,"user":{"id":108,"display_name":"User
-        Name","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"https://www.google.com/?q=pforducturl","id":1,"name":"Product
-        Title","slug":"product-title","shorten_url":"https://yotpo.com/go/12","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/13","twitter":"https://yotpo.com/go/14","linkedin":"https://yotpo.com/go/15","google_oauth2":"https://yotpo.com/go/16"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/17"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-23T14:38:40Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}}]}}'
+        commodo felis quis turpis fringilla egestas","score":4,"user":{"id":3390477,"display_name":"User
+        Name","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png","is_social_connected":false},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"https://www.google.com/?q=pforducturl","id":6558012,"name":"Product
+        Title","slug":"product-title--429","shorten_url":"https://yotpo.com/go/nctaEi4i","images":[{"id":6299789,"image_url":"http://ddcfq0gxiontw.cloudfront.net/Product/6558012/6299789/square.png?1437290724"}],"social_network_links":{"facebook":"https://yotpo.com/go/mIKr0eLD","twitter":"https://yotpo.com/go/6CErRDs8","linkedin":"https://yotpo.com/go/qOlRaVyn","google_oauth2":"https://yotpo.com/go/fPbH9hd3"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/e661Twhb"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2015-07-19T07:31:41Z","deleted":false,"new":true,"verified_buyer":false,"archived":false,"social_pushed":false,"facebook_pushed":0,"twitter_pushed":0,"account":{"id":19699,"domain":"http://vlad-test-shop.myshopify.com"},"products_apps":[{"id":6481683,"product_url":"https://www.google.com/?q=pforducturl","domain_key":"D-4771","product":{"id":6558012,"name":"Product
+        Title"}}]}]}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:38:40 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Sun, 19 Jul 2015 07:31:41 GMT
+recorded_with: VCR 2.9.3

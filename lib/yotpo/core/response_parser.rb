@@ -3,16 +3,9 @@ require 'faraday_middleware/response_middleware'
 
 module Yotpo
   class ResponseParser < Faraday::Response::Middleware
-    def call(env)
-      # "env" contains the request
-      @app.call(env).on_complete do
-        body = false
-        if env[:status] == 200
-          body = env[:response].body.response || env[:response].body
-        elsif env[:response] && env[:response].body && env[:response].body.status
-          body = env[:response].body.status
-        end
-        env[:body] = body
+    def parse(body)
+      unless body.empty?
+        body.response || body.status || body
       end
     end
   end
@@ -80,5 +73,5 @@ module Yotpo
   end
 end
 
-Faraday.register_middleware :response, oj: Yotpo::ParseOj
-Faraday.register_middleware :request, oj: Yotpo::EncodeOj
+Faraday::Response.register_middleware oj: Yotpo::ParseOj
+Faraday::Request.register_middleware oj: Yotpo::EncodeOj

@@ -2,16 +2,16 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/account_platform
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/account_platform
     body:
       encoding: UTF-8
-      string: ! '{"account_platform":{"shop_token":"asdasdadads","shop_domain":"yahoo.com","plan_name":"test
-        plan","platform_type_id":1,"deleted":false},"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A"}'
+      string: '{"account_platform":{"shop_token":"asdasdadads","shop_domain":"yahoo.com","plan_name":"test
+        plan","platform_type_id":1,"deleted":false},"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC"}'
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
       Content-Type:
       - application/json
   response:
@@ -19,40 +19,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:53 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"a256df543f1a87337d22e71180e5dd02"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTM4ZTJmNzk1Y2QyNTRiZmMzZDBjNDJmNDg4ZWM0MjRiBjsAVA%3D%3D--8308bb590105ad5cf5c422f4180038cd0504663f;
-        path=/; HttpOnly
-      X-Request-Id:
-      - 9a131cbb7ece84043cc91038980b6a8b
-      X-Runtime:
-      - '0.051893'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:39 GMT
+      Etag:
+      - '"8186bb3d10d92194eed51d7a44ea5798"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - d7754e43647397d5716cd122bd54358f
+      X-Runtime:
+      - '0.125850'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '577'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"account_platform":{"id":1,"shop_token":null,"shop_domain":null,"plan_name":null,"platform_type":{"id":2,"name":"general","description":"users
-        that signup for general purpose","billable":false},"deleted":null,"shop_user_name":null,"secondary_cancelled_charge_at":null,"secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null}}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"account_platform":{"id":19340,"shop_token":"0ececa38a17419d3d3bd2326ff4fe967","shop_secret":null,"shop_domain":"vlad-test-shop.myshopify.com","plan_name":"affiliate","platform_type":{"id":1,"name":"shopify","description":"cool
+        e-commerece host and platform","billable":true},"deleted":false,"shop_user_name":null,"secondary_cancelled_charge_at":"2013-10-01T13:17:27Z","secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null,"encrypted_data":null,"integration_version":"current"}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:53 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:38 GMT
+recorded_with: VCR 2.9.3

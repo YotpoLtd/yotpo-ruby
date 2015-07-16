@@ -5,13 +5,13 @@ http_interactions:
     uri: https://api.yotpo.com/users
     body:
       encoding: UTF-8
-      string: ! '{"user":{"email":"newuser@email.com","display_name":"User Name","first_name":"First
+      string: '{"user":{"email":"newuser4@email.com","display_name":"User Name","first_name":"First
         Name","last_name":"Last Name","website_name":"My Awesome Web Site","password":"thisispass","support_url":"https://www.google.com/support","callback_url":"https://www.google.com/callback","url":"https://www.google.com"}}'
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
       Content-Type:
       - application/json
   response:
@@ -19,39 +19,39 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:53 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"052a094cc26bad9db147f9f83b4a8e9a"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yotpo-api-1_session=BAh7CEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjoGRVRbCEkiCVVzZXIGOwBGWwZpDkkiFGFzZGZhZHNmYXNkZmFkcwY7AEZJIh13YXJkZW4udXNlci51c2VyLnNlc3Npb24GOwBUewZJIhRsYXN0X3JlcXVlc3RfYXQGOwBGSXU6CVRpbWUN7lIcwPuSXEsGOgtAX3pvbmVJIghVVEMGOwBUSSIPc2Vzc2lvbl9pZAY7AEZJIiU5YzUwNzUzMDQxZjc1ZGZlNDQyYzE3NjNmZjIyOGM2OQY7AFQ%3D--f0464b322e5de2dac2f0335eaa70575533f5ff1b;
-        path=/; HttpOnly
-      X-Request-Id:
-      - f2b8569d3620bf5b25ca431f9494b409
-      X-Runtime:
-      - '0.327660'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:40 GMT
+      Etag:
+      - '"6e07503d37d609319a7c76847b323f54"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Set-Cookie:
+      - _yotpo-api-1_session=BAh7CEkiD3Nlc3Npb25faWQGOgZFRkkiJTViM2I0MTI4YmI2M2E0MDY4NzYwZTQ3NTc3NTM4NzMyBjsAVEkiGXdhcmRlbi51c2VyLnVzZXIua2V5BjsAVFsISSIJVXNlcgY7AEZbBmkDmCc3SSIUYXNkZmFkc2Zhc2RmYWRzBjsARkkiHXdhcmRlbi51c2VyLnVzZXIuc2Vzc2lvbgY7AFR7BkkiFGxhc3RfcmVxdWVzdF9hdAY7AEZJdToJVGltZQ1n2hzA%2Fi%2BHfgk6C0Bfem9uZUkiCFVUQwY7AFQ6DW5hbm9fbnVtaWg6DW5hbm9fZGVuaQY6DXN1Ym1pY3JvIgcJkA%3D%3D--dcb0ebf873d25db240e6ef316db9c757ad6620a7;
+        path=/; HttpOnly
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - c464da5cb0361b34fc9839ca58eb3bd0
+      X-Runtime:
+      - '0.638033'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '225'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"user_id":9,"token":"66YHgLWUfRopeTBLAjGtTCDCsnHHuMD1oKJ7m4tj","app_key":"byrktwaT76y0mKpBKyajf2fPxbHUQ7lN8kgvhcAp","secret":"wKdvGjywHYXltsP8JfpiQB6JXuS7yymNmaLlA3QT"}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"user_id":3614616,"token":"GmASkoy7Y0WulCCdo1bzst9tm9dEif42LJZ1VJYF","app_key":"yqvXSGuouqW2Tzbqg6bn68QZebJZWVmXxNk5Ymdk","secret":"sMoEcYmxkbnLgiMrNndvNa7vJfAwwXqw2t3AmM6V"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:53 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:40 GMT
+recorded_with: VCR 2.9.3

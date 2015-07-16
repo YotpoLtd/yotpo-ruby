@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: put
-    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy
     body:
       encoding: UTF-8
-      string: ! '{"account":{"minisite_website_name":"Minisite Name","minisite_website":"www.google.com","minisite_subdomain":"google","minisite_cname":"reviews.google.com","minisite_subdomain_active":true},"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A"}'
+      string: '{"account":{"minisite_website_name":"Minisite Name","minisite_website":"www.google.com","minisite_subdomain":"google","minisite_cname":"reviews.google.com","minisite_subdomain_active":false},"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC"}'
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
       Content-Type:
       - application/json
   response:
@@ -18,45 +18,58 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:51 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"c5655713a352c8ca14003b519ffe6b79"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJThmMDViZmZhM2Y2NjZiYzZiNDgzN2VkMmY1OTA2MjliBjsAVA%3D%3D--4b285c4b343d479a31f0fe9831b2891693a87751;
-        path=/; HttpOnly
-      X-Request-Id:
-      - 3132294910a28304086212eb81515016
-      X-Runtime:
-      - '0.157990'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:38 GMT
+      Etag:
+      - '"a64c729b095276431d213749a5e94440"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - c3d654235ad14d5c65780b629d12ceb6
+      X-Runtime:
+      - '0.343236'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '3867'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"app":{"app_key":"nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG","domain":"hammes.biz","minisite_subdomain":"google","minisite_cname":"reviews.google.com","minisite_website":"www.google.com","minisite_website_name":"Minisite
-        Name","referal":"","active":true,"auto_publish":true,"minisite_subdomain_active":true,"account_type":{"id":1,"name":"small","description":"dummy
-        description","price":14.9},"account_socials":[],"account_platform":{"id":1,"shop_token":null,"shop_domain":null,"plan_name":null,"platform_type_id":2,"deleted":null,"shop_user_name":null,"secondary_cancelled_charge_at":null,"secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null,"platform_type":{"id":2,"name":"general","description":"users
-        that signup for general purpose","billable":false}},"bills":[],"users":[{"id":4,"display_name":"Vladislav
-        Shub","slug":"vladislavshub"}],"reminders":[{"id":1,"account_id":5,"days_from_purchase":11,"subject":"Please
-        review your recent purchases at {store_name}","body":null}],"custom_design":false,"created_at":"2013-05-19T14:00:44Z","updated_at":"2013-05-23T14:18:51Z","auto_login_popup":false,"bottom_line_installed":false,"install_step":"0","customer_language":"en","auto_social_push":false,"customer_mails_sender_name":"Rogahn,
-        Murray and Bartoletti","testimonials_enabled":false,"testimonials_custom":false,"testimonials_floater_position":null,"testimonials_label":null,"testimonials_default_tab":"product_tab","features":[]}}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"app":{"app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","domain":"http://vlad-test-shop.myshopify.com","minisite_subdomain":"google","name":"vlad
+        test shop ","url":"http://vlad-test-shop.myshopify.com","minisite_cname":"reviews.google.com","minisite_website":"www.google.com","minisite_website_name":"Minisite
+        Name","referal":"","active":true,"auto_publish":true,"minisite_subdomain_active":false,"account_type":{"id":1,"name":"small","description":"dummy
+        description","price":14.9},"account_socials":[],"account_platform":{"id":19340,"shop_token":"0ececa38a17419d3d3bd2326ff4fe967","shop_secret":null,"shop_domain":"vlad-test-shop.myshopify.com","plan_name":"affiliate","platform_type_id":1,"deleted":false,"shop_user_name":null,"secondary_cancelled_charge_at":"2013-10-01T13:17:27Z","secondary_activated_charge_at":null,"secondary_recurring_charge_id":null,"secondary_shop_token":null,"platform_type":{"id":1,"name":"shopify","description":"cool
+        e-commerece host and platform","billable":true},"integration_version":"current"},"account_service_providers":[],"bills":[],"users":[{"id":211058,"display_name":"Vladislav
+        Shub","slug":"vladislav-shub--5","email":"vladislav@yotpo.com"}],"reminders":[{"id":22179,"account_id":19699,"days_from_purchase":14,"subject":"Please
+        review your recent purchases at {store_name}","header":"Write a review to
+        receive a coupon for 20% off on your next purchase!\nHello {user},\nYou''ve
+        recently bought {product}, what do you think about it?","bottom":"We really
+        appreciate your feedback and hope to see you again soon.\n\nThank you from
+        {store_name}","mail_interval":5,"max_products":3}],"custom_design":false,"created_at":"2013-09-30T08:22:10Z","updated_at":"2015-07-19T07:31:38Z","secret":"ZeAbRfZQl8dIohaVuPiFPLbc9a0P1wdFRuOuk6ON","auto_login_popup":false,"bottom_line_installed":false,"install_step":"done","customer_language":"en","auto_social_push":false,"customer_mails_sender_name":"vlad-test-shop.myshopify.com","testimonials":{"default_tab":"product_tab","show_tab":"both"},"coupons":[{"id":3917,"account_id":19699,"thank_you":"Thank
+        you for writing a review","enabled":true,"action":"map_review","discount":"20%
+        off","code":"d5bf04ty","unique":false},{"id":3918,"account_id":19699,"thank_you":"","enabled":true,"action":"map_share","discount":"20%
+        off","code":"","unique":false},{"id":3919,"account_id":19699,"thank_you":"Thank
+        you for writing and sharing your review","enabled":true,"action":"map_review_share","discount":"20%
+        off","code":"d5bf04ty","unique":false}],"map_up_sell_title":null,"tracking_code_status":{"status":"NotInstalled","enable_date":"2013-12-17T08:12:17Z"},"coupon_reminder":{"id":2272,"subject":"Don''t
+        forget to redeem your coupon at {store_name}!","body":"Your coupon at {store_name}
+        will expire in {days_interval} days.","reminder_type":"days_before_expiration","days_interval":3},"coupons_expiration_date":"2014-02-15","account_emails":[{"id":7538,"account_id":19699,"email_type_id":2,"data":{"header":"Hello
+        {user},\nPlease fill out the form below and submit your site review, it would
+        be very much appreciated.","subject":"{store_name} - We would love to hear
+        your thoughts","bottom":"Thanks so much and we hope to see you again soon
+        :) &#13;&#10; - {store_name}"},"days_delay":null}],"cloudsearch_account_id":1446175872,"package":{"id":5,"name":"Downgrade
+        Default","description":null,"trial_period":null,"started_at":"2014-01-01T09:53:59Z"},"features_usage_summary":{"questions_and_answers":false,"comments":false,"business_rules":false,"map_customization":false,"testimonials_review_request":false},"data_for_events":{"total_orders":10,"total_reviews":3,"score":null,"downgraded":false,"total_review_request":null,"total_frozen_review_request":null,"interval_review_request":null},"installed":0,"star_installed":false,"partner_key":null}}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:51 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:38 GMT
+recorded_with: VCR 2.9.3

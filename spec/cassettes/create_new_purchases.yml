@@ -2,17 +2,17 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.yotpo.com/apps/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/purchases/mass_create
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/purchases/mass_create
     body:
       encoding: UTF-8
-      string: ! '{"utoken":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A","orders":[{"email":"another@one.com","customer_name":"Another
+      string: '{"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC","platform":null,"orders":[{"email":"another@one.com","customer_name":"Another
         Name","order_id":"123","platform":"shopify","products":[{"p1":{"url":"http://example_product_url1.com","name":"product1","image":"http://example_product_image_url1.com","description":"this
         is the description of a product"}}]}]}'
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
       Content-Type:
       - application/json
   response:
@@ -20,39 +20,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:52 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"c09c7c5e1681219e88278dab7a45d672"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      Set-Cookie:
-      - _yotpo-api-1_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTcyMjg2YTIzMTU3YWNmZTNjZWE4Zjk4NWM4NjEzMGRjBjsAVA%3D%3D--e8fec5b0273c668afe06ca5d4908b43d79e07829;
-        path=/; HttpOnly
-      X-Request-Id:
-      - a111f7d451fc7c8819e85e51bbbec6e3
-      X-Runtime:
-      - '0.053530'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:39 GMT
+      Etag:
+      - '"ff338c05e925e0da825f92d06e112107"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - c32ec0e70c07402aaf098ecb0a8b0acf
+      X-Runtime:
+      - '0.016271'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"code":500,"message":"Failure. no such platform: "}'
+      encoding: UTF-8
+      string: '{"code":200,"message":"OK"}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:52 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:39 GMT
+recorded_with: VCR 2.9.3

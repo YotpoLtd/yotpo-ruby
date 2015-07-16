@@ -2,50 +2,50 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/users/b2blogin.json?app_key=nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG&secret=YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm
+    uri: https://api.yotpo.com/users/b2blogin.json?app_key=3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy&secret=ZeAbRfZQl8dIohaVuPiFPLbc9a0P1wdFRuOuk6ON
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:54 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"0ddda42c4bd01a653f26a396e27c7416"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 3a79ff829adbc1354eab3b8bae621dd0
-      X-Runtime:
-      - '0.053795'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:39 GMT
+      Etag:
+      - '"8619abaf42a59907bebeb31e06b45728"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 75f45434fa79708bafd6558df5639890
+      X-Runtime:
+      - '0.050077'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '208'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"code":"2I6V5iWi4JA26fr8ZiGc","signin_url":"https://www.yotpo.com/callbacks/login?code=2I6V5iWi4JA26fr8ZiGc"}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"code":"HOO04tTgG97HmGlyRI7a","signin_url":"https://my.yotpo.com/callbacks/login?code=HOO04tTgG97HmGlyRI7a&app_key=3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:54 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:39 GMT
+recorded_with: VCR 2.9.3

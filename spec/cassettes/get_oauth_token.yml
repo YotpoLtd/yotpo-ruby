@@ -5,12 +5,12 @@ http_interactions:
     uri: https://api.yotpo.com/oauth/token
     body:
       encoding: UTF-8
-      string: ! '{"client_id":"nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG","client_secret":"YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm","grant_type":"client_credentials"}'
+      string: '{"client_id":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","client_secret":"ZeAbRfZQl8dIohaVuPiFPLbc9a0P1wdFRuOuk6ON","grant_type":"client_credentials"}'
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
       Content-Type:
       - application/json
   response:
@@ -18,36 +18,36 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:50 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"bc5ec6ac4a121357f6c4b7c8e99cb7b7"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - 37436319f154d22d353439bde023d62e
-      X-Runtime:
-      - '0.067003'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:37 GMT
+      Etag:
+      - '"b3c4b3ffba9e6f4b76884d57508bd33d"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - d8c43201f96ed6790433c6bd46d6721c
+      X-Runtime:
+      - '0.025954'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '81'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"access_token":"SjXjHQ01wUj7dezYWbqCT4aixbY4UudTJReqxk2A","token_type":"bearer"}'
+      encoding: UTF-8
+      string: '{"access_token":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC","token_type":"bearer"}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:50 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:37 GMT
+recorded_with: VCR 2.9.3

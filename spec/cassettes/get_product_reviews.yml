@@ -2,71 +2,54 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/products/nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG/D-4771/reviews?count=5&page=1
+    uri: https://api.yotpo.com/products/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/120915246/reviews?count=5&page=1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.8.7
+      - Faraday v0.9.1
       Yotpo-Api-Connector:
-      - Ruby0.0.5
+      - Ruby0.0.8
   response:
     status:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx/1.2.1
-      Date:
-      - Thu, 23 May 2013 14:18:51 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Status:
-      - 200 OK
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Etag:
-      - ! '"7bf5b2b4ec3cb7fe59a3a2c105822164"'
+      Access-Control-Allow-Credentials:
+      - 'true'
       Cache-Control:
       - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e7641be3eeabd986ab3a472926f7fb8d
-      X-Runtime:
-      - '0.588107'
-      Strict-Transport-Security:
-      - max-age=2592000; includeSubdomains
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 19 Jul 2015 07:31:41 GMT
+      Etag:
+      - '"380ac347b2304fc3840ae1d5adb88381"'
       P3p:
       - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
         CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Server:
+      - nginx
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 2258ecd00fdaa8f7db4936233fc4737b
+      X-Runtime:
+      - '0.004949'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Content-Length:
+      - '1510'
+      Connection:
+      - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"status":{"code":200,"message":"OK"},"response":{"total_reviews":102,"reviews":[{"id":108,"content":"Sunt
-        exercitationem voluptates alias omnis accusantium rerum. Voluptatum ab sit
-        optio maxime non. Laboriosam harum quos eos aperiam aliquam. Ut nihil illum
-        dicta rerum provident cupiditate. Qui ex vel eos in quia.","title":"Et sed
-        eligendi tenetur nam ut distinctio consequatur sit.","score":0,"user":{"id":104,"display_name":"uriah.bartell","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://haley.us","id":1,"name":"Trunt
-        Portable Viewer","slug":"trunt-portable-viewer","shorten_url":"https://yotpo.com/go/w","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/x","twitter":"https://yotpo.com/go/y","linkedin":"https://yotpo.com/go/z","google_oauth2":"https://yotpo.com/go/10"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/11"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-23T14:12:46Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":107,"content":"Odit
-        dolorem necessitatibus libero doloribus. Veniam repudiandae voluptas voluptatem
-        aut fugit ut. Quos eos nam consequuntur sed animi incidunt. Amet qui at libero
-        molestias. Quis repudiandae ducimus facilis quae dolorem quasi consequatur
-        quod.","title":"Non dolor ipsam unde tenetur rerum et eius.","score":0,"user":{"id":103,"display_name":"diana","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://haley.us","id":1,"name":"Trunt
-        Portable Viewer","slug":"trunt-portable-viewer","shorten_url":"https://yotpo.com/go/w","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/x","twitter":"https://yotpo.com/go/y","linkedin":"https://yotpo.com/go/z","google_oauth2":"https://yotpo.com/go/10"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/11"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-23T12:07:59Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":96,"content":"Molestias
-        quae pariatur corrupti sit vel. Nobis neque ea facere possimus. Sequi pariatur
-        totam suscipit tenetur voluptatem. Eum dolorem ipsa rerum illo autem voluptatem
-        ex.","title":"Ipsam consequuntur et voluptas.","score":4,"user":{"id":96,"display_name":"noble","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://haley.us","id":1,"name":"Trunt
-        Portable Viewer","slug":"trunt-portable-viewer","shorten_url":"https://yotpo.com/go/w","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/x","twitter":"https://yotpo.com/go/y","linkedin":"https://yotpo.com/go/z","google_oauth2":"https://yotpo.com/go/10"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/11"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":97,"content":"Voluptatibus
-        ducimus reprehenderit consequatur tenetur sit. Unde doloribus ut laudantium
-        maxime. Nam cumque ipsam eaque. Quae repudiandae voluptatibus ratione ut magnam
-        tempore molestiae.","title":"Velit ad quo a eum esse corporis ut.","score":2,"user":{"id":97,"display_name":"dudley","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://haley.us","id":1,"name":"Trunt
-        Portable Viewer","slug":"trunt-portable-viewer","shorten_url":"https://yotpo.com/go/w","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/x","twitter":"https://yotpo.com/go/y","linkedin":"https://yotpo.com/go/z","google_oauth2":"https://yotpo.com/go/10"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/11"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}},{"id":98,"content":"Dolorem
-        similique et temporibus. Aut voluptatum sit officia voluptatem corporis nemo
-        impedit. Ipsam ut in dolore excepturi.","title":"In ea aut quisquam non.","score":2,"user":{"id":98,"display_name":"esmeralda","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png"},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://haley.us","id":1,"name":"Trunt
-        Portable Viewer","slug":"trunt-portable-viewer","shorten_url":"https://yotpo.com/go/w","images":[{"id":2,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/2/square.png?1368972049"},{"id":4,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/4/square.png?1369057866"},{"id":5,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/5/square.png?1369057869"},{"id":7,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/7/square.png?1369057872"},{"id":8,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/8/square.png?1369057872"},{"id":19,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/19/square.png?1369057960"},{"id":21,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/21/square.png?1369057964"},{"id":22,"image_url":"http://s3.amazonaws.com/yotpo-images-test/Product/1/22/square.png?1369057968"}],"social_network_links":{"facebook":"https://yotpo.com/go/x","twitter":"https://yotpo.com/go/y","linkedin":"https://yotpo.com/go/z","google_oauth2":"https://yotpo.com/go/10"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/11"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2013-05-19T14:00:57Z","deleted":false,"new":true,"distance":999,"verified_buyer":false,"archived":false,"facebook_pushed":false,"twitter_pushed":false,"social_pushed":false,"account":{"id":5,"domain":"hammes.biz"}}]}}'
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"total_reviews":1,"reviews":[{"id":7286135,"content":"asdadsa
+        asd asd asd asd","title":"asd asd asd ads","score":4,"user":{"id":3390467,"display_name":"aasdasd
+        asd","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png","is_social_connected":false},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"product_url":"http://vlad-test-shop.myshopify.com/collections/frontpage/products/test-product","id":817499,"name":"Test
+        Product","slug":"test-product--95","shorten_url":"https://yotpo.com/go/65ziFTpN","images":[{"id":850232,"image_url":"http://ddcfq0gxiontw.cloudfront.net/Product/817499/850232/square.png?1382372991"}],"social_network_links":{"facebook":"https://yotpo.com/go/24kEqVvP","twitter":"https://yotpo.com/go/ad27nebt","linkedin":"https://yotpo.com/go/vIp7dQEB","google_oauth2":"https://yotpo.com/go/uTqrjFn7"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/2a8aRbr5"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2015-07-19T07:21:28Z","deleted":false,"new":true,"verified_buyer":false,"archived":false,"social_pushed":false,"facebook_pushed":0,"twitter_pushed":0,"account":{"id":19699,"domain":"http://vlad-test-shop.myshopify.com"},"products_apps":[{"id":789680,"product_url":"http://vlad-test-shop.myshopify.com/collections/frontpage/products/test-product","domain_key":"120915246","product":{"id":817499,"name":"Test
+        Product"}}]}],"page":"1","per_page":"5"}}'
     http_version: 
-  recorded_at: Thu, 23 May 2013 14:18:51 GMT
-recorded_with: VCR 2.2.5
+  recorded_at: Sun, 19 Jul 2015 07:31:41 GMT
+recorded_with: VCR 2.9.3
