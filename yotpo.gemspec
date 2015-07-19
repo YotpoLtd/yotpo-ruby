@@ -11,6 +11,8 @@ Gem::Specification.new do |gem|
   gem.description   = %q{A Ruby interface to the YOTPO API}
   gem.summary       = %q{A Ruby interface to the YOTPO API}
   gem.homepage      = 'https://github.com/YotpoLtd/yotpo-ruby'
+  gem.license       = 'MIT'
+  gem.required_ruby_version = '>= 1.9.3'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
