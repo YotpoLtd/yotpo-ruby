@@ -22,7 +22,7 @@ describe Yotpo::Product do
   describe '#get_product_bottom_line' do
     before(:all) do
       get_bottom_line_params = {
-          product_id: 'D-4771',
+          product_id: '120915246',
           app_key: @app_key
       }
       VCR.use_cassette('get_product_bottom_line') do

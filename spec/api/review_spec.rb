@@ -35,9 +35,9 @@ describe Yotpo::Review do
     before(:all) do
       get_reviews_params = {
           page: 1,
-          count: 5,
+          count: 10,
           app_key: @app_key,
-          product_id: 'D-4771'
+          product_id: '120915246'
       }
       VCR.use_cassette('get_product_reviews') do
         @response = Yotpo.get_product_reviews(get_reviews_params)

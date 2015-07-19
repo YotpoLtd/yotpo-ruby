@@ -88,8 +88,6 @@ describe Yotpo::Purchase do
     it { should respond_to :product_url }
     it { should respond_to :order_date }
     it { should respond_to :product_description }
-    it { should respond_to :product_image }
-    it { should respond_to :delivery_date }
     it { should respond_to :created_at }
   end
 end

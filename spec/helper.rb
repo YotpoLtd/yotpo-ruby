@@ -26,8 +26,8 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
-    @app_key = 'nNgGNA54ETOqaXQ7hRZymxqdtwwetJKDVs0v8qGG'
-    @secret = 'YUFV3FrFHGbAJLPsOR8JebwUUhGJg9Z42XKj3Umm'
+    @app_key = '3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy'
+    @secret = 'ZeAbRfZQl8dIohaVuPiFPLbc9a0P1wdFRuOuk6ON'
     VCR.use_cassette('get_oauth_token') do
       @utoken ||= Yotpo.get_oauth_token({ app_key: @app_key, secret: @secret }).body.access_token
     end

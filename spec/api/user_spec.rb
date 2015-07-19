@@ -5,7 +5,7 @@ describe Yotpo::User do
   describe '#create_user' do
     before(:all) do
       @user_info = {
-          email: 'newuser@email.com',
+          email: 'newuser4@email.com',
           display_name: 'User Name',
           first_name: 'First Name',
           last_name: 'Last Name',
