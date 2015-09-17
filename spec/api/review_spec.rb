@@ -24,7 +24,7 @@ describe Yotpo::Review do
     end
 
     subject { @response.body.reviews[0] }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :id }
     it { should respond_to :user }
     it { should respond_to :content }
@@ -45,7 +45,7 @@ describe Yotpo::Review do
     end
 
     subject { @response.body.reviews[0] }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :id }
     it { should respond_to :user }
     it { should respond_to :content }

@@ -14,7 +14,7 @@ describe Yotpo::Reminder do
         end
       end
       subject { @response.body }
-      it { should be_a ::Hashie::Rash }
+      it { should be_a ::Hashie::Mash }
       it { should respond_to :code }
       it { should respond_to :message }
     end

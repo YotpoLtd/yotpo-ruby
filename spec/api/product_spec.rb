@@ -13,7 +13,7 @@ describe Yotpo::Product do
     end
 
     subject { @response.body.bottomlines[0] }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :domain_key }
     it { should respond_to :product_score }
     it { should respond_to :total_reviews }
@@ -31,7 +31,7 @@ describe Yotpo::Product do
     end
 
     subject { @response.body.bottomline }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :average_score }
     it { should respond_to :total_reviews }
   end

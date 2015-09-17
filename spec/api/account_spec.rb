@@ -17,8 +17,7 @@ describe Yotpo::Account do
       end
     end
     subject { @response.body.app }
-    it { should be_a ::Hashie::Rash }
-    it { should respond_to :id }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :app_key }
   end
 
@@ -34,7 +33,7 @@ describe Yotpo::Account do
       end
     end
     subject { @response.body.subdomain }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :available }
     it { should respond_to :subdomain }
 
