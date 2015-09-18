@@ -18,7 +18,7 @@ describe Yotpo::AccountPlatform do
     end
 
     subject { @response.body.account_platform }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :id }
     it { should respond_to :shop_token }
     it { should respond_to :shop_domain }

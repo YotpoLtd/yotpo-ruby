@@ -26,7 +26,7 @@ describe Yotpo::Purchase do
     end
 
     subject { @response.body }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :code }
     it { should respond_to :message }
   end
@@ -61,7 +61,7 @@ describe Yotpo::Purchase do
     end
 
     subject { @response.body }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :code }
     it { should respond_to :message }
   end
@@ -78,7 +78,7 @@ describe Yotpo::Purchase do
     end
 
     subject { @response.body.purchases[0] }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :id }
     it { should respond_to :user_email }
     it { should respond_to :user_name }

@@ -1,5 +1,13 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - 2.1.1
-  - ruby-head
+- 1.9.3
+- 2.1.1
+- ruby-head
+deploy:
+  provider: rubygems
+  api_key:
+    secure: D2DAEwJaeCncuki1aYww1uL/cafrRxCwKnuRiTsiN+xjsUX6K3r3swoELFEw1/zMRjUN5qW81pK3XnNt2MSALECon2JOC/wyt5H+jcxXWkKGmAG7/Lymva/REDVcWWaYbqWLHs8fj5M8lfIoKCfb8iyJTmhb+cBCaIzaz617Elc=
+  gem: yotpo
+  on:
+    branch: master
+    repo: YotpoLtd/yotpo-ruby

@@ -21,11 +21,11 @@ describe Yotpo::User do
       end
     end
     subject { @response.body }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :app_key }
     it { should respond_to :secret }
     it { should respond_to :token }
-    it { should respond_to :id }
+    it { should respond_to :user_id }
   end
 
   describe '#get_oauth_token' do
@@ -40,7 +40,7 @@ describe Yotpo::User do
       end
     end
     subject { @response.body }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :access_token }
     it { should respond_to :token_type }
   end
@@ -56,7 +56,7 @@ describe Yotpo::User do
       end
     end
     subject { @response.body }
-    it { should be_a ::Hashie::Rash }
+    it { should be_a ::Hashie::Mash }
     it { should respond_to :code }
     it { should respond_to :signin_url }
 

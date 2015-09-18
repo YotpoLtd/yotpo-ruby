@@ -17,7 +17,7 @@ module Yotpo
     # @option params [String] :review_title the review title
     # @option params [String Integer] :review_score the rating of the review
     # @option params [String] :utoken the token of the user who wrote the review (if one exists)
-    # @return [::Hashie::Rash] The new review with all of it's date
+    # @return [::Hashie::Mash] The new review with all of it's date
     def create_review(params)
       request = {
           appkey: params[:app_key],
