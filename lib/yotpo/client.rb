@@ -7,6 +7,10 @@ require 'yotpo/core/response_parser'
 require 'yotpo/version'
 require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
+require 'yotpo/api/comment'
+require 'yotpo/api/feature'
+require 'yotpo/api/owner_feature'
+require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
 require 'yotpo/api/purchase'
 require 'yotpo/api/reminder'
@@ -17,6 +21,10 @@ module Yotpo
   class Client
     include Yotpo::Account
     include Yotpo::AccountPlatform
+    include Yotpo::Comment
+    include Yotpo::Feature
+    include Yotpo::OwnerFeature
+    include Yotpo::OwnerFeatureSetting
     include Yotpo::Product
     include Yotpo::Reminder
     include Yotpo::Review
@@ -75,9 +83,10 @@ module Yotpo
     # Does a DELETE request to the url with the params
     #
     # @param url [String] the relative path in the Yotpo API
-    def delete(url)
-      preform(url, :delete) do
-        return connection.delete(url)
+    def delete(url, params)
+      params = convert_hash_keys(params)
+      preform(url, :delete, params: params) do
+        return connection.delete(url, params)
       end
     end
 
