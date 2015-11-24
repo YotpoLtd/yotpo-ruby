@@ -23,4 +23,28 @@ describe Yotpo::Comment do
     it { should respond_to :public }
     it { should respond_to :created_at }
   end
+
+  describe '#update_comment_avatar' do
+    before(:all) do
+      update_avatar_params = {
+          utoken: @utoken,
+          app_key: @app_key,
+          comments_avatar_data: {
+              'original_filename' => 'image',
+              'data' => Base64.encode64('image'),
+              content_type: 'image/jpg'
+          },
+          comments_display_name: 'Tova'
+      }
+
+      VCR.use_cassette('update_comment_avatar') do
+        @response = Yotpo.update_comment_avatar(update_avatar_params)
+      end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :code }
+    it { should respond_to :message}
+  end
 end
