@@ -11,6 +11,18 @@ module Yotpo
       post("/reviews/#{params[:review_id]}/comments", request)
     end
 
+    def update_comment(params)
+      request = {
+          utoken: params[:utoken],
+          comment: {
+              content: params[:content],
+              public: params[:public]
+          }
+      }
+      put("/reviews/#{params[:review_id]}/comments/#{params[:comment_id]}", request)
+    end
+
+
     def update_comment_avatar(params)
       request = {
           utoken: params[:utoken],
