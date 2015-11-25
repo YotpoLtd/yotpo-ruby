@@ -15,6 +15,16 @@ module Yotpo
       delete("#{get_owner_basic_path(params[:owner_type])}/#{params[:owner_id]}/features/#{params[:feature_id]}", request)
     end
 
+    def user_enable_feature(params)
+      request = {
+          utoken: params[:utoken],
+          feature: {
+              user_enabled: params[:user_enabled]
+          }
+      }
+      put("apps/#{params[:app_key]}/features/#{params[:feature_id]}", request)
+    end
+
     private
 
     def get_owner_basic_path(owner_type)
