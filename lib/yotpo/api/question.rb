@@ -1,7 +1,7 @@
 module Yotpo
   module Question
 
-    def send_confirmation_mail(params)
+    def question_send_confirmation(params)
       request = {
           appkey: params[:app_key],
           sku: params[:product_id],
@@ -21,7 +21,7 @@ module Yotpo
       post('questions/send_confirmation_mail', request)
     end
 
-    def create_by_token(params)
+    def question_create_by_token(params)
       request = {
           content: params[:content],
           domain: params[:domain],

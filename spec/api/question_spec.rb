@@ -17,7 +17,7 @@ describe Yotpo::Question do
           product_image_url: 'https://www.google.com/images/srpr/logo4w.png',
           }
       VCR.use_cassette('send_question_confirmation_email') do
-        @response = Yotpo.send_confirmation_mail(question)
+        @response = Yotpo.question_send_confirmation(question)
       end
     end
 
@@ -36,20 +36,18 @@ describe Yotpo::Question do
           product_name: 'Product Title',
           product_url: 'https://www.google.com/?q=pforducturl',
           product_id:'D-4771',
-          token: '487e5b76efabbdee499753cf68d35d700f9f2b14',
+          token: '430c58a5b4880d915ef1af941d315648289c8aad',
           utm_campaign: 'general',
           utm_medium: 'general',
           utm_source: 'yotpo'
       }
       VCR.use_cassette('create_by_token') do
-        @response = Yotpo.create_by_token(question)
+        @response = Yotpo.question_create_by_token(question)
       end
     end
 
     subject { @response.body }
-    it { should be_a ::Hashie::Mash }
-    it { should respond_to :code }
-    it { should respond_to :message }
+    it { should eq '<html><body>You are being <a href="https://landing-pages.yotpo.com/question?mail_language=en">redirected</a>.</body></html>' }
   end
 
 end

@@ -136,7 +136,7 @@ module Yotpo
 
         # Setting request and response to use JSON/XML
         conn.request :oj
-        conn.response :oj
+        conn.response :oj, :content_type => /\bjson$/
 
         # Set to use instrumentals to get time logs
         conn.use :instrumentation
