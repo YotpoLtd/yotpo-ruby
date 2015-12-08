@@ -9,6 +9,7 @@ require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
 require 'yotpo/api/comment'
 require 'yotpo/api/question'
+require 'yotpo/api/answer'
 require 'yotpo/api/feature'
 require 'yotpo/api/owner_feature'
 require 'yotpo/api/owner_feature_setting'
@@ -31,7 +32,7 @@ module Yotpo
     include Yotpo::Review
     include Yotpo::User
     include Yotpo::Question
-
+    include Yotpo::Answer
     include Yotpo::Purchase
 
 
