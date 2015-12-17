@@ -60,5 +60,10 @@ module Yotpo
       }
       get('/users/b2blogin.json', request)
     end
+
+    def anonymous_user_confirmation(params)
+      get("/users/anonymous/#{params[:token]}")
+    end
+
   end
 end
