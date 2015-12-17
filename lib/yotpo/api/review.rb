@@ -38,7 +38,6 @@ module Yotpo
       get('/reviews/dynamic_create', request)
     end
 
-
     #
     # Gets reviews of a specific product
     #
@@ -62,6 +61,10 @@ module Yotpo
       }
       request.delete_if{|key,val| val.nil? }
       get("/products/#{app_key}/#{sku}/reviews", request)
+    end
+
+    def add_vote_to_review(params)
+      get("reviews/#{params[:review_id]}/vote/#{params[:vote_value]}")
     end
   end
 end
