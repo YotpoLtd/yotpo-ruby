@@ -3,7 +3,7 @@ module Yotpo
     def get_feature_settings(params)
       request = {
           utoken: params[:utoken],
-          id: params[:feature_id]
+          owner_ids: params[:owner_ids]
       }
       get("features/#{params[:feature_id]}/get_multiple_owners_settings", request)
     end
