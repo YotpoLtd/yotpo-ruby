@@ -51,4 +51,21 @@ describe Yotpo::Review do
     it { should respond_to :content }
     it { should respond_to :title }
   end
+
+  describe '#add_vote_to_review' do
+    before(:all) do
+      add_vote_params = {
+          review_id: 2,
+          vote_value: 'up'
+      }
+      VCR.use_cassette('add_vote_to_review') do
+        @response = Yotpo.add_vote_to_review(add_vote_params)
+      end
+    end
+
+    subject { @response.body.vote }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :id }
+
+  end
 end
