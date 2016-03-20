@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/apps/PT34FxZmlNLXSoH8Z2lwJL2kuv63PHijaSqCRc5m/features?utoken=GltrxJnl4IbT3lGgG2FZeu4YHJ3RQCX9VsyxXnxY
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/features?utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
     body:
       encoding: US-ASCII
       string: ''
@@ -19,42 +19,37 @@ http_interactions:
       Server:
       - nginx/1.9.4
       Date:
-      - Sun, 20 Mar 2016 13:57:14 GMT
+      - Sun, 20 Mar 2016 15:30:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '18633'
+      - '7498'
       Connection:
       - keep-alive
       Yotpo-Parsed-Request:
-      - '{"action":"index","controller":"owners_features","app_id":"PT34FxZmlNLXSoH8Z2lwJL2kuv63PHijaSqCRc5m"}'
+      - '{"action":"index","controller":"owners_features","app_id":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy"}'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
       Etag:
-      - '"a5f435401a471da72f60f5af56ff6312"'
+      - '"52849dd5f87b7053be515b38082ec772"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 01f2558beaa03dc260af84bed339caa9
+      - f5e65d5f507afc78bd6fe729663525f7
       X-Runtime:
-      - '0.755880'
+      - '0.236208'
       Access-Control-Allow-Credentials:
       - 'true'
     body:
       encoding: UTF-8
-      string: '{"status":{"code":200,"message":"OK"},"response":{"features":[{"id":1,"name":"MapCustomization","description":"Advanced
-        general Map customizations","user_enabled":1,"owner_type":"Account"},{"id":2,"name":"Campaigns","description":"Campaigns","user_enabled":1,"owner_type":"Account"},{"id":3,"name":"RichSnippet","description":"Rich
-        snippets","user_enabled":1,"owner_type":"Account"},{"id":4,"name":"ReminderAdvancedSettings","description":"Advanced
-        Map customizations for orders with multiple products","user_enabled":1,"owner_type":"Account"},{"id":5,"name":"Notifications","description":"Display
+      string: '{"status":{"code":200,"message":"OK"},"response":{"features":[{"id":2,"name":"Campaigns","description":"Campaigns","user_enabled":1,"owner_type":"Account"},{"id":5,"name":"Notifications","description":"Display
         Notifications for b2b user","user_enabled":1,"owner_type":"Account"},{"id":6,"name":"DashboardSideBar","description":"Display
         Dashboard","user_enabled":1,"owner_type":"Account"},{"id":7,"name":"InviteAFriend","description":"Invite
         a friend to use Yotpo","user_enabled":1,"owner_type":"Account"},{"id":8,"name":"StayUpdated","description":"Yotpo
         facebook box","user_enabled":1,"owner_type":"Account"},{"id":9,"name":"Map","description":"Mail
         After Purchase","user_enabled":1,"owner_type":"Account"},{"id":10,"name":"Testimonials","description":"Testimonials","user_enabled":1,"owner_type":"Account"},{"id":11,"name":"LookAndFeel","description":"Ability
-        to customize look and feel of widget","user_enabled":1,"owner_type":"Account"},{"id":12,"name":"Bottomline","description":"Bottomline","user_enabled":1,"owner_type":"Account"},{"id":13,"name":"Seo","description":"Seo
-        tricks","user_enabled":1,"owner_type":"Account"},{"id":14,"name":"StatusPie","description":"Customize
-        used by b2b user status pie","user_enabled":1,"owner_type":"Account"},{"id":15,"name":"Coupons","description":"Ability
-        to send coupons to store customers","user_enabled":1,"owner_type":"Account"},{"id":16,"name":"TopProducts","description":"display
+        to customize look and feel of widget","user_enabled":1,"owner_type":"Account"},{"id":12,"name":"Bottomline","description":"Bottomline","user_enabled":1,"owner_type":"Account"},{"id":14,"name":"StatusPie","description":"Customize
+        used by b2b user status pie","user_enabled":1,"owner_type":"Account"},{"id":16,"name":"TopProducts","description":"display
         top selling products","user_enabled":1,"owner_type":"Account"},{"id":17,"name":"Header","description":"Display
         b2b header","user_enabled":1,"owner_type":"Account"},{"id":18,"name":"Settings","description":"Display
         settings page","user_enabled":1,"owner_type":"Account"},{"id":19,"name":"Help","description":"Allow
@@ -76,153 +71,36 @@ http_interactions:
         reviews moderation","user_enabled":1,"owner_type":"Account"},{"id":36,"name":"ModerateSettings","description":"reviews
         moderation settings","user_enabled":1,"owner_type":"Account"},{"id":37,"name":"TestimonialsSettings","description":"reviews
         moderation settings","user_enabled":1,"owner_type":"Account"},{"id":38,"name":"BurstEmails","description":"Send
-        requests for site reviews to your customers","user_enabled":1,"owner_type":"Account"},{"id":39,"name":"UpsellMails","description":"ability
-        to send upsell emails to account''s customers","user_enabled":1,"owner_type":"Account"},{"id":40,"name":"ProductReviews","description":"Account
+        requests for site reviews to your customers","user_enabled":1,"owner_type":"Account"},{"id":40,"name":"ProductReviews","description":"Account
         that has products and can have products reviews","user_enabled":1,"owner_type":"Account"},{"id":41,"name":"TestimonialsCustomization","description":"Advanced
         Testimonials customizations","user_enabled":1,"owner_type":"Account"},{"id":42,"name":"DashboardNotifications","description":"Notifications
         in the Dashboard page","user_enabled":1,"owner_type":"Account"},{"id":43,"name":"TestimonialsPageManual","description":"Manual
         how to install testimonials in a dedicated page","user_enabled":1,"owner_type":"Account"},{"id":44,"name":"TestimonialsManual","description":"Manual
-        how to install testimonials","user_enabled":1,"owner_type":"Account"},{"id":45,"name":"PullOrdersCustomOrderStatus","description":"When
-        pulling orders, take only orders with specific status, and not all orders","user_enabled":1,"owner_type":"Account"},{"id":46,"name":"PullOrdersUseShippingDate","description":"When
-        pulling orders, save the purchase order date with shipping date, not created
-        date","user_enabled":1,"owner_type":"Account"},{"id":47,"name":"Badges","description":"Badges","user_enabled":1,"owner_type":"Account"},{"id":48,"name":"ServiceProviderZendesk","description":"Use
+        how to install testimonials","user_enabled":1,"owner_type":"Account"},{"id":47,"name":"Badges","description":"Badges","user_enabled":1,"owner_type":"Account"},{"id":48,"name":"ServiceProviderZendesk","description":"Use
         Service Provider of type Zendesk to collect user emails.","user_enabled":1,"owner_type":"Account"},{"id":49,"name":"EmbeddedWidget","description":"Embedded
-        widget","user_enabled":1,"owner_type":"Account"},{"id":51,"name":"PurchaseCollector","description":"Purchase
-        collector feature","user_enabled":1,"owner_type":"Account"},{"id":52,"name":"PromotedProducts","description":"Promoted
-        products feature","user_enabled":1,"owner_type":"Account"},{"id":53,"name":"IntroFeatures","description":"Intro
+        widget","user_enabled":1,"owner_type":"Account"},{"id":50,"name":"SocialPush","description":"Social
+        pushes","user_enabled":1,"owner_type":"Account"},{"id":51,"name":"PurchaseCollector","description":"Purchase
+        collector feature","user_enabled":1,"owner_type":"Account"},{"id":53,"name":"IntroFeatures","description":"Intro
         for features","user_enabled":1,"owner_type":"Account"},{"id":54,"name":"TestimonialsPage","description":"Testimonials
-        page skin","user_enabled":1,"owner_type":"Account"},{"id":55,"name":"SortReviews","description":"Sort
-        widget reviews by shop owners and shoppers","user_enabled":1,"owner_type":"Account"},{"id":57,"name":"UserSettings","description":"User
-        settings in b2b","user_enabled":1,"owner_type":"Account"},{"id":58,"name":"Comments","description":"ability
-        to write a comment on a review","user_enabled":1,"owner_type":"Account"},{"id":59,"name":"MultipleProductMapSelection","description":"Allow
-        the account owner to select for which product to send the MAP in case of multiple
-        products map","user_enabled":1,"owner_type":"Account"},{"id":60,"name":"CommentsUSA","description":"ability
-        to send Up Sails section in the comment notification email to the user(b2c)","user_enabled":1,"owner_type":"Account"},{"id":61,"name":"ServiceProviderVend","description":"Use
-        Service Provider of type Vend to collect user emails.","user_enabled":1,"owner_type":"Account"},{"id":62,"name":"ConvertToSiteMap","description":"Change
-        mail after purchase to site review mail.","user_enabled":1,"owner_type":"Account"},{"id":63,"name":"ModerationSearch","description":"Allow
-        search in the moderation","user_enabled":1,"owner_type":"Account"},{"id":64,"name":"MapBlackList","description":"ability
-        to set a list of emails to whom the MAP and burst email wont be sent","user_enabled":1,"owner_type":"Account"},{"id":65,"name":"FullWhiteLabel","description":"Full
-        white label on all Yotpo mentions","user_enabled":1,"owner_type":"Account"},{"id":66,"name":"SemiWhiteLabel","description":"Semi
-        white label for Yotpo mentions","user_enabled":1,"owner_type":"Account"},{"id":67,"name":"ProcessInvoices","description":"Allow
-        to process invoices which sent to SendGrid.","user_enabled":1,"owner_type":"Account"},{"id":68,"name":"QuestionsAndAnswers","description":"Questions
-        And Answers section for products.","user_enabled":1,"owner_type":"Account"},{"id":69,"name":"QuestionsAndAnswersUSA","description":"ability
-        to send Up Sails section in the answers notification email to the user(b2c)","user_enabled":1,"owner_type":"Account"},{"id":70,"name":"ProductReviewsAsSiteReviews","description":"Ability
-        to use product reviews as site reviews.","user_enabled":1,"owner_type":"Account"},{"id":71,"name":"AdvancedEmailSettings","description":"Ability
-        to change advanced email settings.","user_enabled":1,"owner_type":"User"},{"id":72,"name":"EmailIssueNotice","description":"Ability
-        to customize notice about possible issue with displaying of email.","user_enabled":1,"owner_type":"Account"},{"id":73,"name":"AdvancedAutoPublish","description":"Ability
-        to have more advanced auto publish logic.","user_enabled":1,"owner_type":"Account"},{"id":74,"name":"Censor","description":"Ability
-        to filter reviews with dirty words.","user_enabled":1,"owner_type":"Account"},{"id":75,"name":"ResendMap","description":"Ability
-        to resend mail after purchase","user_enabled":1,"owner_type":"Account"},{"id":76,"name":"PremiumSupport","description":"Premium
-        support requests","user_enabled":1,"owner_type":"Account"},{"id":77,"name":"PricingPage","description":"Show
-        the pricing page to the users who have this feature","user_enabled":1,"owner_type":"User"},{"id":78,"name":"PremiumFeatures","description":"Show
-        page of premium apps to the user who has this feature","user_enabled":1,"owner_type":"User"},{"id":79,"name":"BillingPage","description":"Billing
-        page in b2b settings page","user_enabled":1,"owner_type":"User"},{"id":80,"name":"GoogleFeed","description":"Send
-        account reviews to google","user_enabled":1,"owner_type":"Account"},{"id":81,"name":"PricingPageWithPrices","description":"Show
-        the pricing page with prices to the users who have this feature","user_enabled":1,"owner_type":"User"},{"id":82,"name":"EmailHeaders","description":"Allow
-        to edit email headers, like reply-to and form email.","user_enabled":1,"owner_type":"Account"},{"id":83,"name":"ReviewsMe","description":"enable
-        support in reviews me","user_enabled":1,"owner_type":"Account"},{"id":84,"name":"VolusionDDoS","description":"Performing
-        DDoS on Volusion server to get all orders first.","user_enabled":1,"owner_type":"Account"},{"id":85,"name":"MapHtmlEditor","description":"Enable
-        accounts to edit the html of the Mail After Purchase","user_enabled":1,"owner_type":"Account"},{"id":86,"name":"WidgetV2","description":"Provides
-        widget functionality","user_enabled":1,"owner_type":"Account"},{"id":87,"name":"GoogleSellerRating","description":"Send
-        accounts site reviews to google","user_enabled":1,"owner_type":"Account"},{"id":88,"name":"ReviewRequestLimit","description":"Limit
-        the number of review request an account can send","user_enabled":1,"owner_type":"Account"},{"id":89,"name":"OrdersLimitHook","description":"Change
-        account package when passing order limit","user_enabled":1,"owner_type":"Account"},{"id":90,"name":"CssEditor","description":"Enable
-        accounts to edit completely customize his CSS","user_enabled":1,"owner_type":"Account"},{"id":91,"name":"WidgetPromotedProducts","description":"Promoted
-        products for the widget","user_enabled":1,"owner_type":"Account"},{"id":92,"name":"CrossSitePromotedProducts","description":"Promoted
-        products for the other sites","user_enabled":1,"owner_type":"Account"},{"id":93,"name":"WidgetReviewsPerPage","description":"Ability
-        to set how many reviews to display in the widget by shoppers","user_enabled":1,"owner_type":"Account"},{"id":94,"name":"AdvancedCustomization","description":"Adds
-        ability to have advanced customization for widget","user_enabled":1,"owner_type":"Account"},{"id":95,"name":"OrdersCharge","description":"Send
-        usage report to Chargify on new orders","user_enabled":1,"owner_type":"User"},{"id":96,"name":"StartTrialTicker","description":"Shows
-        a start trial ticker for free customers","user_enabled":1,"owner_type":"User"},{"id":97,"name":"WidgetV1","description":"Provides
-        widget functionality, version 1","user_enabled":1,"owner_type":"Account"},{"id":98,"name":"TestimonialsTab","description":"Provides
-        testimonials tabs functionality","user_enabled":1,"owner_type":"Account"},{"id":99,"name":"MapReviewTitle","description":"Ability
+        page skin","user_enabled":1,"owner_type":"Account"},{"id":57,"name":"UserSettings","description":"User
+        settings in b2b","user_enabled":1,"owner_type":"Account"},{"id":61,"name":"ServiceProviderVend","description":"Use
+        Service Provider of type Vend to collect user emails.","user_enabled":1,"owner_type":"Account"},{"id":63,"name":"ModerationSearch","description":"Allow
+        search in the moderation","user_enabled":1,"owner_type":"Account"},{"id":67,"name":"ProcessInvoices","description":"Allow
+        to process invoices which sent to SendGrid.","user_enabled":1,"owner_type":"Account"},{"id":70,"name":"ProductReviewsAsSiteReviews","description":"Ability
+        to use product reviews as site reviews.","user_enabled":1,"owner_type":"Account"},{"id":82,"name":"EmailHeaders","description":"Allow
+        to edit email headers, like reply-to and form email.","user_enabled":1,"owner_type":"Account"},{"id":86,"name":"WidgetV2","description":"Provides
+        widget functionality","user_enabled":1,"owner_type":"Account"},{"id":91,"name":"WidgetPromotedProducts","description":"Promoted
+        products for the widget","user_enabled":1,"owner_type":"Account"},{"id":99,"name":"MapReviewTitle","description":"Ability
         to control if review title is shown in map or not","user_enabled":1,"owner_type":"Account"},{"id":100,"name":"MapReviewAcceptOneField","description":"If
         enabled at least one field is required for a map review, title or content
-        (not only content)","user_enabled":1,"owner_type":"Account"},{"id":101,"name":"Labs","description":"Indicates
-        that a User is a part and have access to Yotpo Labs","user_enabled":1,"owner_type":"Account"},{"id":102,"name":"TellAboutYourself","description":"A
-        b2b pop-up window asking the user for some information about him","user_enabled":1,"owner_type":"User"},{"id":103,"name":"StarDistribution","description":"Show
-        reviews distribution by score","user_enabled":1,"owner_type":"Account"},{"id":104,"name":"CustomizedLandingPage","description":"Allow
-        customized landing pages","user_enabled":1,"owner_type":"Account"},{"id":105,"name":"QuestionsAndAnswersStandalone","description":"Allow
-        Q&A widget to be standalone","user_enabled":1,"owner_type":"Account"},{"id":106,"name":"UserReference","description":"External
-        reference for Yotpo users","user_enabled":1,"owner_type":"Account"},{"id":107,"name":"DedicatedIp","description":"Use
-        a dedicated IP address for mail sending","user_enabled":1,"owner_type":"Account"},{"id":108,"name":"WriteOnlyWidget","description":"Ability
-        to make regular widget as write only","user_enabled":1,"owner_type":"Account"},{"id":109,"name":"CreateReviewsAsync","description":"Allows
-        to create reviews asynchronously","user_enabled":1,"owner_type":"Account"},{"id":110,"name":"CustomTranslations","description":"Ability
-        to customize translations","user_enabled":1,"owner_type":"Account"},{"id":111,"name":"LandingPageTemplate","description":"Ability
-        to use custom templates for landing page","user_enabled":1,"owner_type":"Account"},{"id":112,"name":"SkipProductUrlValidation","description":"Skip
-        validation of product urls","user_enabled":1,"owner_type":"Account"},{"id":113,"name":"EmailModeration","description":"Ability
-        to moderate content via email","user_enabled":1,"owner_type":"Account"},{"id":114,"name":"ShowSocialLinks","description":"Forces
-        displaying of social links even if auto publish is false","user_enabled":1,"owner_type":"Account"},{"id":115,"name":"ReviewRequestCharge","description":"Provides
-        charge functionality for additional review requests","user_enabled":1,"owner_type":"Account"},{"id":116,"name":"Ads","description":"Enables
+        (not only content)","user_enabled":1,"owner_type":"Account"},{"id":106,"name":"UserReference","description":"External
+        reference for Yotpo users","user_enabled":1,"owner_type":"Account"},{"id":109,"name":"CreateReviewsAsync","description":"Allows
+        to create reviews asynchronously","user_enabled":1,"owner_type":"Account"},{"id":116,"name":"Ads","description":"Enables
         Yotpo Ads","user_enabled":1,"owner_type":"Account"},{"id":117,"name":"FacebookAds","description":"Enables
-        Yotpo Ads for Facebook","user_enabled":1,"owner_type":"Account"},{"id":118,"name":"TrustedVendors","description":"Ability
-        for vendors to create verified buyers and verified reviewers reviews, and
-        also create question without mail verifications","user_enabled":1,"owner_type":"Account"},{"id":119,"name":"SpamLimitation","description":"ability
-        to control emails spam limitation","user_enabled":1,"owner_type":"Account"},{"id":120,"name":"CustomizedReviewerBadge","description":"Ability
-        to add customized reviewer badge to verified buyers","user_enabled":1,"owner_type":"Account"},{"id":122,"name":"TermsOfService","description":"Ability
-        to add terms of service to the feature","user_enabled":1,"owner_type":"Account"},{"id":123,"name":"WidgetStatusBar","description":"Ability
-        to display status bar in widget navigation","user_enabled":1,"owner_type":"Account"},{"id":126,"name":"CustomPoweredBy","description":"Ability
-        to change the powered by link","user_enabled":1,"owner_type":"Account"},{"id":127,"name":"JsonFeed","description":"Upload
-        reviews/question json content to s3","user_enabled":1,"owner_type":"Account"},{"id":128,"name":"MergeContentFeedFolders","description":"Notify
-        rundeck to sync multiple accounts into a single folder","user_enabled":1,"owner_type":"User"},{"id":129,"name":"SocialShare","description":"Allows
-        end users to share reviews on social networks","user_enabled":1,"owner_type":"Account"},{"id":134,"name":"PreventDuplicateReviews","description":"Prevents
-        a user to submit more than one review per product","user_enabled":1,"owner_type":"Account"},{"id":135,"name":"MapSendAsync","description":"Each
-        MAP will be sent in a new async resque job","user_enabled":1,"owner_type":"Account"},{"id":136,"name":"WidgetRichSnippet","description":"Adds
-        Rich Snippets markup to reviews widget","user_enabled":1,"owner_type":"Account"},{"id":137,"name":"ServiceProviderHubspot","description":"Use
-        Hubspot Marketing automation service","user_enabled":1,"owner_type":"Account"},{"id":138,"name":"ReviewsCarousel","description":"Reviews
-        carousel widget","user_enabled":1,"owner_type":"Account"},{"id":139,"name":"AdvancedEmailModeration","description":"Ability
-        to auto escalate to email moderation","user_enabled":1,"owner_type":"Account"},{"id":140,"name":"EmailHtmlEditor","description":"Ability
-        to edit email templates via advanced HTML editor","user_enabled":1,"owner_type":"Account"},{"id":141,"name":"ReviewWithPictures","description":"The
-        abillity to upload pictures to reviews","user_enabled":1,"owner_type":"Account"},{"id":143,"name":"ReviewRatingFields","description":"Ability
-        to create customized fields for review and customize different review forms","user_enabled":1,"owner_type":"Account"},{"id":145,"name":"ProductTags","description":"Ability
-        to create product tags","user_enabled":1,"owner_type":"Account"},{"id":146,"name":"DisplayNameTrim","description":"Stops
-        the trimming of display name in widget , for Staples","user_enabled":1,"owner_type":"Account"},{"id":147,"name":"ReviewsDashboard","description":"Open
-        calls for reviews search, filter and grouping via the api","user_enabled":1,"owner_type":"Account"},{"id":148,"name":"Syndication","description":"Ability
-        to syndicate reviews between stores","user_enabled":1,"owner_type":"Account"},{"id":149,"name":"AdminPanel","description":"Yotpo
-        Admin Panel (YAP) AKA new-B2B","user_enabled":1,"owner_type":"Account"},{"id":150,"name":"BlockSelfServiceUnsubscribe","description":"Block
-        ability for an account to perform unsubscribe from chargify","user_enabled":1,"owner_type":"User"},{"id":102,"name":"TellAboutYourself","description":"A
+        Yotpo Ads for Facebook","user_enabled":1,"owner_type":"Account"},{"id":119,"name":"SpamLimitation","description":"ability
+        to control emails spam limitation","user_enabled":1,"owner_type":"Account"},{"id":129,"name":"SocialShare","description":"Allows
+        end users to share reviews on social networks","user_enabled":1,"owner_type":"Account"},{"id":102,"name":"TellAboutYourself","description":"A
         b2b pop-up window asking the user for some information about him","user_enabled":1,"owner_type":"User"}]}}'
     http_version: 
-  recorded_at: Sun, 20 Mar 2016 13:57:14 GMT
-- request:
-    method: get
-    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/features?utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Yotpo-Api-Connector:
-      - Ruby0.1.0
-  response:
-    status:
-      code: 401
-      message: 'Unauthorized '
-    headers:
-      Server:
-      - nginx/1.9.4
-      Date:
-      - Sun, 20 Mar 2016 13:58:53 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '119'
-      Connection:
-      - keep-alive
-      X-Ua-Compatible:
-      - IE=Edge,chrome=1
-      Cache-Control:
-      - no-cache
-      X-Request-Id:
-      - 7b7a07c59e812219e77a2dffde94b52f
-      X-Runtime:
-      - '0.110405'
-      Access-Control-Allow-Credentials:
-      - 'true'
-    body:
-      encoding: UTF-8
-      string: '{"status":{"message":"You are not authorized to access this page.","code":401,"error_type":"Exceptions::AccessDenied"}}'
-    http_version: 
-  recorded_at: Sun, 20 Mar 2016 13:58:53 GMT
+  recorded_at: Sun, 20 Mar 2016 15:30:24 GMT
 recorded_with: VCR 3.0.1

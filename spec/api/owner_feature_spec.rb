@@ -52,8 +52,7 @@ describe Yotpo::OwnerFeature do
 
     subject { @response.body }
     it { should be_a ::Hashie::Mash }
-    it { should respond_to :code }
-    it { should respond_to :message }
+    it { should respond_to :features }
   end
 
   describe '#user_enable_feature' do
