@@ -25,8 +25,14 @@ module Yotpo
       put("apps/#{params[:app_key]}/features/#{params[:feature_id]}", request)
     end
 
-    private
+    def get_owner_features(params)
+      request = {
+          utoken: params[:utoken]
+      }
+      get("apps/#{params[:app_key]}/features", request)
+    end
 
+    private
     def get_owner_basic_path(owner_type)
       if owner_type == :user
         '/users'
