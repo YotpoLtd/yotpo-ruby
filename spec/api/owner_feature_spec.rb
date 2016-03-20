@@ -39,6 +39,22 @@ describe Yotpo::OwnerFeature do
     it { should respond_to :message }
   end
 
+  describe '#get_owner_features' do
+    before(:all) do
+      get_owner_features_params = {
+          utoken: @utoken,
+          app_key: @app_key
+      }
+     VCR.use_cassette('get_owner_features') do
+        @response = Yotpo.get_owner_features(get_owner_features_params)
+     end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :features }
+  end
+
   describe '#user_enable_feature' do
     before(:all) do
       user_enable_feature_params = {
