@@ -7,6 +7,7 @@ require 'yotpo/core/response_parser'
 require 'yotpo/version'
 require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
+require 'yotpo/api/account_social'
 require 'yotpo/api/comment'
 require 'yotpo/api/question'
 require 'yotpo/api/answer'
@@ -24,6 +25,7 @@ module Yotpo
   class Client
     include Yotpo::Account
     include Yotpo::AccountPlatform
+    include Yotpo::AccountSocial
     include Yotpo::Comment
     include Yotpo::Feature
     include Yotpo::Oauth
