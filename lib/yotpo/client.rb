@@ -11,6 +11,7 @@ require 'yotpo/api/comment'
 require 'yotpo/api/question'
 require 'yotpo/api/answer'
 require 'yotpo/api/feature'
+require 'yotpo/api/oauth'
 require 'yotpo/api/owner_feature'
 require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
@@ -25,6 +26,7 @@ module Yotpo
     include Yotpo::AccountPlatform
     include Yotpo::Comment
     include Yotpo::Feature
+    include Yotpo::Oauth
     include Yotpo::OwnerFeature
     include Yotpo::OwnerFeatureSetting
     include Yotpo::Product

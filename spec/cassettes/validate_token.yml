@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/oauth/validate_token?app_key=3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy&token=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.7.7
+      Date:
+      - Mon, 21 Mar 2016 08:56:26 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '141'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"controller":"token_validator","action":"show"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"7e7fac65ce4b2dd885197aab5c6b968f"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e439104eb1754ead52994340f1006532
+      X-Runtime:
+      - '1.145917'
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"Status":"Success","Code":"200","user_id":301,"user_has_access_to_account":true,"application_id":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy"}'
+    http_version: 
+  recorded_at: Mon, 21 Mar 2016 08:56:26 GMT
+recorded_with: VCR 2.9.3
