@@ -22,4 +22,21 @@ describe Yotpo::AccountSocial do
     it { should respond_to :access_token }
     it { should respond_to :social_id }
   end
+
+  describe '#get social account' do
+    before(:all) do
+      account_social_params = {
+          utoken: @utoken,
+          app_key: @app_key
+      }
+      VCR.use_cassette('get_account_social') do
+        @response = Yotpo.get_account_social(account_social_params)
+      end
+    end
+
+    subject { @response.body.account_socials[0] }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :access_token }
+    it { should respond_to :social_id }
+  end
 end

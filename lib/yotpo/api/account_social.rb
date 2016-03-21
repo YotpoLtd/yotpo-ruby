@@ -12,6 +12,14 @@ module Yotpo
       app_key = params[:app_key]
       post("/apps/#{app_key}/account_socials", request)
     end
+
+    def get_account_social(params)
+      request = {
+          utoken: params[:utoken]
+      }
+      app_key = params[:app_key]
+      get("/apps/#{app_key}/account_socials", request)
+    end
   end
 end
 
