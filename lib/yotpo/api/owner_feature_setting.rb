@@ -16,6 +16,13 @@ module Yotpo
       put("features/#{params[:feature_id]}/#{params[:owner_id]}/admin_mass_update", request)
     end
 
+    def owner_feature_settings(params)
+      request = {
+          utoken: params[:utoken],
+      }
+      get("apps/#{params[:app_key]}/features/#{params[:feature_id]}/feature_settings", request)
+    end
+
     def update_feature_settings(params)
       request = {
           utoken: params[:utoken],
