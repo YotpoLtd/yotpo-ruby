@@ -23,7 +23,7 @@ describe Yotpo::OwnerFeatureSetting do
     before(:all) do
       feature_update_params = {
           utoken: @utoken,
-          settings: { 'font_size': '12' },
+          settings: { font_size: '12' },
           feature_id: 11,
           owner_id: 7
       }
