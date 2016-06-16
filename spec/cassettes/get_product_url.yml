@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/products/vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T/120915246/product_url?reference=instagram_comment&utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 16 Jun 2016 10:39:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"controller":"products_apps","action":"get_product_url","app_key":"vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T","sku":"120915246"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"765dff100cf7ae238e994eb9d4418dd7"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3261808bdcd710361d2f5ed7032155fd
+      X-Runtime:
+      - '0.216960'
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"url":"https://yotpo.com/go/xhj5ierw"}}'
+    http_version: 
+  recorded_at: Thu, 16 Jun 2016 10:39:55 GMT
+recorded_with: VCR 3.0.3

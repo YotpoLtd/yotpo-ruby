@@ -21,5 +21,15 @@ module Yotpo
       sku = params[:product_id]
       get("/products/#{app_key}/#{sku}/bottomline")
     end
+
+    def get_product_url(params)
+      app_key = params[:app_key]
+      sku = params[:product_id]
+      request = {
+          utoken: params[:utoken],
+          reference: params[:reference]
+      }
+      get("/products/#{app_key}/#{sku}/product_url", request)
+    end
   end
 end
