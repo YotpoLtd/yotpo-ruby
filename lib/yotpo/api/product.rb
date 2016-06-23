@@ -24,12 +24,14 @@ module Yotpo
 
     def get_product_url(params)
       app_key = params[:app_key]
-      sku = params[:product_id]
+      product_id = params[:product_id]
       request = {
           utoken: params[:utoken],
-          reference: params[:reference]
+          reference: params[:reference],
+          sub_reference: params[:sub_reference]
       }
-      get("/products/#{app_key}/#{sku}/product_url", request)
+      request[:product_id] = product_id if product_id
+      get("/products/#{app_key}/product_url", request)
     end
   end
 end
