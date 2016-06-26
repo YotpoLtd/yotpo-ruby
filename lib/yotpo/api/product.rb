@@ -28,6 +28,7 @@ module Yotpo
       request = {
           utoken: params[:utoken],
           reference: params[:reference],
+          source: params[:source],
           sub_reference: params[:sub_reference]
       }
       request[:product_id] = product_id if product_id
