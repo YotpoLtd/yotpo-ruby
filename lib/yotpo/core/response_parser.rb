@@ -4,7 +4,7 @@ require 'faraday_middleware/response_middleware'
 module Yotpo
   class ResponseParser < Faraday::Response::Middleware
     def parse(body)
-      unless body.empty?
+      unless body.to_s.empty?
         body.response || body.status || body
       end
     end
@@ -19,7 +19,7 @@ module Yotpo
     end
 
     define_parser do |body|
-      ::Oj.load(body, mode: :compat) unless body.strip.empty?
+      ::Oj.load(body, mode: :compat) unless body.to_s.strip.empty?
     end
   end
 
