@@ -52,6 +52,5 @@ describe Yotpo::Product do
 
     subject { @response.body }
     it { should be_a ::Hashie::Mash }
-    it { should respond_to :url }
   end
 end
