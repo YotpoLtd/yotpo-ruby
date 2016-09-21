@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/account_socials/17
+    body:
+      encoding: UTF-8
+      string: '{"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC","account_social":{"access_token":123,"secret":123}}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.7.7
+      Date:
+      - Tue, 22 Mar 2016 14:51:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '73'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"action":"update","controller":"account_socials","app_id":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","id":"17"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"85da173e31752dda778be7e809d4e973"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 25461e3ee806040eef1b66b008b7cb1d
+      X-Runtime:
+      - '0.203654'
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"account_social":true}}'
+    http_version: 
+  recorded_at: Tue, 22 Mar 2016 14:51:59 GMT
+recorded_with: VCR 2.9.3

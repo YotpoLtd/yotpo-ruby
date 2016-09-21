@@ -35,4 +35,22 @@ describe Yotpo::Product do
     it { should respond_to :average_score }
     it { should respond_to :total_reviews }
   end
+
+  describe '#get_product_url' do
+    before(:all) do
+      product_url_params = {
+          utoken: @utoken,
+          reference: 'instagram_comment',
+          product_id: '120915246',
+          app_key: 'vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T',
+          sub_reference: '10'
+      }
+      VCR.use_cassette('get_product_url') do
+        @response = Yotpo.get_product_url(product_url_params)
+      end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+  end
 end

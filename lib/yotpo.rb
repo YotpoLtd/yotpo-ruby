@@ -40,7 +40,7 @@ module Yotpo
     # @return an instance of Yotpo::Client
     #
     def client
-      @client ||= Yotpo::Client.new()
+      @client ||= Yotpo::Client.new(@url || 'https://api.yotpo.com')
     end
 
     private

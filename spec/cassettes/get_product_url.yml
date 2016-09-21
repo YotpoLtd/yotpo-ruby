@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/products/vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T/product_url?sub_reference=10&product_id=120915246&reference=instagram_comment&utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 23 Jun 2016 06:47:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"controller":"products_apps","action":"get_product_url","app_key":"vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"bb7644cede4430b825dbdd26e204aeaf"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - db991858bf2b6acdff3cc9b508167066
+      X-Runtime:
+      - '5.150407'
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"url":"https://yotpo.com/go/afhj8t2k"}}'
+    http_version: 
+  recorded_at: Thu, 23 Jun 2016 06:47:48 GMT
+- request:
+    method: get
+    uri: https://api.yotpo.com/products/vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T/product_url?product_id=120915246&reference=instagram_comment&sub_reference=10&utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Thu, 23 Jun 2016 06:56:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"controller":"products_apps","action":"get_product_url","app_key":"vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"bb7644cede4430b825dbdd26e204aeaf"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - c4736ef50122c39e2bc5c96b3b203ee1
+      X-Runtime:
+      - '6.566141'
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"url":"https://yotpo.com/go/afhj8t2k"}}'
+    http_version: 
+  recorded_at: Thu, 23 Jun 2016 06:56:21 GMT
+recorded_with: VCR 3.0.3

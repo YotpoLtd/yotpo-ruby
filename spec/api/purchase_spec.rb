@@ -8,14 +8,14 @@ describe Yotpo::Purchase do
           customer_name: 'Customer Name',
           order_id: '123',
           platform: 'shopify',
-          products: [
+          products: {
               p1: {
                   url: 'http://example_product_url1.com',
                   name: 'product1',
                   image: 'http://example_product_image_url1.com',
                   description: 'this is the description of a product'
               }
-          ],
+          },
           utoken: @utoken,
           app_key: @app_key
       }

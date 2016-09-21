@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/questions/send_confirmation_mail
+    body:
+      encoding: UTF-8
+      string: '{"appkey":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","sku":"D-4771","product_title":"Product
+        Title","product_url":"https://www.google.com/?q=pforducturl","display_name":"User
+        Name","email":"user@email.com","review_content":"Integer feugiat nunc non
+        leo vehicula bibendum. Nulla at tortor at nulla faucibus suscipit. Curabitur
+        sodales est vel orci lobortis convallis. Vestibulum sit amet tellus neque,
+        ac euismod arcu. Phasellus a nunc ultrices erat condimentum facilisis. Donec
+        a odio in ligula vestibulum lobortis. Mauris posuere, justo tincidunt tincidunt
+        interdum, felis velit venenatis augue, vel rhoncus purus turpis ut magna.
+        Quisque consequat elit vitae enim molestie mattis. Class aptent taciti sociosqu
+        ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur adipiscing
+        consequat lectus eu pulvinar. Vestibulum ante ipsum primis in faucibus orci
+        luctus et ultrices posuere cubilia Curae","review_source":"widget_v2","product_description":"Nullam
+        ultrices purus a metus porttitor hendrerit. Vivamus accumsan congue urna a
+        viverra. Nam molestie euismod est, vitae sollicitudin velit scelerisque vel.
+        Quisque feugiat, metus sed tempus malesuada, quam erat volutpat metus, a tempor
+        felis est id purus. Ut nec felis nunc, id cursus magna. Mauris sollicitudin
+        ultrices velit vitae viverra. Nulla faucibus lacus id nisl euismod porta.
+        Curabitur mi magna, tempus tristique commodo sit amet, imperdiet in eros.
+        Proin eros arcu, ornare in lobortis eu, posuere ut risus. Quisque fermentum
+        varius nibh, id aliquet lectus congue quis. In placerat arcu at libero posuere
+        eleifend. Donec lacinia mollis lacus, at aliquam nisi molestie nec. Cras eleifend
+        gravida nulla, vitae mollis eros varius eleifend. Pellentesque elit sem, lacinia
+        eget fringilla vitae, condimentum eu quam. Proin quis orci arcu, ut suscipit
+        arcu.","product_image_url":"https://www.google.com/images/srpr/logo4w.png"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby0.1.0
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.7.7
+      Date:
+      - Mon, 07 Dec 2015 13:05:00 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '38'
+      Connection:
+      - keep-alive
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"a873ac57132fed9ae7f368e3c8c85724"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cef662dbebdce1ec0403ce0a3a6a6d72
+      X-Runtime:
+      - '0.079528'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+      Access-Control-Allow-Credentials:
+      - 'true'
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"}}'
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 13:05:00 GMT
+recorded_with: VCR 2.9.3

@@ -61,4 +61,18 @@ describe Yotpo::User do
     it { should respond_to :signin_url }
 
   end
+
+  describe '#anonymous_user_confirmation' do
+    before(:all) do
+      request = {
+          token: 'PC3yqmddeS434jWW1bVi'
+      }
+      VCR.use_cassette('anonymous_user_confirmation') do
+        @response = Yotpo.anonymous_user_confirmation(request)
+      end
+    end
+    subject { @response.body }
+    it { should eq '<html><body>You are being <a href="https://www.yotpo.com/500.html">redirected</a>.</body></html>' }
+
+  end
 end
