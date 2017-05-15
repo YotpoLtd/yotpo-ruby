@@ -7,7 +7,8 @@ describe Yotpo::Comment do
           utoken: @utoken,
           review_id: 1,
           content: 'Comment content',
-          public: true
+          public: true,
+          app_key: @app_key
       }
       VCR.use_cassette('create_comment') do
         @response = Yotpo.create_comment(create_comment_params)
@@ -31,7 +32,7 @@ describe Yotpo::Comment do
           review_id: 1,
           comment_id: 695,
           content: 'Comment content',
-          public: true
+          public: true,
       }
       VCR.use_cassette('update_comment') do
         @response = Yotpo.update_comment(create_comment_params)

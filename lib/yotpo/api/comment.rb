@@ -6,7 +6,8 @@ module Yotpo
           comment: {
               content: params[:content],
               public: params[:public]
-          }
+          },
+          app_key: params[:app_key]
       }
       post("/reviews/#{params[:review_id]}/comments", request)
     end
