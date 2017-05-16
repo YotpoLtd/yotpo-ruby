@@ -40,6 +40,16 @@ module Yotpo
       utoken = params[:utoken]
       get("/apps/#{app_key}/subomain_check/#{subdomain}?utoken=#{utoken}")
     end
+
+    #
+    # Check if the account is locked
+    #
+    # @param params [Hash]
+    # @option params [String] :app_key the account app key that was created at registration
+    def check_lock_state(params)
+      app_key = params[:app_key]
+      get("/apps/#{app_key}/lock_state")
+    end
   end
 end
 
