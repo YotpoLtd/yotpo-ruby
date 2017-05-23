@@ -40,7 +40,13 @@ end
 ```
 That is it you are ready
 
-Now lets make some public calls to our api. Public calls only require you to use a valid app_key. 
+Now lets make some public calls to our api. Public calls only require you to use a valid app_key.
+
+NOTE: If you've configured Yotpo as demonstrated above, the app_key param becomes
+optional for all requests.  If you want to pass in a different app_key or be
+explicit, providing it in the args will take precedence over the configuration.
+Upcoming examples include app_key to demonstrate that it is required for a
+request to be valid.
 
 Creating your first review using the API
 
