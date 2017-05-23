@@ -29,7 +29,8 @@ module Yotpo
           comments_avatar_data: params[:comments_avatar_data],
           comments_display_name: params[:comments_display_name]
       }
-      put("/apps/#{params[:app_key]}/app_comment_avatar", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      put("/apps/#{app_key}/app_comment_avatar", request)
     end
 
   end

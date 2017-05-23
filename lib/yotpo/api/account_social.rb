@@ -15,6 +15,7 @@ module Yotpo
           },
           utoken: params[:utoken]
       }
+      app_key = params[:app_key] || Yotpo.app_key
       post("/apps/#{params[:app_key]}/account_socials", request)
     end
 
@@ -23,14 +24,17 @@ module Yotpo
           utoken: params.delete(:utoken)
       }
       request[:account_social] = params
-      put("/apps/#{params.delete(:app_key)}/account_socials/#{params.delete(:id)}", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      params.delete(:app_key)
+      put("/apps/#{app_key}/account_socials/#{params.delete(:id)}", request)
     end
 
     def get_account_social(params)
       request = {
           utoken: params[:utoken]
       }
-      get("/apps/#{params[:app_key]}/account_socials", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      get("/apps/#{app_key}/account_socials", request)
     end
   end
 end

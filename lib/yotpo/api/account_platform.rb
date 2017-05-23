@@ -11,7 +11,7 @@ module Yotpo
           },
           utoken: params[:utoken]
       }
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       post("/apps/#{app_key}/account_platform", request)
     end
   end

@@ -20,7 +20,8 @@ module Yotpo
       request = {
           utoken: params[:utoken],
       }
-      get("apps/#{params[:app_key]}/features/#{params[:feature_id]}/feature_settings", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      get("apps/#{app_key}/features/#{params[:feature_id]}/feature_settings", request)
     end
 
     def update_feature_settings(params)
@@ -29,7 +30,8 @@ module Yotpo
           value: params[:value],
           key: params[:key]
       }
-      put("apps/#{params[:app_key]}/features/#{params[:feature_id]}/feature_settings/#{params[:feature_settings_id]}", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      put("apps/#{app_key}/features/#{params[:feature_id]}/feature_settings/#{params[:feature_settings_id]}", request)
     end
   end
 end

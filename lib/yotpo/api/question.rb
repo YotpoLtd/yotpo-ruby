@@ -2,8 +2,9 @@ module Yotpo
   module Question
 
     def question_send_confirmation(params)
+      app_key = params[:app_key] || Yotpo.app_key
       request = {
-          appkey: params[:app_key],
+          appkey: app_key,
           sku: params[:product_id],
           product_title: params[:product_title],
           product_url: params[:product_url],
