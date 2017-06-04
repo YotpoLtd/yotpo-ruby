@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/lock_state
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.1
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.8.1
+      Date:
+      - Tue, 16 May 2017 13:55:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '65'
+      Connection:
+      - keep-alive
+      Yotpo-Parsed-Request:
+      - '{"action":"lock_state","controller":"apps","id":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy"}'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Etag:
+      - '"c3733c6fbd8c6c10a81437240c49c7f9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 700119c9b20f1006b5007ff80c96bc8a
+      X-Runtime:
+      - '11.192951'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"active":true}}'
+    http_version: 
+  recorded_at: Tue, 16 May 2017 13:55:49 GMT
+recorded_with: VCR 2.9.3
