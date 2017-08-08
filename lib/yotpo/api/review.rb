@@ -19,8 +19,9 @@ module Yotpo
     # @option params [String] :utoken the token of the user who wrote the review (if one exists)
     # @return [::Hashie::Mash] The new review with all of it's date
     def create_review(params)
+      app_key = params[:app_key] || Yotpo.app_key
       request = {
-          appkey: params[:app_key],
+          appkey: app_key,
           sku: params[:product_id],
           domain: params[:shop_domain],
           product_title: params[:product_title],
@@ -55,7 +56,7 @@ module Yotpo
     # @option params [Boolean] :deleted Include deleted reviews
 
     def get_all_reviews(params)
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       sku = params[:product_id]
       request = {
           utoken: params[:utoken],
@@ -84,7 +85,7 @@ module Yotpo
     # @option params [String] :since_date the date from which to start retrieving reviews
     # @option params [String] :utoken the users utoken to get the reviews that are most relevant to that user
     def get_product_reviews(params)
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       sku = params[:product_id]
       request = {
           page: params[:page] || 1,

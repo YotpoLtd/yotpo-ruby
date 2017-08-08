@@ -22,14 +22,16 @@ module Yotpo
               user_enabled: params[:user_enabled]
           }
       }
-      put("apps/#{params[:app_key]}/features/#{params[:feature_id]}", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      put("apps/#{app_key}/features/#{params[:feature_id]}", request)
     end
 
     def get_owner_features(params)
       request = {
           utoken: params[:utoken]
       }
-      get("apps/#{params[:app_key]}/features", request)
+      app_key = params[:app_key] || Yotpo.app_key
+      get("apps/#{app_key}/features", request)
     end
 
     private

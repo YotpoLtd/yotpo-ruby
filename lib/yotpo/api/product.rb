@@ -7,7 +7,7 @@ module Yotpo
           since_id: params[:since_id]
       }
       request.delete_if{|key,val| val.nil?}
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       get("/apps/#{app_key}/bottom_lines", request)
     end
 
@@ -17,13 +17,13 @@ module Yotpo
     # @option params [String] :app_key the accounts app key that was given to it upon registration
     # @option params [String] :product_id the id of the product
     def get_product_bottom_line(params)
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       sku = params[:product_id]
       get("/products/#{app_key}/#{sku}/bottomline")
     end
 
     def get_product_url(params)
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       product_id = params[:product_id]
       request = {
           utoken: params[:utoken],

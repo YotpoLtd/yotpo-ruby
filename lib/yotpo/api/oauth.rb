@@ -3,7 +3,7 @@ module Yotpo
     def validate_token(params)
       request = {
           token: params[:utoken],
-          app_key: params[:app_key]
+          app_key: params[:app_key] || Yotpo.app_key
       }
       get('/oauth/validate_token', request)
     end

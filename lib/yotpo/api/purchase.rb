@@ -11,7 +11,7 @@ module Yotpo
           platform: params[:platform],
           products: params[:products]
       }
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       post("/apps/#{app_key}/purchases", request)
     end
 
@@ -21,7 +21,7 @@ module Yotpo
           platform: params[:platform],
           orders: params[:orders]
       }
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       post("/apps/#{app_key}/purchases/mass_create", request)
     end
 
@@ -34,7 +34,7 @@ module Yotpo
           count: params[:count] || 10
       }
       request.delete_if{|key, value| value.nil? }
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       get("/apps/#{app_key}/purchases", request)
     end
   end

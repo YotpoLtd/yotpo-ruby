@@ -23,7 +23,7 @@ module Yotpo
           },
           utoken: params[:utoken]
       }
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       put("/apps/#{app_key}", request)
     end
 
@@ -35,7 +35,7 @@ module Yotpo
     # @option params [String] :app_key the account app key that was created at registration
     # @option params [String] :subdomain the subdomain to check
     def check_minisite_subdomain(params)
-      app_key = params[:app_key]
+      app_key = params[:app_key] || Yotpo.app_key
       subdomain = params[:subdomain]
       utoken = params[:utoken]
       get("/apps/#{app_key}/subomain_check/#{subdomain}?utoken=#{utoken}")

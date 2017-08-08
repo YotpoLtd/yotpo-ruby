@@ -38,8 +38,9 @@ module Yotpo
     # @option params [String] :secret app secret received at the registration
     # @return [Hash] that includes access_token and the token_type
     def get_oauth_token(params)
+      app_key = params[:app_key] || Yotpo.app_key
       request = {
-          client_id: params[:app_key],
+          client_id: app_key,
           client_secret: params[:secret],
           grant_type: 'client_credentials'
       }
@@ -54,8 +55,9 @@ module Yotpo
     # @option params [String] :app_key that was received when registered to www.yotpo.com
     # @option params [String] :secret that was received when registered to www.yotpo.com
     def get_login_url(params)
+      app_key = params[:app_key] || Yotpo.app_key
       request = {
-          app_key: params[:app_key],
+          app_key: app_key,
           secret: params[:secret]
       }
       get('/users/b2blogin.json', request)
