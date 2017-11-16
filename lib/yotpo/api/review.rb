@@ -17,7 +17,7 @@ module Yotpo
     # @option params [String] :review_title the review title
     # @option params [String Integer] :review_score the rating of the review
     # @option params [String] :utoken the token of the user who wrote the review (if one exists)
-    # @return [::Hashie::Mash] The new review with all of it's date
+    # @return [::Hashie::Mash] The new review with all of it's data
     def create_review(params)
       request = {
           appkey: params[:app_key],
@@ -34,8 +34,18 @@ module Yotpo
           review_score: params[:review_score],
           utoken: params[:utoken]
       }
-      request.delete_if {|element, value| value.nil? }
+      request.delete_if { |element, value| value.nil? }
       get('/reviews/dynamic_create', request)
+    end
+
+    # Gets a specific review in Yotpo
+    #
+    # @param [Hash] params
+    # @option params [String] :id the id of the review
+    # @return [::Hashie::Mash] The review with all of it's data
+    def get_review(params)
+      review_id = params[:id]
+      get("/reviews/#{review_id}")
     end
 
     #
