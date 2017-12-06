@@ -1,6 +1,24 @@
 require 'helper'
 
 describe Yotpo::Product do
+  describe '#get_product_information' do
+    before(:all) do
+      products_params = {
+        app_key: 'vzStmYud6bHLto5ksn5DoGoA7ghM0kzjMdH2DS5T',
+        domain_keys: ['1', '2']
+      }
+      VCR.use_cassette('check_products_information') do
+        @response = Yotpo.get_products_information(products_params)
+      end
+    end
+
+    subject { @response.body.products['1'] }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :domain_key }
+    it { should respond_to :product_link }
+    it { should respond_to :name }
+  end
+
   describe '#get_all_bottom_lines' do
     before(:all) do
       get_app_bottom_lines_params = {

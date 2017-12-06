@@ -11,6 +11,11 @@ module Yotpo
       get("/apps/#{app_key}/bottom_lines", request)
     end
 
+    def get_products_information(params)
+      app_key = params[:app_key]
+      get("/v1/widget/#{app_key}/products/products_information", { domain_keys: params[:domain_keys] })
+    end
+
     #
     # Retrieves the bottom line of a product
     # @param params [Hash]
