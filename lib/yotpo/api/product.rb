@@ -13,7 +13,7 @@ module Yotpo
 
     def get_products_information(params)
       app_key = params[:app_key]
-      get("/v1/widget/#{app_key}/products/products_information", { domain_keys: params[:domain_keys] })
+      get("/v1/widget/#{app_key}/products/products_information", { domain_keys: params[:domain_keys], ref_name: params[:ref_name] })
     end
 
     #
