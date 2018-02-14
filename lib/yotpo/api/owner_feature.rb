@@ -38,6 +38,8 @@ module Yotpo
         '/users'
       elsif owner_type == :account
         '/apps'
+      elsif owner_type == :organization
+        '/organizations'
       else
         raise 'Wrong owner type!'
       end
