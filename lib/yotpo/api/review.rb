@@ -17,7 +17,7 @@ module Yotpo
     # @option params [String] :review_title the review title
     # @option params [String Integer] :review_score the rating of the review
     # @option params [String] :utoken the token of the user who wrote the review (if one exists)
-    # @return [::Hashie::Mash] The new review with all of it's date
+    # @return [::Hashie::Mash] The new review with all of it's data
     def create_review(params)
       request = {
           appkey: params[:app_key],
@@ -34,8 +34,52 @@ module Yotpo
           review_score: params[:review_score],
           utoken: params[:utoken]
       }
-      request.delete_if {|element, value| value.nil? }
+      request.delete_if { |element, value| value.nil? }
       get('/reviews/dynamic_create', request)
+    end
+
+    # Gets a specific review in Yotpo
+    #
+    # @param [Hash] params
+    # @option params [String] :id the id of the review
+    # @return [::Hashie::Mash] The review with all of it's data
+    def get_review(params)
+      review_id = params[:id]
+      get("/reviews/#{review_id}")
+    end
+
+    #
+    # Gets reviews of all products
+    #
+    # @param [Hash] params
+    # @option params [String] :app_key the app key of the account for which the review is created
+    # @option params [String] :product_id the id of the product
+    # @option params [Integer] :count the amount of reviews per page
+    # @option params [Integer] :page the page number
+    # @option params [String] :since_id the id from which to start retrieving reviews
+    # @option params [String] :since_date the date from which to start retrieving reviews
+    # @option params [String] :since_updated_at Earliest update date of returned reviews
+    # @option params [String] :utoken the users utoken to get the reviews that are most relevant to that user
+    # @option params [String] :user_reference Filter by user reference
+    # @option params [Boolean] :include_site_reviews Include site reviews
+    # @option params [Boolean] :deleted Include deleted reviews
+
+    def get_all_reviews(params)
+      app_key = params[:app_key]
+      sku = params[:product_id]
+      request = {
+          utoken: params[:utoken],
+          since_id: params[:since_id],
+          since_date: params[:since_date],
+          since_updated_at: params[:since_updated_at],
+          count: params[:per_page] || 20,
+          page: params[:page] || 1,
+          include_site_reviews: params[:include_site_reviews],
+          deleted: params[:deleted],
+          user_reference: params[:user_reference]
+      }
+      request.delete_if{|key,val| val.nil? }
+      get("/v1/apps/#{app_key}/#{sku}/reviews", request)
     end
 
     #

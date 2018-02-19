@@ -23,7 +23,7 @@ describe Yotpo::OwnerFeatureSetting do
     before(:all) do
       feature_update_params = {
           utoken: @utoken,
-          settings: { 'font_size': '12' },
+          settings: { font_size: '12' },
           feature_id: 11,
           owner_id: 7
       }
@@ -36,6 +36,23 @@ describe Yotpo::OwnerFeatureSetting do
     it { should be_a ::Hashie::Mash }
     it { should respond_to :code }
     it { should respond_to :message }
+  end
+
+  describe '#owner_feature_settings' do
+    before(:all) do
+      feature_settings_params = {
+          utoken: @utoken,
+          feature_id: 11,
+          app_key: @app_key
+      }
+      VCR.use_cassette('owner_feature_settings') do
+        @response = Yotpo.owner_feature_settings(feature_settings_params)
+      end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :font_size }
   end
 
   describe '#update_feature_settings' do

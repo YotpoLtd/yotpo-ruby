@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/reviews/22
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.1
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Thu, 16 Nov 2017 15:13:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1515'
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Yotpo-Parsed-Request:
+      - '{"format":"json","controller":"reviews","action":"show","id":"22"}'
+      Etag:
+      - W/"f8255f25de01e79b2568f439aa9305e4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b90ae4f6-2014-4701-a226-9ad3339b6592
+      X-Runtime:
+      - '0.150779'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"review":{"id":22,"content":"Wow,
+        what a camera! This is absolutely perfect for anyone who wants to use it for
+        personal use.","title":"Works Great","score":5,"user":{"id":7,"display_name":"Henry
+        K.","slug":"henry-k","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png","is_social_connected":false,"bio":null,"score":0,"badges":[]},"user_type":"User","users":[],"products":[{"Location_idx":[0,0],"Product":{"id":8,"name":"Camera
+        GX4","slug":"camera-gx4--4","product_url":"http://www.yotpo.com","shorten_url":"https://yotpo.com/go/v5n0HW0r","images":[{"id":16,"image_url":"https://s3.amazonaws.com/yotpo-images-test/Product/8/16/square.jpg?1487692044","big_image_url":"https://s3.amazonaws.com/yotpo-images-test/Product/8/16/big.jpg?1487692044"}],"social_network_links":{"facebook":"https://yotpo.com/go/kjcEQbGK","twitter":"https://yotpo.com/go/fx5SeycZ","linkedin":"https://yotpo.com/go/vUOZEgEi","google_oauth2":"https://yotpo.com/go/evOxBJDA"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/cFIcQ0lI"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2015-03-05T22:00:00.000Z","deleted":false,"new":false,"verified_buyer":false,"archived":false,"social_pushed":false,"facebook_pushed":0,"twitter_pushed":0,"account":{"id":1,"domain":"w2.yotpo.com"},"products_apps":[{"id":8,"product_url":"http://www.yotpo.com","domain_key":"nb2b_pictures_in_reviews","product":{"id":8,"name":"Camera
+        GX4"}}],"sentiment":null}}}'
+    http_version: 
+  recorded_at: Thu, 16 Nov 2017 15:13:55 GMT
+recorded_with: VCR 3.0.3

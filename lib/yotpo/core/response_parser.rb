@@ -21,7 +21,7 @@ module Yotpo
     end
 
     define_parser do |body|
-      ::Oj.load(body, mode: :compat) unless body.strip.empty?
+      ::Oj.load(body, mode: :compat) unless body.to_s.strip.empty?
     end
   end
 

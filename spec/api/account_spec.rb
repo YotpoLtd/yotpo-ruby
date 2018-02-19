@@ -36,7 +36,19 @@ describe Yotpo::Account do
     it { should be_a ::Hashie::Mash }
     it { should respond_to :available }
     it { should respond_to :subdomain }
+  end
 
-
+  describe '#check_lock_state' do
+    before(:all) do
+      data = {
+          app_key: @app_key
+      }
+      VCR.use_cassette('check_lock_state') do
+        @response = Yotpo.check_lock_state(data)
+      end
+    end
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :active }
   end
 end

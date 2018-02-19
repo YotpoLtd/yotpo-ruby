@@ -31,6 +31,20 @@ describe Yotpo::Review do
     it { should respond_to :title }
   end
 
+  describe '#get_review' do
+    before(:all) do
+      VCR.use_cassette('get_review') do
+        @response = Yotpo.get_review(id: 22)
+      end
+    end
+
+    subject { @response.body.review }
+    it { should respond_to :id }
+    it { should respond_to :user }
+    it { should respond_to :content }
+    it { should respond_to :title }
+  end
+
   describe '#get_product_reviews' do
     before(:all) do
       get_reviews_params = {

@@ -7,10 +7,13 @@ require 'yotpo/core/response_parser'
 require 'yotpo/version'
 require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
+require 'yotpo/api/account_social'
 require 'yotpo/api/comment'
 require 'yotpo/api/question'
 require 'yotpo/api/answer'
 require 'yotpo/api/feature'
+require 'yotpo/api/oauth'
+require 'yotpo/api/image'
 require 'yotpo/api/owner_feature'
 require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
@@ -23,8 +26,11 @@ module Yotpo
   class Client
     include Yotpo::Account
     include Yotpo::AccountPlatform
+    include Yotpo::AccountSocial
     include Yotpo::Comment
     include Yotpo::Feature
+    include Yotpo::Image
+    include Yotpo::Oauth
     include Yotpo::OwnerFeature
     include Yotpo::OwnerFeatureSetting
     include Yotpo::Product
