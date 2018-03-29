@@ -17,6 +17,7 @@ module Yotpo
     # @return the new account hash
     def create_user(params)
       user = {
+          name: params[:name],
           email: params[:email],
           display_name: params[:display_name],
           first_name: params[:first_name],
@@ -25,7 +26,8 @@ module Yotpo
           password: params[:password],
           support_url: params[:support_url],
           callback_url: params[:callback_url],
-          url: params[:url]
+          url: params[:url],
+          customer_mails_sender_name: params[:name]
       }
       post('/users', {user: user})
     end
