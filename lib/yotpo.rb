@@ -19,6 +19,14 @@ module Yotpo
     # @return [String] the secret that is registered with Yotpo
     attr_accessor :secret
 
+    # @!attribute timeout
+    # @return [int] connection timeout in seconds
+    attr_accessor :timeout
+
+    # @!attribute user_agent
+    # @return [string] global user agent in header
+    attr_accessor :user_agent
+
     # Configuration interface of the gem
     #
     # @yield [self] to accept configuration settings
@@ -40,7 +48,7 @@ module Yotpo
     # @return an instance of Yotpo::Client
     #
     def client
-      @client ||= Yotpo::Client.new(@url || 'https://api.yotpo.com')
+      @client ||= Yotpo::Client.new(@url || 'https://api.yotpo.com', @parallel_requests || 5, @timeout || 60, @user_agent)
     end
 
     private
