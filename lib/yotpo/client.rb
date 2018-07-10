@@ -47,9 +47,12 @@ module Yotpo
     #
     # @param url [String] The url to yotpo api (https://api.yotpo.com)
     # @param parallel_requests [Integer String] The maximum parallel request to do (5)
-    def initialize(url = 'https://api.yotpo.com', parallel_requests = 5)
+    def initialize(url = 'https://api.yotpo.com', parallel_requests, timeout, user_agent)
       @url = url
       @parallel_requests = parallel_requests
+      @timeout = timeout
+      @headers = { yotpo_api_connector: 'Ruby'+Yotpo::VERSION }
+      @headers.merge!(user_agent: user_agent) if user_agent
     end
 
     #
@@ -134,7 +137,9 @@ module Yotpo
     #
     # @return an instance of Faraday initialized with all that this gem needs
     def connection
-      @connection ||= Faraday.new(url: @url, parallel_manager: Typhoeus::Hydra.new(max_concurrency: @parallel_requests), headers: {:yotpo_api_connector => 'Ruby'+Yotpo::VERSION}) do |conn|
+      @connection ||= Faraday.new(url: @url, parallel_manager: Typhoeus::Hydra.new(max_concurrency: @parallel_requests), headers: @headers) do |conn|
+
+        conn.options.timeout = @timeout
 
         conn.use Yotpo::ResponseParser
 
