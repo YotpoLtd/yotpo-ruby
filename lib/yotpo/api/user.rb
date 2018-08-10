@@ -25,7 +25,8 @@ module Yotpo
           password: params[:password],
           support_url: params[:support_url],
           callback_url: params[:callback_url],
-          url: params[:url]
+          url: params[:url],
+          reviews_me_account_name: params[:reviews_me_account_name]
       }
       post('/users', {user: user})
     end
