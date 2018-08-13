@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rake'
 gem 'yard'
 gem 'redcarpet'
+gem 'faraday_middleware', git: 'https://github.com/lostisland/faraday_middleware'
 
 group :test do
   gem 'coveralls', :require => false
