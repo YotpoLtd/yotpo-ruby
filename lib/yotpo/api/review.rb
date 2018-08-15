@@ -110,5 +110,17 @@ module Yotpo
     def add_vote_to_review(params)
       get("reviews/#{params[:review_id]}/vote/#{params[:vote_value]}")
     end
+
+    #
+    # Retrieve Bottom Line (Total Reviews and Average Score) for All Site Reviews
+    #
+    # @param [Hash] params
+    # @option params [String] :app_key the app key of the account for which the review is created
+    # @option params [String] :utoken the users utoken to get the reviews that are most relevant to that user
+    def get_bottom_line_of_all_site_reviews(params)
+      app_key = params[:app_key]
+
+      get("/products/#{app_key}/yotpo_site_reviews/bottomline")
+    end
   end
 end

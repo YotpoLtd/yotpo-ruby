@@ -82,4 +82,20 @@ describe Yotpo::Review do
     it { should respond_to :id }
 
   end
+
+  describe '#get_bottom_line_of_all_site_reviews' do
+    before(:all) do
+      params = {
+        app_key: @app_key
+      }
+      VCR.use_cassette('get_bottom_line_of_all_site_reviews') do
+        @response = Yotpo.get_bottom_line_of_all_site_reviews(params)
+      end
+    end
+
+    subject { @response.body.bottomline }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to :average_score }
+    it { should respond_to :total_reviews }
+  end
 end
