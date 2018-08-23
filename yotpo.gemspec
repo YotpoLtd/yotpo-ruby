@@ -13,6 +13,7 @@ Gem::Specification.new do |gem|
   gem.homepage      = 'https://github.com/YotpoLtd/yotpo-ruby'
   gem.license       = 'MIT'
   gem.required_ruby_version = '>= 2.3.0'
+  gem.platform      = Gem::Platform::RUBY
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
