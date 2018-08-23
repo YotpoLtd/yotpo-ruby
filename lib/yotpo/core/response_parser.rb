@@ -17,11 +17,11 @@ module Yotpo
   #
   class ParseOj < FaradayMiddleware::ResponseMiddleware
     dependency do
-      require 'oj' unless defined?(::Oj)
+      require 'json' unless defined?(JSON)
     end
 
     define_parser do |body|
-      ::Oj.load(body, mode: :compat) unless body.to_s.strip.empty?
+      JSON.load(body, mode: :compat) unless body.to_s.strip.empty?
     end
   end
 
@@ -37,7 +37,7 @@ module Yotpo
     MIME_TYPE    = 'application/json'.freeze
 
     dependency do
-      require 'oj' unless defined?(::Oj)
+      require 'json' unless defined?(JSON)
     end
 
     def call(env)
@@ -48,7 +48,7 @@ module Yotpo
     end
 
     def encode(data)
-      ::Oj.dump data
+      JSON.dump data
     end
 
     def match_content_type(env)
