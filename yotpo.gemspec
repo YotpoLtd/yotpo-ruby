@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{A Ruby interface to the YOTPO API}
   gem.homepage      = 'https://github.com/YotpoLtd/yotpo-ruby'
   gem.license       = 'MIT'
-  gem.required_ruby_version = '>= 2.2.2'
+  gem.required_ruby_version = '>= 2.3.0'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -21,11 +21,8 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'faraday'
   gem.add_dependency 'typhoeus'
-  gem.add_dependency 'faraday_middleware', '>= 0.8', '< 0.10'
+  gem.add_dependency 'faraday_middleware', '>= 0.8', '< 0.13'
   gem.add_dependency 'hashie'
   gem.add_dependency 'oj'
   gem.add_dependency 'activesupport'
-
-
-
 end
