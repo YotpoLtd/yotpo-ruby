@@ -61,7 +61,7 @@ module Yotpo
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the url params that should be passed in the request
     def get(url, params = {})
-      params = params.inject({}){|memo,(k,v)| memo[k.to_s] = v; memo}
+      params = params.inject({}) { |memo,(k,v)| memo[k.to_s] = v; memo }
       preform(url, :get, params: params) do
         return connection.get(url, params)
       end
@@ -147,8 +147,10 @@ module Yotpo
         conn.response :mashify
 
         # Setting request and response to use JSON/XML
-        conn.request :oj
-        conn.response :oj, :content_type => /\bjson$/
+        conn.request :json
+        conn.response :json,
+                      content_type: /\bjson$/,
+                      parser_options: { symbolize_names: true }
 
         # Set to use instrumentals to get time logs
         conn.use :instrumentation
