@@ -85,7 +85,7 @@ response = Yotpo.get_product_bottom_line app_key: ak, product_id: "BLABLA"
 response.body.bottomline.total_reviews
 # => 1
 
-respnse.body.bottomline.average_score
+response.body.bottomline.average_score
 # => 5.0
 ```
 
