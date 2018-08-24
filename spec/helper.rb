@@ -5,8 +5,6 @@ require 'webmock/rspec'
 require 'yotpo'
 require 'vcr'
 
-
-
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
     SimpleCov::Formatter::HTMLFormatter,
     Coveralls::SimpleCov::Formatter
@@ -17,7 +15,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.ignore_hosts 'coveralls.io'
   c.cassette_library_dir     = 'spec/cassettes'
-  c.default_cassette_options = { :record => :new_episodes }
+  c.default_cassette_options = { record: :new_episodes }
 end
 
 RSpec.configure do |config|
