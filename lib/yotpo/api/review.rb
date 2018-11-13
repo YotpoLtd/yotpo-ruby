@@ -35,7 +35,11 @@ module Yotpo
           utoken: params[:utoken],
           customer_metadata: params[:customer_metadata],
           order_metadata: params[:order_metadata],
-          product_metadata: params[:product_metadata]
+          product_metadata: params[:product_metadata],
+          signature: params[:signature],
+          time_stamp: params[:time_stamp],
+          reviewer_type: params[:reviewer_type],
+          user_reference: params[:user_reference]
       }
       request.delete_if { |element, value| value.nil? }
       get('/reviews/dynamic_create', request)
