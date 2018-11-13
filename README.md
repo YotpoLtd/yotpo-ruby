@@ -62,7 +62,10 @@ Yotpo.create_review :app_key => ak,
                     :review_score => 5,
                     :signature => "The SHA256 or HMAC signature goes here",
                     :time_stamp => "1426770722",
-                    :reviewer_type => "verified_buyer"
+                    :reviewer_type => "verified_buyer",
+                    :custom_fields => {
+                      "--would-buy-again": true
+                    }
 ```
 
 and now lets retrieve all the reviews of our product BLABLA

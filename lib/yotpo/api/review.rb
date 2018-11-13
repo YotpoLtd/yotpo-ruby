@@ -39,7 +39,8 @@ module Yotpo
           signature: params[:signature],
           time_stamp: params[:time_stamp],
           reviewer_type: params[:reviewer_type],
-          user_reference: params[:user_reference]
+          user_reference: params[:user_reference],
+          custom_fields: params[:custom_fields]
       }
       request.delete_if { |element, value| value.nil? }
       get('/reviews/dynamic_create', request)
