@@ -43,7 +43,7 @@ module Yotpo
           custom_fields: params[:custom_fields]
       }
       request.delete_if { |element, value| value.nil? }
-      get('/reviews/dynamic_create', request)
+      post('/reviews/dynamic_create', request)
     end
 
     # Gets a specific review in Yotpo
