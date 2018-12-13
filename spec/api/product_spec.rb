@@ -71,4 +71,21 @@ describe Yotpo::Product do
     subject { @response.body }
     it { should be_a ::Hashie::Mash }
   end
+
+  describe '#products_name_by_sku' do
+    before(:all) do
+      params = {
+        app_key: 'QhyohRSID1AF74EekHm8i7x7KiVsTrjfKGB1AeeS',
+        utoken: 'bHdCbnov6fe218iHE3ZHLabLLW4NYD8l5kg9y8zL',
+        domain_keys: ['10']
+      }
+      VCR.use_cassette('products_name_by_sku') do
+        @response = Yotpo.products_name_by_sku(params)
+      end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to? :products}
+  end
 end
