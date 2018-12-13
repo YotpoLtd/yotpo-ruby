@@ -75,8 +75,8 @@ describe Yotpo::Product do
   describe '#products_name_by_sku' do
     before(:all) do
       params = {
-        app_key: 'QhyohRSID1AF74EekHm8i7x7KiVsTrjfKGB1AeeS',
-        utoken: 'bHdCbnov6fe218iHE3ZHLabLLW4NYD8l5kg9y8zL',
+        app_key: 'LjRHHPuW4zmcLNyLRAlvEkmGqZ1LULYF62FMIzvM',
+        utoken: 'qMwb2i9iJANf7BtXA0MqhKB9opq2sRLRwNYmXaCK',
         domain_keys: ['10']
       }
       VCR.use_cassette('products_name_by_sku') do
