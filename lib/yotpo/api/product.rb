@@ -39,5 +39,14 @@ module Yotpo
       request[:product_id] = product_id if product_id
       get("/products/#{app_key}/product_url", request)
     end
+
+    def products_name_by_sku(params)
+      request = {
+        utoken: params[:utoken],
+        domain_keys: params[:domain_keys]
+      }
+      app_key = params[:app_key]
+      post("v1/apps/#{app_key}/products_name_by_sku/", request)
+    end
   end
 end

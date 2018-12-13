@@ -4,8 +4,10 @@ require 'faraday_middleware/response_middleware'
 module Yotpo
   class ResponseParser < Faraday::Response::Middleware
     def parse(body)
-      if body.respond_to?(:response) || body.respond_to?(:status)
-        body.response || body.status
+      if body.respond_to?(:response)
+        body.response
+      elsif body.respond_to?(:status)
+        body.status.merge(body)
       else
         body
       end
