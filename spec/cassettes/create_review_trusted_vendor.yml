@@ -28,7 +28,7 @@ http_interactions:
         ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur adipiscing
         consequat lectus eu pulvinar. Vestibulum ante ipsum primis in faucibus orci
         luctus et ultrices posuere cubilia Curae","review_title":"Fusce commodo felis
-        quis turpis fringilla egestas","review_score":4.5,"user_reference":"1234"}'
+        quis turpis fringilla egestas","review_score":4.5,"signature":"e3a30f856453983fc3884ca0c9ef1f31862e6ad25199803dbc192bf2a58f2b31","time_stamp":"1426770722","reviewer_type":"verified_buyer"}'
     headers:
       User-Agent:
       - Faraday v0.9.2
@@ -89,8 +89,8 @@ http_interactions:
         ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae","title":"Fusce
         commodo felis quis turpis fringilla egestas","score":4,"user":{"id":24333822,"display_name":"User
         N.","social_image":"https://ddcfq0gxiontw.cloudfront.net/images/anonymous_user.png","is_social_connected":false},"user_type":"AnonymousUser","users":[],"products":[{"Location_idx":[0,0],"Product":{"id":6558012,"name":"Product
-        Title","slug":"product-title--429","product_url":"https://www.google.com/?q=pforducturl","shorten_url":"https://yotpo.com/go/oyhF9ltB","images":[{"id":6299789,"image_url":"https://ddcfq0gxiontw.cloudfront.net/Product/6558012/6299789/square.png?1455254154","big_image_url":"https://ddcfq0gxiontw.cloudfront.net/Product/6558012/6299789/big.png?1455254154"}],"social_network_links":{"facebook":"https://yotpo.com/go/zjgc1NGk","twitter":"https://yotpo.com/go/ay9VqGAW","linkedin":"https://yotpo.com/go/rt8WlkID","google_oauth2":"https://yotpo.com/go/7yeVqGzJ"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/gp6zp25E"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2018-11-15T18:19:13.269Z","deleted":false,"new":true,"verified_buyer":false,"archived":false,"social_pushed":false,"facebook_pushed":0,"twitter_pushed":0,"account":{"id":19699,"domain":"http://vlad-test-shop.myshopify.com"},"products_apps":[{"id":6481683,"product_url":"https://www.google.com/?q=pforducturl","domain_key":"D-4771","product":{"id":6558012,"name":"Product
+        Title","slug":"product-title--429","product_url":"https://www.google.com/?q=pforducturl","shorten_url":"https://yotpo.com/go/oyhF9ltB","images":[{"id":6299789,"image_url":"https://ddcfq0gxiontw.cloudfront.net/Product/6558012/6299789/square.png?1455254154","big_image_url":"https://ddcfq0gxiontw.cloudfront.net/Product/6558012/6299789/big.png?1455254154"}],"social_network_links":{"facebook":"https://yotpo.com/go/zjgc1NGk","twitter":"https://yotpo.com/go/ay9VqGAW","linkedin":"https://yotpo.com/go/rt8WlkID","google_oauth2":"https://yotpo.com/go/7yeVqGzJ"},"facebook_testemonials_page_product_url":"https://yotpo.com/go/gp6zp25E"}}],"votes_up":0,"votes_down":0,"user_vote":0,"created_at":"2018-11-15T18:19:13.269Z","deleted":false,"new":true,"verified_buyer":true,"archived":false,"social_pushed":false,"facebook_pushed":0,"twitter_pushed":0,"account":{"id":19699,"domain":"http://vlad-test-shop.myshopify.com"},"products_apps":[{"id":6481683,"product_url":"https://www.google.com/?q=pforducturl","domain_key":"D-4771","product":{"id":6558012,"name":"Product
         Title"}}]}]}}'
-    http_version: 
+    http_version:
   recorded_at: Thu, 15 Nov 2018 18:19:14 GMT
 recorded_with: VCR 4.0.0
