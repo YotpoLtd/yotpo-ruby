@@ -32,10 +32,18 @@ module Yotpo
           review_content: params[:review_body],
           review_title: params[:review_title],
           review_score: params[:review_score],
-          utoken: params[:utoken]
+          utoken: params[:utoken],
+          customer_metadata: params[:customer_metadata],
+          order_metadata: params[:order_metadata],
+          product_metadata: params[:product_metadata],
+          signature: params[:signature],
+          time_stamp: params[:time_stamp],
+          reviewer_type: params[:reviewer_type],
+          user_reference: params[:user_reference],
+          custom_fields: params[:custom_fields]
       }
       request.delete_if { |element, value| value.nil? }
-      get('/reviews/dynamic_create', request)
+      post('/reviews/dynamic_create', request)
     end
 
     # Gets a specific review in Yotpo

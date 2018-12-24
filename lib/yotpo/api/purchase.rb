@@ -9,7 +9,11 @@ module Yotpo
           currency_iso: params[:currency_iso],
           order_id: params[:order_id],
           platform: params[:platform],
-          products: params[:products]
+          coupon_used: params[:coupon_used],
+          delivery_type: params[:delivery_type],
+          products: params[:products],
+          customer: params[:customer],
+          custom_properties: params[:custom_properties]
       }
       app_key = params[:app_key]
       post("/apps/#{app_key}/purchases", request)
