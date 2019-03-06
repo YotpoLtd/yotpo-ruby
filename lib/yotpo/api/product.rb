@@ -48,5 +48,16 @@ module Yotpo
       app_key = params[:app_key]
       post("v1/apps/#{app_key}/products_name_by_sku/", request)
     end
+
+    def get_product_matches(params)
+      request = {
+          utoken: params[:utoken],
+          source_app_key: params[:source_app_key],
+          destination_app_key: params[:destination_app_key],
+          domain_keys: params[:domain_keys]
+      }
+      app_key = params[:app_key]
+      post("apps/#{app_key}/products_apps_matches/get_matches/", request)
+    end
   end
 end
