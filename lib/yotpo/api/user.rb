@@ -16,7 +16,8 @@ module Yotpo
     # @option params [String] :callback_url the beginning of the callback url at the users site
     # @return the new account hash
     def create_user(params)
-      user = {
+      payload = {
+        user: {
           email: params[:email],
           display_name: params[:display_name],
           first_name: params[:first_name],
@@ -26,8 +27,10 @@ module Yotpo
           support_url: params[:support_url],
           callback_url: params[:callback_url],
           url: params[:url]
+        }
       }
-      post('/users', {user: user})
+      payload[:request_uuid] = params.delete(:request_uuid) if params.key?(:request_uuid)
+      post('/users', payload)
     end
 
     #
