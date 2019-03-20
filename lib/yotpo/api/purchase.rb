@@ -13,7 +13,8 @@ module Yotpo
           delivery_type: params[:delivery_type],
           products: params[:products],
           customer: params[:customer],
-          custom_properties: params[:custom_properties]
+          custom_properties: params[:custom_properties],
+          request_uuid: params[:request_uuid]
       }
       app_key = params[:app_key]
       post("/apps/#{app_key}/purchases", request)
