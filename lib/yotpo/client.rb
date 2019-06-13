@@ -60,10 +60,10 @@ module Yotpo
     #
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the url params that should be passed in the request
-    def get(url, params = {})
+    def get(url, params = {}, headers = {})
       params = params.inject({}){|memo,(k,v)| memo[k.to_s] = v; memo}
       preform(url, :get, params: params) do
-        return connection.get(url, params)
+        return connection.get(url, params, headers)
       end
     end
 
@@ -72,10 +72,10 @@ module Yotpo
     #
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the body of the request
-    def post(url, params)
+    def post(url, params, headers = {})
       params = convert_hash_keys(params)
       preform(url, :post, params: params) do
-        return connection.post(url, params)
+        return connection.post(url, params, headers)
       end
     end
 
@@ -84,10 +84,10 @@ module Yotpo
     #
     # @param url [String] the relative path in the Yotpo API
     # @param params [Hash] the body of the request
-    def put(url, params)
+    def put(url, params, headers = {})
       params = convert_hash_keys(params)
       preform(url, :put, params: params) do
-        return connection.put(url, params)
+        return connection.put(url, params, headers)
       end
     end
 
@@ -95,10 +95,10 @@ module Yotpo
     # Does a DELETE request to the url with the params
     #
     # @param url [String] the relative path in the Yotpo API
-    def delete(url, params)
+    def delete(url, params, headers = {})
       params = convert_hash_keys(params)
       preform(url, :delete, params: params) do
-        return connection.delete(url, params)
+        return connection.delete(url, params, headers)
       end
     end
 

@@ -1,6 +1,6 @@
 module Yotpo
   module AccountPlatform
-    def create_account_platform(params)
+    def create_account_platform(params, headers = {})
       request ={
            account_platform: {
             shop_token: params[:shop_token],
@@ -12,7 +12,7 @@ module Yotpo
           utoken: params[:utoken]
       }
       app_key = params[:app_key]
-      post("/apps/#{app_key}/account_platform", request)
+      post("/apps/#{app_key}/account_platform", request, headers)
     end
   end
 end
