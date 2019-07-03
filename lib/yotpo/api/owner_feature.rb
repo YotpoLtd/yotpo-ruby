@@ -1,35 +1,35 @@
 module Yotpo
   module OwnerFeature
-    def add_feature(params)
+    def add_feature(params, headers = {})
       request = {
           utoken: params[:utoken],
           id: params[:feature_id]
       }
-      post("#{get_owner_basic_path(params[:owner_type])}/#{params[:owner_id]}/features", request)
+      post("#{get_owner_basic_path(params[:owner_type])}/#{params[:owner_id]}/features", request, headers)
     end
 
-    def remove_feature(params)
+    def remove_feature(params, headers = {})
       request = {
           utoken: params[:utoken]
       }
-      delete("#{get_owner_basic_path(params[:owner_type])}/#{params[:owner_id]}/features/#{params[:feature_id]}", request)
+      delete("#{get_owner_basic_path(params[:owner_type])}/#{params[:owner_id]}/features/#{params[:feature_id]}", request, headers)
     end
 
-    def user_enable_feature(params)
+    def user_enable_feature(params, headers = {})
       request = {
           utoken: params[:utoken],
           feature: {
               user_enabled: params[:user_enabled]
           }
       }
-      put("apps/#{params[:app_key]}/features/#{params[:feature_id]}", request)
+      put("apps/#{params[:app_key]}/features/#{params[:feature_id]}", request, headers)
     end
 
-    def get_owner_features(params)
+    def get_owner_features(params, headers = {})
       request = {
           utoken: params[:utoken]
       }
-      get("apps/#{params[:app_key]}/features", request)
+      get("apps/#{params[:app_key]}/features", request, headers)
     end
 
     private

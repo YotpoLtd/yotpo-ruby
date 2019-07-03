@@ -15,7 +15,7 @@ module Yotpo
     # @option params [String] :support_url the support url at the users site
     # @option params [String] :callback_url the beginning of the callback url at the users site
     # @return the new account hash
-    def create_user(params)
+    def create_user(params, headers = {})
       user = {
           email: params[:email],
           display_name: params[:display_name],
@@ -27,7 +27,7 @@ module Yotpo
           callback_url: params[:callback_url],
           url: params[:url]
       }
-      post('/users', {user: user})
+      post('/users', {user: user}, headers)
     end
 
     #
@@ -37,14 +37,14 @@ module Yotpo
     # @option params [String] :app_key the app key received at the registration
     # @option params [String] :secret app secret received at the registration
     # @return [Hash] that includes access_token and the token_type
-    def get_oauth_token(params)
+    def get_oauth_token(params, headers = {})
       request = {
           client_id: params[:app_key],
           client_secret: params[:secret],
           grant_type: 'client_credentials'
       }
 
-      response = post('/oauth/token', request)
+      response = post('/oauth/token', request, headers)
       return response
     end
 
@@ -53,16 +53,16 @@ module Yotpo
     # @param params [Hash] the request params
     # @option params [String] :app_key that was received when registered to www.yotpo.com
     # @option params [String] :secret that was received when registered to www.yotpo.com
-    def get_login_url(params)
+    def get_login_url(params, headers = {})
       request = {
           app_key: params[:app_key],
           secret: params[:secret]
       }
-      get('/users/b2blogin.json', request)
+      get('/users/b2blogin.json', request, headers)
     end
 
-    def anonymous_user_confirmation(params)
-      get("/users/anonymous/#{params[:token]}")
+    def anonymous_user_confirmation(params, headers = {})
+      get("/users/anonymous/#{params[:token]}", {}, headers)
     end
 
   end

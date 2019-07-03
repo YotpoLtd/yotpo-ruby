@@ -18,7 +18,7 @@ module Yotpo
     # @option params [String Integer] :review_score the rating of the review
     # @option params [String] :utoken the token of the user who wrote the review (if one exists)
     # @return [::Hashie::Mash] The new review with all of it's data
-    def create_review(params)
+    def create_review(params, headers = {})
       request = {
           appkey: params[:app_key],
           sku: params[:product_id],
@@ -43,7 +43,7 @@ module Yotpo
           custom_fields: params[:custom_fields]
       }
       request.delete_if { |element, value| value.nil? }
-      post('/reviews/dynamic_create', request)
+      post('/reviews/dynamic_create', request, headers)
     end
 
     # Gets a specific review in Yotpo
@@ -51,9 +51,9 @@ module Yotpo
     # @param [Hash] params
     # @option params [String] :id the id of the review
     # @return [::Hashie::Mash] The review with all of it's data
-    def get_review(params)
+    def get_review(params, headers = {})
       review_id = params[:id]
-      get("/reviews/#{review_id}")
+      get("/reviews/#{review_id}", {},headers)
     end
 
     #
@@ -72,7 +72,7 @@ module Yotpo
     # @option params [Boolean] :include_site_reviews Include site reviews
     # @option params [Boolean] :deleted Include deleted reviews
 
-    def get_all_reviews(params)
+    def get_all_reviews(params, headers = {})
       app_key = params[:app_key]
       sku = params[:product_id]
       request = {
@@ -87,7 +87,7 @@ module Yotpo
           user_reference: params[:user_reference]
       }
       request.delete_if{|key,val| val.nil? }
-      get("/v1/apps/#{app_key}/#{sku}/reviews", request)
+      get("/v1/apps/#{app_key}/#{sku}/reviews", request, headers)
     end
 
     #
@@ -101,7 +101,7 @@ module Yotpo
     # @option params [String] :since_id the id from which to start retrieving reviews
     # @option params [String] :since_date the date from which to start retrieving reviews
     # @option params [String] :utoken the users utoken to get the reviews that are most relevant to that user
-    def get_product_reviews(params)
+    def get_product_reviews(params, headers = {})
       app_key = params[:app_key]
       sku = params[:product_id]
       request = {
@@ -112,11 +112,11 @@ module Yotpo
           utoken: params[:utoken]
       }
       request.delete_if{|key,val| val.nil? }
-      get("/products/#{app_key}/#{sku}/reviews", request)
+      get("/products/#{app_key}/#{sku}/reviews", request, headers)
     end
 
-    def add_vote_to_review(params)
-      get("reviews/#{params[:review_id]}/vote/#{params[:vote_value]}")
+    def add_vote_to_review(params, headers = {})
+      get("reviews/#{params[:review_id]}/vote/#{params[:vote_value]}", {}, headers)
     end
   end
 end

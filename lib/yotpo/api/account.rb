@@ -12,7 +12,7 @@ module Yotpo
     # @option params [Boolean Integer] :minisite_subdomain_active enable or disable the feature
     # @option params [String] :utoken the login token of the account owner
     # @option params [String] :app_key the account app key that was created at registration
-    def update_account(params)
+    def update_account(params, headers = {})
       request = {
           account: {
             minisite_website_name: params[:minisite_website_name],
@@ -24,7 +24,7 @@ module Yotpo
           utoken: params[:utoken]
       }
       app_key = params[:app_key]
-      put("/apps/#{app_key}", request)
+      put("/apps/#{app_key}", request, headers)
     end
 
     #
@@ -34,11 +34,13 @@ module Yotpo
     # @option params [String] :utoken the login token of the account owner
     # @option params [String] :app_key the account app key that was created at registration
     # @option params [String] :subdomain the subdomain to check
-    def check_minisite_subdomain(params)
+    def check_minisite_subdomain(params, headers = {})
       app_key = params[:app_key]
       subdomain = params[:subdomain]
-      utoken = params[:utoken]
-      get("/apps/#{app_key}/subomain_check/#{subdomain}?utoken=#{utoken}")
+      request = {
+          utoken: params[:utoken]
+      }
+      get("/apps/#{app_key}/subomain_check/#{subdomain}", request, headers)
     end
 
     #
@@ -46,9 +48,9 @@ module Yotpo
     #
     # @param params [Hash]
     # @option params [String] :app_key the account app key that was created at registration
-    def check_lock_state(params)
+    def check_lock_state(params, headers = {})
       app_key = params[:app_key]
-      get("/apps/#{app_key}/lock_state")
+      get("/apps/#{app_key}/lock_state", {}, headers)
     end
   end
 end

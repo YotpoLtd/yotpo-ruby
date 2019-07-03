@@ -1,6 +1,6 @@
 module Yotpo
   module AccountSocial
-    def create_account_social(params)
+    def create_account_social(params, headers = {})
       request = {
           account_social: {
             social_network_name: params[:social_network_name],
@@ -15,22 +15,22 @@ module Yotpo
           },
           utoken: params[:utoken]
       }
-      post("/apps/#{params[:app_key]}/account_socials", request)
+      post("/apps/#{params[:app_key]}/account_socials", request, headers)
     end
 
-    def update_account_social(params)
+    def update_account_social(params, headers = {})
       request = {
           utoken: params.delete(:utoken)
       }
       request[:account_social] = params
-      put("/apps/#{params.delete(:app_key)}/account_socials/#{params.delete(:id)}", request)
+      put("/apps/#{params.delete(:app_key)}/account_socials/#{params.delete(:id)}", request, headers)
     end
 
-    def get_account_social(params)
+    def get_account_social(params, headers = {})
       request = {
           utoken: params[:utoken]
       }
-      get("/apps/#{params[:app_key]}/account_socials", request)
+      get("/apps/#{params[:app_key]}/account_socials", request, headers)
     end
   end
 end
