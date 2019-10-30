@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/products?count=10&page=1&utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Oct 2019 13:24:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - W/"57b29222f5cbb58d0387aeb509d3b840"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 5b78be59-6517-4a31-b148-caaa52b5e3a0
+      X-Runtime:
+      - '0.084171'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"status":{"code":200,"message":"OK"},"response":{"products":[{"id":817499,"slug":"test-product--8877817082196055893","name":"Test
+        Product","images":[{"id":850232,"image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/817499/850232/thumb.png?1455140445","image_content_type":"image/png","big_image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/817499/850232/big.png?1455140445"}],"featured_image_id":850232,"total_reviews":2,"new_reviews":1,"published_reviews":2,"pend_for_web_reviews":0,"domain_key":"120915246","app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","bread_crumbs":"","last_mention":"2017-06-19T10:02:43.000Z","updated_at":"2017-06-19T10:02:42.000Z"},{"id":860215,"slug":"this-amp-_-x27-quot-gt","name":"This
+        ! @ # $ % ^ &amp; * _ + = - } { | \\ &#x27; &quot; ; / ? . &gt; ,","images":[],"featured_image_id":null,"total_reviews":0,"new_reviews":0,"published_reviews":0,"pend_for_web_reviews":0,"domain_key":"168859516","app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","bread_crumbs":"","last_mention":"2014-11-08T07:09:21.000Z","updated_at":"2013-10-29T18:26:05.000Z"},{"id":895609,"slug":"a-very-unique-product-by-vlad","name":"a
+        very unique product by vlad","images":[],"featured_image_id":null,"total_reviews":0,"new_reviews":0,"published_reviews":0,"pend_for_web_reviews":0,"domain_key":"171029054","app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","bread_crumbs":"","last_mention":"2014-11-02T07:44:39.000Z","updated_at":"2013-11-04T14:05:02.000Z"},{"id":2753248,"slug":"unicorn--13","name":"Unicorn","images":[{"id":2666915,"image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/2753248/2666915/thumb.png?1455207298","image_content_type":"image/png","big_image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/2753248/2666915/big.png?1455207298"}],"featured_image_id":2666915,"total_reviews":0,"new_reviews":0,"published_reviews":0,"pend_for_web_reviews":0,"domain_key":"350964957","app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","bread_crumbs":"","last_mention":"2014-11-02T09:12:02.000Z","updated_at":"2014-08-04T01:42:23.000Z"},{"id":6558012,"slug":"product-title--429","name":"Product
+        Title","images":[{"id":6299789,"image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/6558012/6299789/thumb.png?1455254154","image_content_type":"image/png","big_image_url":"https://cdn-yotpo-images-production.yotpo.com/Product/6558012/6299789/big.png?1455254154"}],"featured_image_id":6299789,"total_reviews":4,"new_reviews":1,"published_reviews":4,"pend_for_web_reviews":0,"domain_key":"D-4771","app_key":"3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy","bread_crumbs":"","last_mention":"2018-11-15T18:19:13.000Z","updated_at":"2015-07-19T07:25:35.000Z"}],"total_products":5,"page":"1","per_page":"10"}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:24:54 GMT
+recorded_with: VCR 5.0.0

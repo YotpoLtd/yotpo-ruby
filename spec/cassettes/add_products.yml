@@ -1,0 +1,142 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/products/mass_create
+    body:
+      encoding: UTF-8
+      string: '{"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC","products":{"50":{"name":"Blackberry
+        Acai1","url":"https://www.google.com"}},"return_email_address":null,"result_callback_url":null}'
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 29 Oct 2019 13:56:31 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 5088ee0f-8e51-43dd-81d3-b2df384de12d
+      X-Runtime:
+      - '0.038523'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"You are not authorized to access this page.","code":401,"error_type":"Exceptions::AccessDenied","uuid":"5088ee0f-8e51-43dd-81d3-b2df384de12d","s":4}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:56:31 GMT
+- request:
+    method: post
+    uri: https://api.yotpo.com/apps/qMwb2i9iJANf7BtXA0MqhKB9opq2sRLRwNYmXaCK/products/mass_create
+    body:
+      encoding: UTF-8
+      string: '{"utoken":"LjRHHPuW4zmcLNyLRAlvEkmGqZ1LULYF62FMIzvM","products":{"50":{"name":"T-shirt","url":"https://www.google.com"}},"return_email_address":null,"result_callback_url":null}'
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 29 Oct 2019 13:57:40 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 11305a1c-2ba7-4174-86f4-3f2ddf5a8c5b
+      X-Runtime:
+      - '0.008643'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"You are not authorized to access this page.","code":401,"error_type":"Exceptions::AccessDenied","uuid":"11305a1c-2ba7-4174-86f4-3f2ddf5a8c5b","s":4}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 13:57:40 GMT
+- request:
+    method: put
+    uri: https://api.yotpo.com/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/products/mass_update
+    body:
+      encoding: UTF-8
+      string: '{"utoken":"Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC","products":{"50":{"name":"T-shirt","url":"https://www.google.com"}},"return_email_address":null,"result_callback_url":null}'
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 29 Oct 2019 14:01:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 7b648a07-3af8-4f42-8cb3-5d4a831fc238
+      X-Runtime:
+      - '0.015488'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"You are not authorized to access this page.","code":401,"error_type":"Exceptions::AccessDenied","uuid":"7b648a07-3af8-4f42-8cb3-5d4a831fc238","s":4}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 14:01:49 GMT
+recorded_with: VCR 5.0.0
