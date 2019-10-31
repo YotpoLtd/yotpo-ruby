@@ -135,7 +135,7 @@ module Yotpo
       }
 
       app_key = params[:app_key]
-      post("apps/#{app_key}/products_groups", request, headers)
+      post("v1/apps/#{app_key}/products_groups", request, headers)
     end
 
     # Delete a product group in Yotpo
@@ -151,7 +151,7 @@ module Yotpo
 
       app_key = params[:app_key]
       group_name = params[:group_name]
-      delete("apps/#{app_key}/products_groups/#{group_name}", request, headers)
+      delete("v1/apps/#{app_key}/products_groups/#{group_name}", request, headers)
     end
 
     # Gets products group in Yotpo
@@ -165,7 +165,7 @@ module Yotpo
       }
 
       app_key = params[:app_key]
-      get("apps/#{app_key}/products_groups", request, headers)
+      get("v1/apps/#{app_key}/products_groups", request, headers)
     end
   end
 end
