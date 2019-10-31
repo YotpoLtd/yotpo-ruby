@@ -53,7 +53,7 @@ module Yotpo
     # @return an instance of Yotpo::Client
     #
     def client
-      @client ||= Yotpo::Client.new(@url || 'https://api.yotpo.com/v1', @parallel_requests || 5, @timeout || 60, @user_agent)
+      @client ||= Yotpo::Client.new(@url || 'https://api.yotpo.com', @parallel_requests || 5, @timeout || 60, @user_agent)
     end
 
     private

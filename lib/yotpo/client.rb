@@ -47,7 +47,7 @@ module Yotpo
     #
     # @param url [String] The url to yotpo api (https://api.yotpo.com)
     # @param parallel_requests [Integer String] The maximum parallel request to do (5)
-    def initialize(url = 'https://api.yotpo.com/v1', parallel_requests, timeout, user_agent)
+    def initialize(url = 'https://api.yotpo.com', parallel_requests, timeout, user_agent)
       @url = url
       @parallel_requests = parallel_requests
       @timeout = timeout
