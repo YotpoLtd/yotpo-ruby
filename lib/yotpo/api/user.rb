@@ -25,9 +25,9 @@ module Yotpo
           password: params[:password],
           support_url: params[:support_url],
           callback_url: params[:callback_url],
-          url: params[:url]
+          url: params[:url],
       }
-      post('/users', {user: user}, headers)
+      post('/users', {user: user, set_test_package: params[:set_test_package]}, headers)
     end
 
     #
