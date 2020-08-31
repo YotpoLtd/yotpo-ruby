@@ -8,6 +8,7 @@ A Ruby interface to the YOTPO API
 [codeclimate]: https://codeclimate.com/github/YotpoLtd/yotpo-ruby
 [coveralls]: https://coveralls.io/r/YotpoLtd/yotpo-ruby
 
+
 [![Gem Version](https://badge.fury.io/rb/yotpo.png)][gem]
 [![Build Status](https://secure.travis-ci.org/YotpoLtd/yotpo-ruby.png?branch=master)][travis]
 [![Dependency Status](https://gemnasium.com/YotpoLtd/yotpo-ruby.png?travis)][gemnasium]
