@@ -8,7 +8,7 @@ module Yotpo
       }
       request.delete_if{|key,val| val.nil?}
       app_key = params[:app_key]
-      get("/apps/#{app_key}/bottom_lines", request, headers)
+      get("/v1/apps/#{app_key}/bottom_lines", request, headers)
     end
 
     def get_products_information(params, headers = {})
