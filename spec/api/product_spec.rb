@@ -21,11 +21,16 @@ describe Yotpo::Product do
 
   describe '#get_all_bottom_lines' do
     before(:all) do
+      VCR.configure do |c|
+        c.filter_sensitive_data('YOTPO_APP_KEY') { @app_key }
+        c.filter_sensitive_data('YOTPO_TOKEN') { @utoken }
+      end
+
       get_app_bottom_lines_params = {
           utoken: @utoken,
           app_key: @app_key
       }
-      VCR.use_cassette('check_minisite_subdomain') do
+      VCR.use_cassette('get_all_bottom_lines') do
         @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
       end
     end
