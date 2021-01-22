@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.yotpo.com/v1/apps/YOTPO_APP_KEY/bottom_lines?utoken=YOTPO_TOKEN
+    uri: https://api.yotpo.com/v1/apps/YOTPO_APP_KEY/bottom_lines?count=20&utoken=YOTPO_TOKEN
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: ''
     headers:
       Date:
-      - Sat, 16 Jan 2021 02:09:07 GMT
+      - Fri, 22 Jan 2021 20:18:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Server:
@@ -33,13 +33,13 @@ http_interactions:
       X-Robots-Tag:
       - noindex
       Etag:
-      - W/"ff0fbde54be6b9e5c6986d1fa23808c4"
+      - W/"7c4f3de2faa3dad7579bb1abbbf58d75"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 2a70d3a1-00e0-4221-8662-1d3f5cbb0819
+      - f346a036-cf41-404d-8ec3-1210841be739
       X-Runtime:
-      - '0.064447'
+      - '0.105538'
       Access-Control-Allow-Credentials:
       - 'true'
       P3p:
@@ -54,15 +54,15 @@ http_interactions:
       Ratelimit-Limit:
       - '5000'
       Ratelimit-Reset:
-      - '53'
+      - '44'
       X-Kong-Upstream-Latency:
-      - '69'
+      - '108'
       X-Kong-Proxy-Latency:
       - '8'
       Via:
       - kong/2.1.4
     body:
       encoding: UTF-8
-      string: '{"status":{"code":200,"message":"ok"},"response":{"bottomlines":[{"domain_key":"J1A1063","product_score":4.55769,"total_reviews":156},{"domain_key":"J1D1147","product_score":4.12317,"total_reviews":2395},{"domain_key":"J1D1023","product_score":4.2074,"total_reviews":3081},{"domain_key":"AUTOSHIP","product_score":4.68317,"total_reviews":202},{"domain_key":"J1T1419","product_score":4.19407,"total_reviews":6714},{"domain_key":"J1T1028","product_score":4.13415,"total_reviews":2199},{"domain_key":"J1T1193","product_score":5.0,"total_reviews":1},{"domain_key":"J1T1025","product_score":3.43082,"total_reviews":2219},{"domain_key":"J1T1024","product_score":4.00757,"total_reviews":2114},{"domain_key":"J1T1443","product_score":3.7926,"total_reviews":1432}],"page":1,"per_page":10}}'
-  recorded_at: Sat, 16 Jan 2021 02:09:07 GMT
+      string: '{"status":{"code":200,"message":"ok"},"response":{"bottomlines":[{"domain_key":"J1A1063","product_score":4.55769,"total_reviews":156},{"domain_key":"J1D1147","product_score":4.12317,"total_reviews":2395},{"domain_key":"J1D1023","product_score":4.2074,"total_reviews":3081},{"domain_key":"AUTOSHIP","product_score":4.68317,"total_reviews":202},{"domain_key":"J1T1419","product_score":4.19407,"total_reviews":6714},{"domain_key":"J1T1028","product_score":4.13415,"total_reviews":2199},{"domain_key":"J1T1193","product_score":5.0,"total_reviews":1},{"domain_key":"J1T1025","product_score":3.43082,"total_reviews":2219},{"domain_key":"J1T1024","product_score":4.00757,"total_reviews":2114},{"domain_key":"J1T1443","product_score":3.7926,"total_reviews":1432},{"domain_key":"J1T1434","product_score":3.97157,"total_reviews":2568},{"domain_key":"J1T1422","product_score":3.71975,"total_reviews":2223},{"domain_key":"J1T1027","product_score":3.93721,"total_reviews":637},{"domain_key":"J1T1026","product_score":4.18424,"total_reviews":2106},{"domain_key":"J1D1810","product_score":4.2074,"total_reviews":3081},{"domain_key":"J1D1854","product_score":4.12317,"total_reviews":2395},{"domain_key":"J1D1845","product_score":4.12317,"total_reviews":2395},{"domain_key":"J1D1846","product_score":4.12317,"total_reviews":2395},{"domain_key":"J1T1810","product_score":3.93721,"total_reviews":637},{"domain_key":"J1T1351","product_score":4.16651,"total_reviews":1057}],"page":1,"per_page":"20"}}'
+  recorded_at: Fri, 22 Jan 2021 20:18:16 GMT
 recorded_with: VCR 6.0.0

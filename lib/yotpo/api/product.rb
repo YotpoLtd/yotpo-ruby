@@ -4,7 +4,8 @@ module Yotpo
       request = {
           utoken: params[:utoken],
           since_date: params[:since_date],
-          since_id: params[:since_id]
+          since_id: params[:since_id],
+          count: params[:count]
       }
       request.delete_if{|key,val| val.nil?}
       app_key = params[:app_key]

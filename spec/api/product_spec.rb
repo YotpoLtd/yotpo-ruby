@@ -28,7 +28,8 @@ describe Yotpo::Product do
 
       get_app_bottom_lines_params = {
           utoken: @utoken,
-          app_key: @app_key
+          app_key: @app_key,
+          count: 20
       }
       VCR.use_cassette('get_all_bottom_lines') do
         @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
@@ -40,6 +41,10 @@ describe Yotpo::Product do
     it { should respond_to :domain_key }
     it { should respond_to :product_score }
     it { should respond_to :total_reviews }
+
+    it "retrieves a custom count per page" do
+      expect(@response.body[:per_page]).to eq("20")
+    end
   end
 
   describe '#get_product_bottom_line' do
