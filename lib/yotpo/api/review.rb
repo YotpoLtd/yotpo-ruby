@@ -40,8 +40,7 @@ module Yotpo
           time_stamp: params[:time_stamp],
           reviewer_type: params[:reviewer_type],
           user_reference: params[:user_reference],
-          custom_fields: params[:custom_fields],
-          override_remote_ip: params[:override_remote_ip]
+          custom_fields: params[:custom_fields]
       }
       request.delete_if { |element, value| value.nil? }
       post('/reviews/dynamic_create', request, headers)
