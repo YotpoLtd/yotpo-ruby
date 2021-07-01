@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module Product
     def get_all_bottom_lines(params)

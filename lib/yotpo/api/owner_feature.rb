@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module OwnerFeature
     def add_feature(params)

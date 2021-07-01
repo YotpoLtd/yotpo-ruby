@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module AccountPlatform
     def create_account_platform(params)

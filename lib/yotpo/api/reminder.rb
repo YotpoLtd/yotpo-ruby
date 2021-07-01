@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module Reminder
     def send_test_reminder(params)

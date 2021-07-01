@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module Comment
     def create_comment(params)

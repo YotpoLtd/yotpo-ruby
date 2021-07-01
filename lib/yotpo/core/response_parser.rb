@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'typhoeus/adapters/faraday'
 require 'faraday_middleware/response_middleware'
 

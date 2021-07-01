@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yotpo/version'
 require 'yotpo/client'
 

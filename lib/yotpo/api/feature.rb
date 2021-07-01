@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module Feature
     def get_features(params)

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Yotpo
   module Purchase
     def create_new_purchase(params)
