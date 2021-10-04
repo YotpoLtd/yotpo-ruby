@@ -11,6 +11,10 @@
 ##
 ############################################################
 
+2021-10-04 Karl Smith
+1. remove faraday_middleware version pin
+2. increase version to 1.1.0
+
 2013-05-26 Omri Cohen
 1. Adding support in purchase.rb for order_date and currency_iso
 2. increasing version to 0.0.7
