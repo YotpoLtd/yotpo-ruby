@@ -1,6 +1,11 @@
 require 'yotpo/version'
 require 'yotpo/client'
 
+# turn off hashie warnings
+# the GET all products call uses 'count' as a param which is used by hashie
+require "hashie/logger"
+Hashie.logger = Logger.new('/dev/null')
+
 module Yotpo
   class << self
     # @!attribute url

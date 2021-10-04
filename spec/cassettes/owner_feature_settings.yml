@@ -46,4 +46,46 @@ http_interactions:
         Sans","background_color":{"transparent":true,"color":"#ffffff"},"color_primary":"#3085c7","color_d1":"#26649f","color_d2":"#1d5077","color_l1":"#599dd2","color_l2":"#83b6dd","color_l3":"#accee9","color_l4":"#d6e7f4","color_stars":"#ffd200","color_text_white":"#ffffff","theme":"light","color_text_gray_light":"#e3e3e3","color_text_gray":"#a2a2a2","color_text_gray_dark":"#737373","color_text_gray_darker":"#4f4f4f"}}'
     http_version: 
   recorded_at: Tue, 24 May 2016 07:25:15 GMT
-recorded_with: VCR 2.9.3
+- request:
+    method: get
+    uri: https://api.yotpo.com/v1/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/features/11/feature_settings?utoken=Ufo5XkKXNsuh0k9ZMPndRv4DlV9324ptg730KKqC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.17.0
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      Expect:
+      - ''
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Tue, 29 Oct 2019 16:28:36 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      X-Request-Id:
+      - 086b080e-25b5-479f-b296-59130868f906
+      X-Runtime:
+      - '0.008963'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      P3p:
+      - policyref="/w3c/p3p.xml", CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi
+        CONi HIS OUR IND CNT", CP="CAO PSA OUR"
+    body:
+      encoding: UTF-8
+      string: '{"status":{"message":"No route matches [GET] \"/v1/apps/3ovRYNIb6OIAI0ddS7EfpYkHpi0oTKl6bj82Vjiy/features/11/feature_settings\"","code":404,"error_type":"Exceptions::RoutingError","uuid":"086b080e-25b5-479f-b296-59130868f906","s":4}}'
+    http_version: 
+  recorded_at: Tue, 29 Oct 2019 16:28:36 GMT
+recorded_with: VCR 5.0.0

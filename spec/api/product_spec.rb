@@ -93,4 +93,74 @@ describe Yotpo::Product do
     it { should be_a ::Hashie::Mash }
     it { should respond_to? :products}
   end
+
+  # describe '#add_products' do
+  #   before(:all) do
+  #     params = {
+  #       utoken: @utoken,
+  #       app_key: @app_key,
+  #       products: {
+  #         '50': {
+  #           name: 'T-shirt',
+  #           url: 'https://www.google.com',
+  #         }
+  #       }
+  #     }
+
+  #     VCR.use_cassette('add_products') do
+  #       @response = Yotpo.add_products(params)
+  #     end
+  #   end
+
+  #   # tests get a 401 error due to the token not having authorization
+  #   subject { @response.body }
+  #   it { should be_a ::Hashie::Mash }
+  #   it "gets success" do  
+  #     expect(subject.code).to eq(200)
+  #   end
+  # end
+
+  # describe '#update_products' do
+  #   before(:all) do
+  #     params = {
+  #       utoken: @utoken,
+  #       app_key: @app_key,
+  #       products: {
+  #         '50': {
+  #           name: 'T-shirt',
+  #           url: 'https://www.google.com',
+  #         }
+  #       }
+  #     }
+
+  #     VCR.use_cassette('add_products') do
+  #       @response = Yotpo.update_products(params)
+  #     end
+  #   end
+
+  #   # tests get a 401 error due to the token not having authorization
+  #   subject { @response.body }
+  #   it { should be_a ::Hashie::Mash }
+  #   it "gets success" do  
+  #     expect(subject.code).to eq(200)
+  #   end
+  # end
+
+  describe '#get_all_products' do
+    before(:all) do
+      params = {
+        utoken: @utoken,
+        app_key: @app_key
+      }
+      VCR.use_cassette('get_all_products') do
+        @response = Yotpo.get_all_products(params)
+      end
+    end
+
+    subject { @response.body.products }
+    it { should be_a ::Hashie::Array }
+    it "finds :name" do  
+      expect(subject[0]).to respond_to(:name)
+    end
+  end
 end

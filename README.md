@@ -96,6 +96,88 @@ response.body.bottomline.average_score
 # => 5.0
 ```
 
+## Products
+More product API information can be found at https://apidocs.yotpo.com/reference#introduction-to-products
+
+### Adding products
+```ruby
+ak = "{YOUR_APP_KEY}"
+st = "{YOUR_SECRET_KEY}"
+
+# retrieve the utoken
+response = Yotpo.get_oauth_token :app_key => ak, :secret => st
+utoken = response.body.access_token
+
+# add the product
+response = Yotpo.add_products({
+  app_key: ak,
+  utoken: utoken,
+  products: {
+    'Product-1': {
+      name: 'Shirt',
+      url: 'https://yotpos-demo-store-5.myshopify.com/products/shirt',
+      group_name: "shirt",
+      product_tags: "shirts"
+    }
+  }
+})
+
+raise Exception unless response.body.code == 200
+
+```
+
+### Updating products
+```ruby
+ak = "{YOUR_APP_KEY}"
+st = "{YOUR_SECRET_KEY}"
+
+# retrieve the utoken
+response = Yotpo.get_oauth_token :app_key => ak, :secret => st
+utoken = response.body.access_token
+
+# update the product
+response = Yotpo.update_products({
+  app_key: ak,
+  utoken: utoken,
+  products: {
+    'Product-1': {
+      name: 'Shirt',
+      url: 'https://yotpos-demo-store-5.myshopify.com/products/shirt',
+      group_name: "shirt",
+      product_tags: "shirts"
+    }
+  }
+})
+
+raise Exception unless response.body.code == 200
+
+```
+
+### Getting products
+```ruby
+ak = "{YOUR_APP_KEY}"
+st = "{YOUR_SECRET_KEY}"
+
+# retrieve the utoken
+response = Yotpo.get_oauth_token :app_key => ak, :secret => st
+utoken = response.body.access_token
+
+# get 50 products
+response = Yotpo.get_all_products({
+  app_key: ak,
+  utoken: utoken,
+  count: 50,
+  page: 1
+})
+
+# response `products` is a Hashie::Array
+response.body.products.each do | product |
+  puts product.name
+end
+
+```
+
+### Create a purchase
 Now lets try something a little bit more complicated. Lets try to create a purchase.
 
 For that we will need to go through Yotpo authenticaton process, provide an app_key and secret, and return to get the utoken. The utoken will allow us to make authenticated API calls.

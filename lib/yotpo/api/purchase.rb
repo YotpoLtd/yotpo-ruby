@@ -2,6 +2,7 @@ module Yotpo
   module Purchase
     def create_new_purchase(params, headers = {})
       request = {
+          validate_data: true,
           utoken: params[:utoken],
           email: params[:email],
           customer_name: params[:customer_name],
@@ -40,6 +41,15 @@ module Yotpo
       request.delete_if{|key, value| value.nil? }
       app_key = params[:app_key]
       get("/apps/#{app_key}/purchases", request, headers)
+    end
+
+    def delete_purchases(params, headers = {})
+      request = {
+        utoken: params[:utoken],
+        orders: params[:orders]
+    }
+      app_key = params[:app_key]
+      delete("/apps/#{app_key}/purchases", request, headers)
     end
   end
 end
