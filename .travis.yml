@@ -1,6 +1,8 @@
-language: ruby
-rvm:
-- ruby-head
+sudo: required
+dist: trusty
+language: generic
+services:
+  - docker
 deploy:
   provider: rubygems
   api_key:
