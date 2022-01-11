@@ -38,6 +38,7 @@ Yotpo.configure do |config|
   config.secret = SECRET
 end
 ```
+
 That is it you are ready
 
 Now lets make some public calls to our api. Public calls only require you to use a valid app_key.
