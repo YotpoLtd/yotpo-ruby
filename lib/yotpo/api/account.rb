@@ -26,8 +26,7 @@ module Yotpo
       app_key = params[:app_key]
       put("/apps/#{app_key}", request, headers)
     end
-
-    #
+    
     # Check if the minisite subdomain at yotpo.me is vacant
     #
     # @param params [Hash]
