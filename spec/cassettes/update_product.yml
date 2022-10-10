@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: patch
+    uri: https://api.yotpo.com/core/v3/stores/foo/products/445581456
+    body:
+      encoding: UTF-8
+      string: '{"yotpo_product_id":445581456,"product":{"external_id":"33","name":"New
+        Product","description":"A description","status":"inactive"}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 10 Oct 2022 21:40:11 GMT
+      Content-Length:
+      - '0'
+      Vary:
+      - Origin
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - 9efadbf3-d747-43d4-8f27-3a52ef858b8a
+      X-Kong-Upstream-Latency:
+      - '31'
+      X-Kong-Proxy-Latency:
+      - '22'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Mon, 10 Oct 2022 21:40:11 GMT

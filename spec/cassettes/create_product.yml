@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.yotpo.com/core/v3/stores/foo/products
+    body:
+      encoding: UTF-8
+      string: '{"product":{"external_id":"33","name":"New Product","description":"A
+        description","status":"active"}}'
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 201
+      message: ''
+    headers:
+      Date:
+      - Mon, 10 Oct 2022 18:26:08 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Origin
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - cf70f163-46ea-408f-b11f-549f5326000f
+      X-Kong-Upstream-Latency:
+      - '57'
+      X-Kong-Proxy-Latency:
+      - '36'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"product":{"yotpo_id":123456789}}'
+  recorded_at: Mon, 10 Oct 2022 18:26:08 GMT
+recorded_with: VCR 6.1.0

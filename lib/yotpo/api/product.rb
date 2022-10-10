@@ -63,5 +63,12 @@ module Yotpo
       app_key = params[:app_key]
       post("apps/#{app_key}/products_apps_matches/get_matches/", request, headers)
     end
+
+    def self.included(base)
+      base.
+        define_endpoint(:get_products, 'core/v3/stores/{app_key}/products').
+        define_endpoint(:create_product, 'core/v3/stores/{app_key}/products', method: :post).
+        define_endpoint(:update_product, 'core/v3/stores/{app_key}/products/{yotpo_product_id}', method: :patch)
+    end
   end
 end

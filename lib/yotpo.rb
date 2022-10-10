@@ -19,6 +19,10 @@ module Yotpo
     # @return [String] the secret that is registered with Yotpo
     attr_accessor :secret
 
+    # @!attribute utoken
+    # @return [String] an access token generated for requests to private endpoints
+    attr_accessor :utoken
+
     # @!attribute timeout
     # @return [int] connection timeout in seconds
     attr_accessor :timeout

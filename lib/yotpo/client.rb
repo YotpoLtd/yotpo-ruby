@@ -3,8 +3,10 @@ require 'faraday'
 require 'typhoeus'
 require 'typhoeus/adapters/faraday'
 require 'faraday_middleware'
+require 'yotpo/core/requests'
 require 'yotpo/core/response_parser'
 require 'yotpo/version'
+require 'yotpo/api/access_token'
 require 'yotpo/api/account'
 require 'yotpo/api/account_platform'
 require 'yotpo/api/account_social'
@@ -17,6 +19,7 @@ require 'yotpo/api/image'
 require 'yotpo/api/owner_feature'
 require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
+require 'yotpo/api/product_variant'
 require 'yotpo/api/purchase'
 require 'yotpo/api/reminder'
 require 'yotpo/api/review'
@@ -24,6 +27,8 @@ require 'yotpo/api/user'
 
 module Yotpo
   class Client
+    extend Yotpo::Requests
+    include Yotpo::AccessToken
     include Yotpo::Account
     include Yotpo::AccountPlatform
     include Yotpo::AccountSocial
@@ -34,6 +39,7 @@ module Yotpo
     include Yotpo::OwnerFeature
     include Yotpo::OwnerFeatureSetting
     include Yotpo::Product
+    include Yotpo::ProductVariant
     include Yotpo::Reminder
     include Yotpo::Review
     include Yotpo::User
@@ -76,6 +82,18 @@ module Yotpo
       params = convert_hash_keys(params)
       preform(url, :post, params: params) do
         return connection.post(url, params, headers)
+      end
+    end
+
+    #
+    # Does a PATCH request to the url with the params
+    #
+    # @param url [String] the relative path in the Yotpo API
+    # @param params [Hash] the body of the request
+    def patch(url, params, headers = {})
+      params = convert_hash_keys(params)
+      preform(url, :patch, params: params) do
+        return connection.patch(url, params, headers)
       end
     end
 

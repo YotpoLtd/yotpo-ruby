@@ -1,6 +1,8 @@
 require 'helper'
 
 describe Yotpo::Product do
+  subject { @response.body }
+
   describe '#get_product_information' do
     before(:all) do
       products_params = {
@@ -73,7 +75,6 @@ describe Yotpo::Product do
       end
     end
 
-    subject { @response.body }
     it { should be_a ::Hashie::Mash }
   end
 
@@ -89,8 +90,65 @@ describe Yotpo::Product do
       end
     end
 
-    subject { @response.body }
     it { should be_a ::Hashie::Mash }
     it { should respond_to? :products}
+  end
+
+  describe '.get_products' do
+    before(:all) do
+      params = {
+        app_key: 'foo',
+        utoken: 'baz',
+      }
+      VCR.use_cassette('get_products') do
+        @response = Yotpo.get_products(params)
+      end
+    end
+
+    it { is_expected.to be_a ::Hashie::Mash }
+    it { expect(subject.products).to be_a ::Hashie::Array }
+  end
+
+  before(:all) do
+    @product_payload = {
+      external_id: '33',
+      name: 'New Product',
+      description: 'A description',
+      status: 'active',
+    }.freeze
+  end
+
+  describe '.create_product' do
+    before(:all) do
+      params = {
+        app_key: 'foo',
+        utoken: 'baz',
+        product: @product_payload,
+      }
+      VCR.use_cassette('create_product') do
+        @response = Yotpo.create_product(params)
+      end
+    end
+
+    it { is_expected.to be_a ::Hashie::Mash }
+    it { expect(subject.dig(:product, :yotpo_id)).to be_an Integer }
+  end
+
+  describe '.update_product' do
+    before(:all) do
+      params = {
+        app_key: 'foo',
+        utoken: 'baz',
+        yotpo_product_id: 445581456,
+        product: @product_payload.merge(status: 'inactive'),
+      }
+      VCR.use_cassette('update_product') do
+        @response = Yotpo.update_product(params)
+      end
+    end
+
+    subject { @response }
+    it { expect(subject.status).to eq 200 }
+    it { expect(subject.body).to be_empty }
   end
 end

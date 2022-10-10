@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/core/v3/stores/foo/products
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 10 Oct 2022 21:33:30 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - 1f343767-1c41-45aa-83cf-df3ee9230f40
+      X-Kong-Upstream-Latency:
+      - '9'
+      X-Kong-Proxy-Latency:
+      - '20'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"products":[{"yotpo_id":445581456,"created_at":"2022-10-06T18:59:16","updated_at":"2022-10-06T18:59:16","external_id":"yotpo_site_reviews","name":"http://spokestage.info","description":null,"status":null,"url":"http://spokestage.info","image_url":null,"price":null,"compare_at_price":null,"currency":null,"inventory_quantity":null,"is_discontinued":false,"group_name":null,"brand":null,"sku":null,"mpn":null,"handle":null,"custom_properties":null,"external_created_at":null,"external_updated_at":null,"store_id":"foo","is_valid_url_format":true,"gtins":null},{"yotpo_id":446700451,"created_at":"2022-10-10T18:26:09","updated_at":"2022-10-10T18:26:09","external_id":"33","name":"New
+        Product","description":"A description","status":"active","url":null,"image_url":null,"price":null,"compare_at_price":null,"currency":null,"inventory_quantity":null,"is_discontinued":false,"group_name":null,"brand":null,"sku":null,"mpn":null,"handle":null,"custom_properties":null,"external_created_at":null,"external_updated_at":null,"store_id":"foo","is_valid_url_format":null,"gtins":null},{"yotpo_id":446708091,"created_at":"2022-10-10T18:48:00","updated_at":"2022-10-10T18:48:00","external_id":"1","name":"Product
+        1","description":"A wonderful widget","status":"active","url":"http://localhost:3000/store/product-1","image_url":"https://dam-dev.bespokepost.com/image/upload/c_limit,dpr_auto,f_auto,q_auto,w_788/v1/spec/images/1.png","price":999.0,"compare_at_price":null,"currency":"USD","inventory_quantity":10,"is_discontinued":false,"group_name":null,"brand":null,"sku":"SKU1-7737","mpn":null,"handle":null,"custom_properties":null,"external_created_at":null,"external_updated_at":null,"store_id":"foo","is_valid_url_format":false,"gtins":null}],"pagination":{"next_page_info":null}}'
+  recorded_at: Mon, 10 Oct 2022 21:33:30 GMT
+recorded_with: VCR 6.1.0
