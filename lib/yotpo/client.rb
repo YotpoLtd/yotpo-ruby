@@ -16,6 +16,7 @@ require 'yotpo/api/answer'
 require 'yotpo/api/feature'
 require 'yotpo/api/oauth'
 require 'yotpo/api/image'
+require 'yotpo/api/order'
 require 'yotpo/api/owner_feature'
 require 'yotpo/api/owner_feature_setting'
 require 'yotpo/api/product'
@@ -36,6 +37,7 @@ module Yotpo
     include Yotpo::Feature
     include Yotpo::Image
     include Yotpo::Oauth
+    include Yotpo::Order
     include Yotpo::OwnerFeature
     include Yotpo::OwnerFeatureSetting
     include Yotpo::Product

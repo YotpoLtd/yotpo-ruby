@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/core/v3/stores/foo/products/70000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 21 Oct 2022 18:00:21 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - 593c06f3-a774-4ace-9d53-3a924a3a170d
+      X-Kong-Upstream-Latency:
+      - '6'
+      X-Kong-Proxy-Latency:
+      - '24'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"product":{"yotpo_id":70000,"created_at":"2022-10-13T18:05:29","updated_at":"2022-10-13T18:05:29","external_id":"10000","name":"Shirt","description":"A shirt","status":"active","url":"https://www.example.com/shirt","image_url":null,"price":23.0,"compare_at_price":30.0,"currency":"USD","inventory_quantity":0,"is_discontinued":true,"group_name":null,"brand":null,"sku":"SHIRT","mpn":null,"handle":null,"custom_properties":null,"external_created_at":null,"external_updated_at":null,"store_id":"foo","is_valid_url_format":true,"gtins":[]}}'
+  recorded_at: Fri, 21 Oct 2022 18:00:21 GMT
+recorded_with: VCR 6.1.0

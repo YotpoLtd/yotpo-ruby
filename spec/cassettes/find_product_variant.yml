@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/core/v3/stores/foo/products/445581456/variants/100000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 21 Oct 2022 18:05:41 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      - Origin
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - 7b82867a-307a-4ebe-bf11-8d32872fd8f0
+      X-Kong-Upstream-Latency:
+      - '9'
+      X-Kong-Proxy-Latency:
+      - '44'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"variant":{"yotpo_id":100000,"created_at":"2022-10-14T20:20:32","updated_at":"2022-10-14T20:20:32","external_id":"10000","name":"Shirt","description":"A shirt","url":"https://www.example.com/shirt","image_url":null,"price":12.0,"compare_at_price":22.0,"currency":"USD","inventory_quantity":20,"is_discontinued":false,"sku":"BLUE-SHIRT","options":[{"name":"color","value":"Blue"}],"custom_properties":null,"external_created_at":null,"external_updated_at":null,"yotpo_product_id":445581456,"is_valid_url_format":true,"gtins":[]}}'
+  recorded_at: Fri, 21 Oct 2022 18:05:41 GMT
+recorded_with: VCR 6.1.0

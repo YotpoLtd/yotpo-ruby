@@ -5,12 +5,12 @@ require 'webmock/rspec'
 require 'yotpo'
 require 'vcr'
 
+Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |support_file| require support_file }
 
-
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-    SimpleCov::Formatter::HTMLFormatter,
-    Coveralls::SimpleCov::Formatter
-]
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter,
+])
 SimpleCov.start
 
 VCR.configure do |c|

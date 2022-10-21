@@ -2,36 +2,30 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.yotpo.com/core/v3/stores/foo/access_tokens
+    uri: https://api.yotpo.com/core/v3/stores/foo/orders
     body:
       encoding: UTF-8
-      string: '{"secret":"baz"}'
+      string: '{"order":{"external_id":"1000","order_date":"2022-10-21T15:49:47Z","line_items":[{"external_product_id":"300000","quantity":1}],"customer":{"external_id":"2000"}}}'
     headers:
       User-Agent:
       - Faraday v1.10.2
       Yotpo-Api-Connector:
       - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
       Content-Type:
       - application/json
       Expect:
       - ''
   response:
     status:
-      code: 200
+      code: 201
       message: ''
     headers:
       Date:
-      - Mon, 10 Oct 2022 17:59:55 GMT
+      - Fri, 21 Oct 2022 16:07:59 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '28'
-      Server:
-      - nginx
-      Via:
-      - kong/2.1.4
-      L5d-Success-Class:
-      - '1.0'
       X-Ratelimit-Limit-Second:
       - '5'
       X-Ratelimit-Remaining-Second:
@@ -43,12 +37,15 @@ http_interactions:
       Ratelimit-Reset:
       - '1'
       Correlation-Id:
-      - 8016e0af-6106-4c87-87bf-1bfde54bb477
+      - 10501e2d-be7b-423f-a9b9-731825498920
       X-Kong-Upstream-Latency:
-      - '26'
+      - '42'
       X-Kong-Proxy-Latency:
-      - '10'
+      - '17'
+      Via:
+      - kong/2.1.4
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"s0met0ken"}'
-  recorded_at: Mon, 10 Oct 2022 17:59:55 GMT
+      string: '{"order":{"yotpo_id":70000}}'
+  recorded_at: Fri, 21 Oct 2022 16:07:59 GMT
+recorded_with: VCR 6.1.0

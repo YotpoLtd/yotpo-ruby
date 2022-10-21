@@ -1,11 +1,12 @@
 require 'helper'
 
 describe Yotpo::AccessToken do
+  include_context 'endpoints'
+
   describe '#generate_utoken' do
     before(:all) do
-      params = { app_key: 'foo', secret: 'bar' }
       VCR.use_cassette('generate_utoken') do
-        @response = Yotpo.generate_utoken(params)
+        @response = Yotpo.generate_utoken(@base_params)
       end
     end
 

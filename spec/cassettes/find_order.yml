@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yotpo.com/core/v3/stores/foo/orders/70000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.10.2
+      Yotpo-Api-Connector:
+      - Ruby1.0.6
+      X-Yotpo-Token:
+      - baz
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 21 Oct 2022 16:17:40 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit-Second:
+      - '5'
+      X-Ratelimit-Remaining-Second:
+      - '4'
+      Ratelimit-Remaining:
+      - '4'
+      Ratelimit-Limit:
+      - '5'
+      Ratelimit-Reset:
+      - '1'
+      Correlation-Id:
+      - 84ab0ae5-6f91-4980-ba76-ce0be175079e
+      X-Kong-Upstream-Latency:
+      - '17'
+      X-Kong-Proxy-Latency:
+      - '23'
+      Via:
+      - kong/2.1.4
+    body:
+      encoding: ASCII-8BIT
+      string: '{"order":{"order_date":"2022-10-21T15:49:47","order_name":"An edited
+        order","source":"orders_api_v3","customer":{"external_id":"2000"},"fulfillments":[],"line_items":[{"yotpo_id":500000,"created_at":"2022-10-21T16:08:00","updated_at":"2022-10-21T16:08:00","quantity":1,"product_id":600000,"external_product_id":"300000"}],"yotpo_id":70000,"created_at":"2022-10-21T16:08:00","updated_at":"2022-10-21T16:11:52","store_id":"foo","external_id":"1000"}}'
+  recorded_at: Fri, 21 Oct 2022 16:17:40 GMT
+recorded_with: VCR 6.1.0
