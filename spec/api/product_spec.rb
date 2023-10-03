@@ -21,11 +21,16 @@ describe Yotpo::Product do
 
   describe '#get_all_bottom_lines' do
     before(:all) do
+      VCR.configure do |c|
+        c.filter_sensitive_data('YOTPO_APP_KEY') { @app_key }
+        c.filter_sensitive_data('YOTPO_TOKEN') { @utoken }
+      end
+
       get_app_bottom_lines_params = {
           utoken: @utoken,
           app_key: @app_key
       }
-      VCR.use_cassette('check_minisite_subdomain') do
+      VCR.use_cassette('get_all_bottom_lines') do
         @response = Yotpo.get_all_bottom_lines(get_app_bottom_lines_params)
       end
     end
@@ -70,5 +75,22 @@ describe Yotpo::Product do
 
     subject { @response.body }
     it { should be_a ::Hashie::Mash }
+  end
+
+  describe '#products_name_by_sku' do
+    before(:all) do
+      params = {
+        app_key: 'LjRHHPuW4zmcLNyLRAlvEkmGqZ1LULYF62FMIzvM',
+        utoken: 'qMwb2i9iJANf7BtXA0MqhKB9opq2sRLRwNYmXaCK',
+        domain_keys: ['10']
+      }
+      VCR.use_cassette('products_name_by_sku') do
+        @response = Yotpo.products_name_by_sku(params)
+      end
+    end
+
+    subject { @response.body }
+    it { should be_a ::Hashie::Mash }
+    it { should respond_to? :products}
   end
 end

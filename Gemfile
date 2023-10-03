@@ -7,7 +7,7 @@ gem 'redcarpet'
 group :test do
   gem 'coveralls', :require => false
   gem 'rspec'
-  gem 'simplecov', :require => false
+  gem 'simplecov', '~> 0.16.1', :require => false
   gem 'webmock'
   gem 'vcr'
 end

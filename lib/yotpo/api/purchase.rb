@@ -1,6 +1,6 @@
 module Yotpo
   module Purchase
-    def create_new_purchase(params)
+    def create_new_purchase(params, headers = {})
       request = {
           utoken: params[:utoken],
           email: params[:email],
@@ -16,20 +16,20 @@ module Yotpo
           custom_properties: params[:custom_properties]
       }
       app_key = params[:app_key]
-      post("/apps/#{app_key}/purchases", request)
+      post("/apps/#{app_key}/purchases", request, headers)
     end
 
-    def create_new_purchases(params)
+    def create_new_purchases(params, headers = {})
       request = {
           utoken: params[:utoken],
           platform: params[:platform],
           orders: params[:orders]
       }
       app_key = params[:app_key]
-      post("/apps/#{app_key}/purchases/mass_create", request)
+      post("/apps/#{app_key}/purchases/mass_create", request, headers)
     end
 
-    def get_purchases(params)
+    def get_purchases(params, headers = {})
       request ={
           utoken: params[:utoken],
           since_id: params[:since_id],
@@ -39,7 +39,7 @@ module Yotpo
       }
       request.delete_if{|key, value| value.nil? }
       app_key = params[:app_key]
-      get("/apps/#{app_key}/purchases", request)
+      get("/apps/#{app_key}/purchases", request, headers)
     end
   end
 end

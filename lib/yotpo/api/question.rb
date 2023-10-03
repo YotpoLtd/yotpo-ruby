@@ -1,7 +1,7 @@
 module Yotpo
   module Question
 
-    def question_send_confirmation(params)
+    def question_send_confirmation(params, headers = {})
       request = {
           appkey: params[:app_key],
           sku: params[:product_id],
@@ -18,10 +18,10 @@ module Yotpo
           reviewer_type: params[:reviewer_type],
       }
       request.delete_if {|element, value| value.nil? }
-      post('questions/send_confirmation_mail', request)
+      post('questions/send_confirmation_mail', request, headers)
     end
 
-    def question_create_by_token(params)
+    def question_create_by_token(params, headers = {})
       request = {
           content: params[:content],
           domain: params[:domain],
@@ -37,7 +37,7 @@ module Yotpo
           utm_source: params[:utm_source]
       }
       request.delete_if {|element, value| value.nil? }
-      get('questions/create_by_token', request)
+      get('questions/create_by_token', request, headers)
     end
 
   end
