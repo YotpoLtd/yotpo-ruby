@@ -42,7 +42,8 @@ module Yotpo
           user_reference: params[:user_reference],
           custom_fields: params[:custom_fields],
           iovation_fp: params[:iovation_fp],
-          override_remote_ip: params[:override_remote_ip]
+          override_remote_ip: params[:override_remote_ip],
+          is_incentivized: params[:is_incentivized]
       }
       request.delete_if { |element, value| value.nil? }
       post('/reviews/dynamic_create', request, headers)
